@@ -1,0 +1,27 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>Hyena</code> revisited
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+7&problem=practicefinal7-Hyena">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Modify your <code>Hyena</code> class from the previous problem to add <strong>eating behavior</strong>.
+		If the hyena encounters food at any point during its movement pattern, it eats the food and starts the pattern over, lengthening the rectangular pattern by 1 in the process.
+		For example: 
+	</p>
+	
+	<ul>
+		<li>
+			N, E, S, W, N, E, E (eats food),
+			N, E, E, E, S, W, W (eats food),
+			N, E, E, E, E, S, W, W, W, W, N, E, E, E, E, E, S (eats food),
+			N, E, E, E, E, E, E, S, W, W, ... 
+		</li>
+	</ul>
+	
+	<p>
+		Solve this program in jGRASP with <code>CritterMain</code>, then test it using the Practice-it link above. 
+	</p>
+</div>

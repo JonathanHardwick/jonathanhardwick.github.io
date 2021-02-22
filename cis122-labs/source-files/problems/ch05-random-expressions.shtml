@@ -1,0 +1,79 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Random expressions</h1>
+	
+	<p>
+		Fill in the boxes to produce expressions that will generate random numbers in the provided ranges.
+		Assume that the following <code>Random</code> variable has been declared:
+	</p>
+	
+	<pre class="compressed">
+Random rand = new Random();
+</pre>
+
+	<table class="expressiontable">
+		<tr>
+			<td class="expression"><strong>Example:</strong> a random integer from 1
+				to 5 inclusive:</td>
+			<td>
+				<code>rand.nextInt(<span class="expressionarea correct" style="padding-right: 0px;"><input type="text" value="5" class="expressionanswer correct" size="3" spellcheck="true" /><span class="expressionsolution">5</span></span>)
+					+
+					<span class="expressionarea correct">
+						<input type="text" value="1" class="expressionanswer correct" size="3" spellcheck="true" />
+						<span class="expressionsolution">1</span>
+					</span>
+				</code>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">a random integer from 0 to 3 inclusive:</td>
+			<td>
+				<code>rand.nextInt(<span class="expressionarea" style="padding-right: 0px;"><input type="text" class="expressionanswer" size="3" spellcheck="true" /><span class="expressionsolution">4</span></span>)</code>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">a random integer from 5 to 10 inclusive:</td>
+			<td>
+				<code>rand.nextInt(<span class="expressionarea" style="padding-right: 0px;"><input type="text" class="expressionanswer" size="3" spellcheck="true" /><span class="expressionsolution">6</span></span>)
+					+
+					<span class="expressionarea">
+						<input type="text" class="expressionanswer" size="3" spellcheck="true" />
+						<span class="expressionsolution">5</span>
+					</span>
+				</code>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">a random integer from -4 to 4 inclusive:</td>
+			<td>
+				<code>rand.nextInt(<span class="expressionarea" style="padding-right: 0px;"><input type="text" class="expressionanswer" size="3" spellcheck="true" /><span class="expressionsolution">9</span></span>)
+					-
+					<span class="expressionarea">
+						<input type="text" class="expressionanswer" size="3" spellcheck="true" />
+						<span class="expressionsolution">4</span>
+					</span>
+				</code>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">a random <strong>even</strong> integer from 16 to 28 inclusive:<br/>
+				<em>(Hint: To get only even numbers, scale up.)</em></td>
+			<td>
+				<code>rand.nextInt(<span class="expressionarea" style="padding-right: 0px;"><input type="text" class="expressionanswer" size="3" spellcheck="true" /><span class="expressionsolution">7</span></span>)
+					*
+					<span class="expressionarea" style="padding-right: 0px;">
+						<input type="text" class="expressionanswer" size="3" spellcheck="true" />
+						<span class="expressionsolution">2</span>
+					</span>&nbsp;+
+					<span class="expressionarea">
+						<input type="text" class="expressionanswer" size="3" spellcheck="true" />
+						<span class="expressionsolution">16</span>
+					</span>
+				</code>
+			</td>
+		</tr>
+	</table>
+</div>

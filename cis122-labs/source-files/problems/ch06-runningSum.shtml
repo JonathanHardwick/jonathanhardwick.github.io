@@ -1,0 +1,32 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>runningSum</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+8&amp;problem=practicefinal8-runningSum">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a static method</strong> called <code>runningSum</code> that
+    accepts as a parameter a <code>Scanner</code> holding a sequence of real
+    numbers and that outputs the running sum of the numbers followed by the
+    maximum running sum.  For example if the <code>Scanner</code> contains the
+    following data:
+  </p>
+
+  <pre>
+3.25 4.5 -8.25 7.25 3.5 4.25 -6.5 5.25
+</pre>
+
+  <p>
+    Your method should produce the following output:
+  </p>
+
+  <pre>
+running sum = 3.25 7.75 -0.5 6.75 10.25 14.5 8.0 13.25
+max sum = 14.5
+</pre>
+
+  <p>
+    Click on the check-mark above to try out your solution in Practice-it!
+  </p>
+</div>

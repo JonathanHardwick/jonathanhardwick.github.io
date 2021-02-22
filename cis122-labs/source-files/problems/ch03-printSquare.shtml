@@ -1,0 +1,41 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>printSquare</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-e4-printSquare">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<!--
+	<div class="attention">
+		We suggest you skip this problem if the lab time is more than half over already.
+	</div>
+	-->
+	
+	<ul>
+		<li>
+			<strong>Write</strong> a method <code>printSquare</code> that accepts min and max integers and prints a square of lines of increasing numbers.  The first line should start with the minimum; each line that follows should start with the next-higher number. The numbers on a line wrap back to the minimum after it hits the maximum.  For example, the call:
+			
+			<pre>
+printSquare(3, 6);
+</pre>
+			
+			should produce the following output:
+			
+			<pre>
+3456
+4563
+5634
+6345
+</pre>
+		</li>
+		
+		<li>
+			If the maximum passed is less than the minimum, the method produces no output.  Check your answer using Practice-It from the check-mark icon above.
+		</li> 
+		<li>
+	       <b>Hint</b>: remember the mod operator or think of each lines as having two parts...
+		</li>
+	</ul>
+</div>

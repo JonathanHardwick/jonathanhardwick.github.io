@@ -1,0 +1,106 @@
+<div class="slide">
+	<h1>Math expression syntax</h1>
+	
+	<table class="standard">
+		<tr>
+			<th>
+				Method
+			</th>
+			<th>
+				Description
+			</th>
+			<th>
+				Example
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.abs</code>
+			</td>
+			<td>
+				absolute value
+			</td>
+			<td>
+				<code>Math.abs(-308)</code> returns <code>308</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.ceil</code>
+			</td>
+			<td>
+				ceiling (rounds upward)
+			</td>
+			<td>
+				<code>Math.ceil(2.13)</code> returns <code>3.0</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.floor</code>
+			</td>
+			<td>
+				floor (rounds downward)
+			</td>
+			<td>
+				<code>Math.floor(2.93)</code> returns <code>2.0</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.max</code>
+			</td>
+			<td>
+				max of two values
+			</td>
+			<td>
+				<code>Math.max(45, 207)</code> returns <code>207</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.min</code>
+			</td>
+			<td>
+				min of two values
+			</td>
+			<td>
+				<code>Math.min(3.8, 2.75)</code> returns <code>2.75</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.pow</code>
+			</td>
+			<td>
+				power
+			</td>
+			<td>
+				<code>Math.pow(3, 4)</code> returns <code>81.0</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.round</code>
+			</td>
+			<td>
+				round to nearest integer
+			</td>
+			<td>
+				<code>Math.round(2.718)</code> returns <code>3</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.sqrt</code>
+			</td>
+			<td>
+				square root
+			</td>
+			<td>
+				<code>Math.sqrt(81)</code> returns <code>9.0</code>
+			</td>
+		</tr>
+	</table>
+</div>
+

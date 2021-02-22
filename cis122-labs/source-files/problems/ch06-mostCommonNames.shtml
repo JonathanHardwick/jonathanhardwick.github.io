@@ -1,0 +1,31 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>mostCommonNames</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+10&problem=practicefinal10-mostCommonNames">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method <code>mostCommonNames</code> that accepts a <code>Scanner</code> for an input file with names on each line separated by spaces.  Some names appear multiple times in a row.  For example:
+	</p>
+
+	<pre class="compressed">
+Benson Eric   Eric  Marty Kim  Kim Kim   Jenny  Nancy Nancy  Nancy  Paul  Paul
+Stuart Stuart Stuart Ethan Alyssa Alyssa Helene Jessica Jessica Jessica Jessica
+Jared  Alisa Yuki   Catriona  Cody   Coral   Trent Kevin  Ben Stefanie Kenneth
+</pre>
+
+	<p>
+		For each line, print the most commonly occurring name.  If there's a tie, use the first name that had that many occurrences.
+	</p>
+
+	<pre class="compressed">
+Most common: Kim
+Most common: Jessica
+Most common: Jared
+</pre>
+
+	<p>
+		Also return the total number of unique names in the whole file (e.g. 23 for the above input).
+	</p>
+</div>

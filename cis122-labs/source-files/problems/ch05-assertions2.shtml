@@ -1,0 +1,217 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: assertions
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-assertions">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Identify whether each assertion is always/never/sometimes <code>true</code> at each point.
+	</p>
+
+	<table class="assertiontable" style="float: right; font-size: smaller; padding-top: 3em;">
+		<tr>
+			<th></th>
+			<th><code>x &gt; y</code></th>
+			<th><code>z == 0</code></th>
+			<th><code>x == y</code></th>
+		</tr>
+
+		<tr>
+			<th>A</th>
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">ALWAYS</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>B</th>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>C</th>
+			
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">ALWAYS</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>D</th>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>E</th>
+			
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">ALWAYS</span>
+			</td>
+		</tr>
+	</table>
+
+	<pre class="compressed">
+public static void mystery(int x, int y) {
+    int z = 0;
+
+    <span class="assertionpoint">// Point A</span>
+    while (x != y) {
+        <span class="assertionpoint">// Point B</span>
+        z++;
+
+        if (x > y) {
+            <span class="assertionpoint">// Point C</span>
+            x = x / 10;
+        } else {
+            <span class="assertionpoint">// Point D</span>
+            y = y / 10;
+        }
+    }
+
+    <span class="assertionpoint">// Point E</span>
+    System.out.println(x + " " + y + " " + z);
+}
+	</pre>
+
+	<p>
+		You can also solve this problem in Practice-It by clicking on the check-mark above.
+	</p>
+</div>

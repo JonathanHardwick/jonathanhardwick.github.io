@@ -1,0 +1,52 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Words</h1>
+
+  <ul>
+    <li>
+      <strong>Download</strong> the following files
+      <a class="popup" href="problems/Words.java">
+        <img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon"
+             />
+        Words.java
+      </a>
+      and
+      <a class="popup" href="problems/wordinput.txt">
+        <img class="icon" src="images/icon_txt.gif" width="16" height="16" alt="icon"
+             />
+        wordinput.txt
+      </a>
+      to your machine and open them with jGrasp.
+    </li>
+
+    <li>
+      The program is supposed to read the input file and count how many words
+      it contains.  Finish the program so that it runs properly.  Don't forget
+      to add <code>import</code> statements and a <code>throws</code> clause to
+      the code.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <pre>
+<ins>import java.io.*;     // for File
+import java.util.*;   // for Scanner</ins>
+
+public class Words {
+    public static void main(String[] args) <ins>throws FileNotFoundException</ins> {
+        int wordCount = 0;
+        Scanner input = new Scanner(new File("wordinput.txt"));
+        
+        // your code goes here ...
+        <ins>while (input.hasNext()) {
+            String word = input.next();
+            wordCount++;
+        }</ins>
+        
+        System.out.println("Total words = " + wordCount);
+    }
+}
+</pre>
+</div>

@@ -1,0 +1,42 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: printAverage
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-e12-printAverage">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Write a method named <code>printAverage</code> that accepts
+      a <code>Scanner</code> for the console as a parameter and repeatedly
+      prompts the user for numbers. Once any number less than zero is typed,
+      the average of all non-negative numbers typed is displayed. Display the
+      average as a double, and do not round it. For example, a call to your
+      method might look like this:
+      <pre>
+Scanner console = new Scanner(System.in);
+printAverage(console);
+</pre>
+
+      The following is one example log of execution for your method:
+      <pre>
+Type a number: 10
+Type a number: 15
+Type a number: -1
+Average was 12.5
+</pre>
+
+      If the first number typed is negative, do not print an average.
+    </li>
+					
+    <li>
+      Try solving this problem in Practice-It! using the link above.
+    </li>
+					
+    <li class="hint">
+      (Hint: To find the average, you will need to know both the sum and a
+      count of the number of numbers to average.)
+    </li>
+  </ul>
+</div>

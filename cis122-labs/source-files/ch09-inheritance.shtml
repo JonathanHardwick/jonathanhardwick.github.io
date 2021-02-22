@@ -1,0 +1,28 @@
+<!--#set var="LAB_NUMBER" value="9" -->
+<!--#set var="LAB_NAME" value="Inheritance" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>get more practice with classes and object-oriented programming</li>
+		<li>use inheritance to create hierarchies of related classes</li>
+		<li>extend behavior and override existing behavior</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It! 
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT INHERITANCE -->
+<!--#include virtual="common/ch09-inheritance-syntax.shtml" -->
+<!--#include virtual="problems/ch09-Car-and-Truck.shtml" -->
+<!--#include virtual="problems/ch09-Car-and-Truck-revisited.shtml" -->
+<!--#include virtual="problems/ch09-MonsterTruck.shtml" -->
+<!--#include virtual="common/ch09-employee-hierarchy.shtml" -->
+<!--#include virtual="problems/ch09-Marketer.shtml" -->
+<!--#include virtual="problems/ch09-Janitor.shtml" -->
+<!--#include virtual="problems/ch09-HarvardLawyer.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

@@ -1,0 +1,70 @@
+<div class="slide">
+  <h1><code>Arrays</code> class methods</h1>
+
+  <table class="standard">
+    <tr>
+      <th>
+        Method name
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap">
+        <code>Arrays.binarySearch(<var>array</var>, <var>value</var>)</code>
+      </td>
+
+      <td>
+        returns index of value in a sorted array (&lt; 0 if not found)
+      </td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap">
+        <code>Arrays.copyOf(<var>array</var>, <var>length</var>)</code>
+      </td>
+
+      <td>
+        returns a new copy of an array
+      </td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap">
+        <code>Arrays.equals(<var>array1</var>, <var>array2</var>)</code>
+      </td>
+
+      <td>
+        returns true if the two arrays contain same elements
+      </td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap">
+        <code>Arrays.fill(<var>array</var>, <var>value</var>)</code>
+      </td>
+
+      <td>
+        sets every element to the given value
+      </td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap">
+        <code>Arrays.sort(<var>array</var>)</code>
+      </td>
+
+      <td>
+        arranges the elements into sorted order
+      </td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap">
+        <code>Arrays.toString(<var>array</var>)</code>
+      </td>
+
+      <td>
+        returns a string for the array, such as &quot;[10, 30, -25, 17]&quot;
+      </td>
+    </tr>
+  </table>
+</div>
+

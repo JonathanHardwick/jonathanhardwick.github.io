@@ -1,0 +1,127 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: jGRASP Debugger
+  </h1>
+
+  <ul>
+    <li>
+      You will find it useful to be able to set a breakpoint to debug your
+      programs.  Copy and paste the following code into jGRASP:
+
+      <table class="linenumbertable">
+        <tr>
+          <td>
+            <pre class="linenumbers" style="font-size: smaller">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+</pre>
+          </td>
+          <td>
+            <pre style="font-size: smaller">
+public class Numbers {
+    public static void main(String[] args) {
+        int number = 42;
+        for (int i = 1; i &lt;= 1000; i++) {
+            number = number * 37 % 103;
+        }
+        int number2 = number * number;
+        System.out.println("result = " + number2);
+    }
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+
+
+      Set a breakpoint on the statement inside the for loop (line 5).  You do
+      this by moving your cursor to the beginning of that line until you see a
+      stop-sign icon and then clicking.
+    </li>
+  </ul>
+                                
+  <p class="continued">
+    continued on the next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP
+  Debugger</h1>
+                                
+  <ul>
+    <li>
+      Now you can debug the program by clicking on the debug icon instead of
+      the run icon (it is to the right of the run icon and looks like a
+      ladybug).  It will stop every time it hits line 5.  Then you can examine
+      the values of the local variables <code>i</code> and <code>number</code>.
+      When you want it to continue, you can hit the button that looks like the
+      standard "play" icon of a right-pointing arrow.  Using this
+      approach, <strong>fill in</strong> the table below indicating what
+      value <code>number</code> has when <code>i</code> has the given value.
+      Keep in mind that you are figuring out what value <code>number</code> has
+      just before it executes this line of code.
+
+      <table class="expressiontable">
+        <tr>
+          <td class="expression"><code>i = 1</code></td>
+          <td><input type="text" class="expressionanswer" size="6"
+                     spellcheck="false" /></td>
+          <td><pre class="expressionsolution">42</pre></td>
+        </tr>
+        <tr>
+          <td class="expression"><code>i = 2</code></td>
+          <td><input type="text" class="expressionanswer" size="6"
+                     spellcheck="false" /></td>
+          <td><pre class="expressionsolution">9</pre></td>
+        </tr>
+        <tr>
+          <td class="expression"><code>i = 3</code></td>
+          <td><input type="text" class="expressionanswer" size="6"
+                     spellcheck="false" /></td>
+          <td><pre class="expressionsolution">24</pre></td>
+        </tr>
+        <tr>
+          <td class="expression"><code>i = 4</code></td>
+          <td><input type="text" class="expressionanswer" size="6"
+                     spellcheck="false" /></td>
+          <td><pre class="expressionsolution">64</pre></td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+                                
+  <p class="continued">
+    continued on the next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP
+    Debugger</h1>
+                                
+  <ul>
+    <li>
+      Click on the stop-sign a second time to get rid of it and then set a stop
+      on line number 7.  This will allow you to find out the value
+      of <code>number</code> after the loop is done executing.  Again hit the
+      "play" button to start the programming running again.  What value
+      does <code>number</code> have at line 7?
+      <blockquote>
+        <span class="expressionarea">
+          <input type="text" class="expressionanswer" size="6"
+                 spellcheck="true" />
+          <span class="expressionsolution">69</span></span>
+      </blockquote>
+
+    </li>
+  </ul>
+</div>

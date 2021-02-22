@@ -1,0 +1,25 @@
+<!--#set var="LAB_NUMBER" value="0" -->
+<!--#set var="LAB_NAME" value="Java Basics" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+  <h1>Today's lab</h1>
+  <p>Goals for today:</p>
+  <ul> 
+    <li>learn about the <strong>jGRASP</strong> editor software</li>
+    <li>gain familiarity with syntax <strong>errors</strong> and debugging</li>
+  </ul>
+</div>
+
+<!--#include virtual="problems/ch01-compile-and-run-a-program-in-jgrasp.shtml" -->
+<!--#include virtual="problems/ch01-modify-an-existing-program.shtml" -->     
+<!--#include virtual="problems/ch01-exploring-syntax-errors.shtml" --> 
+<!--#include virtual="problems/ch01-whats-the-output1-tricky.shtml" -->
+<!--#include virtual="problems/ch01-escape-sequences.shtml" -->
+<!--#include virtual="problems/ch01-whats-the-output2-shaq.shtml" -->
+<!--#include virtual="problems/ch01-MuchBetter.shtml" -->
+<!--#include virtual="problems/ch01-Spikey.shtml" -->
+<!--#include virtual="problems/ch01-indentation-new.shtml" -->   
+<!--#include virtual="problems/ch01-syntax-errors.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

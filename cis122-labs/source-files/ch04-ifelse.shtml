@@ -1,0 +1,29 @@
+<!--#set var="LAB_NUMBER" value="4" -->
+<!--#set var="LAB_NAME" value="if/else" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>if/else</code> statements to select between multiple code actions</li>
+		<li>factor out common redundant code between <code>if/else</code> statements</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT IF/ELSE -->
+<!--#include virtual="common/ch04-if-else-syntax.shtml" -->
+<!--#include virtual="problems/ch04-if-else-mystery1.shtml" -->                                      
+<!--#include virtual="problems/ch04-numUnique.shtml" -->   
+<!--#include virtual="problems/ch04-quadrant.shtml" -->
+<!--#include virtual="common/ch04-if-else-factoring-syntax.shtml" -->
+<!--#include virtual="problems/ch04-if-else-factoring.shtml" -->
+<!--#include virtual="problems/ch04-syntax-errors.shtml" -->
+<!--#include virtual="problems/ch04-AgeCheck.shtml" -->
+<!--#include virtual="problems/ch04-AgeCheck2.shtml" -->
+<!--#include virtual="problems/ch04-seeMovie.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

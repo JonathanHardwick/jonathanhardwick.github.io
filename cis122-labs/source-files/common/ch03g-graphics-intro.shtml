@@ -1,0 +1,25 @@
+<div class="slide">
+	<h1>Graphics</h1>
+
+	<p>
+		Now we'll explore several exercises related to drawing graphics.
+	</p>
+
+	<div class="figure">
+		<img src="images/ch03g-quilt.png" alt="quilt" width="212" height="138" />
+		<img src="images/ch03g-drawingpanel-compare.png" alt="drawingpanel compare" width="225" height="102" />
+	</div>
+
+	<ul>
+		<li>
+			We'll use a provided class <code>DrawingPanel</code> that works with Java classes <code>Graphics</code> (a "pen" for drawing) and <code>Color</code>.
+		</li>
+		<li>
+			Download <a class="popup" href="problems/DrawingPanel.java"><code>DrawingPanel.java</code></a> to your program directory.
+		</li>
+		<li>
+			To check your output in the <code>DrawingPanel</code>, click <strong>File</strong>, <strong>Compare to URL...</strong>.
+		</li>
+	</ul>
+</div>
+

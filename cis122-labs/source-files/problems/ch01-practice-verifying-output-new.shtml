@@ -1,0 +1,77 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Practice verifying output</h1>
+	
+	<p>
+		Your homework must match expected output <strong>exactly</strong>.  You can use our <strong>Output Comparison Tool</strong> web page to check your output.
+	</p>
+	
+	<div style="text-align: center">
+		<img src="images/output-comparison-tool.png" width="701" height="299" alt="output comparison tool screenshot" />
+	</div>
+	
+	<p>
+		In this exercise, we will check whether a program produces correct output.  Download the program and open it in your jGRASP editor.
+	</p>
+	
+	<ul>
+		<li>
+			<a class="popup" href="problems/WrongOutput.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				WrongOutput.java</a>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>: Practice verifying output, cont'd</h1>
+	
+	<ul>
+		<li>
+			Go to the <a class="popup" href="../labs.shtml">CSE 142 Labs page</a>.  Under Lab 1, click <strong>Output Comparison Tool</strong>.
+		</li>
+		<li>
+			In the Output Comparison page, select <strong>WrongOutput.java</strong> from the list.
+		</li>
+		<li>
+			Run <strong>jGRASP</strong> and use it to edit <code>WrongOutput.java</code>.  <strong>Copy/paste the program's output</strong> from jGRASP's console into the "Actual Output" box of the Output Comparison web page.
+		</li>
+		<li>
+			Click <strong>Compare</strong> on the page.  (Also click Add Line Numbers on the web page.)
+		</li>
+	</ul>
+
+	<table class="expressiontable">
+		<tr>
+			<td>
+				Which output line number does not match?
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">4</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				What should be the output for that line?
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="36" spellcheck="false" value="" />
+				<pre class="expressionsolution">"Four score and seven years ago,</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Which expected blank line number is missing?
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">8</pre>
+			</td>
+		</tr>
+	</table>
+</div>

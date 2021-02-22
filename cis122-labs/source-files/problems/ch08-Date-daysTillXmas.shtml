@@ -1,0 +1,27 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Date daysTillXmas
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+4&problem=practicefinal4-daysTillXmas">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			Write an instance method <code>daysTillXmas</code> that will be placed inside the <code>Date</code> class.  The method returns how many days away the Date object is from Christmas, December 25, in the <em>same year</em>. For example, Nov. 22 is 33 days away, Sep. 3 is 113 days away, Dec 25 is 0 days away, and Dec 31 is -6 days away.
+		</li>
+		
+		<li>
+			Here is an example call:
+			
+			<pre class="compressed">
+Date d = new Date(9, 3);
+System.out.println(d.daysTillXmas());   <span class="comment">// 113</span>
+</pre>
+		</li>
+		
+		<li>
+			Test your solution to this problem in Practice-It.
+		</li>
+	</ul>
+</div>

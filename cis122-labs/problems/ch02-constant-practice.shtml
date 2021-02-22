@@ -1,0 +1,42 @@
+<div class="slide">
+	<h1>
+		<code>for</code> loop expressions w/ constant
+	</h1>
+
+	<p>
+		When adding a <strong>class constant</strong> to a loop expression, it affects the constant that must be added in the expression.
+		Suppose we have the two loop expressions below for figure sizes of 5 and 9.  The third line of the table shows the general formula that would be used if we turned our figure's size into a constant named <code>SIZE</code>.
+	</p>
+
+	<table class="calltable">
+		<tr>
+			<th>size</th>
+			<th>expression</th>
+			<th>relationship</th>
+		</tr>
+		
+		<tr>
+			<td><code>5</code></td>
+			<td><code>8 * line + <strong>16</strong></code></td>
+			<td><code>16 = 3 * 5 + 1</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>9</code></td>
+			<td><code>8 * line + <strong>28</strong></code></td>
+			<td><code>28 = 3 * 9 + 1</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>SIZE</code></td>
+			<td><code>8 * line + <strong>(3 * SIZE + 1)</strong></code></td>
+			<td>
+				
+			</td>
+		</tr>
+	</table>
+	
+	<p class="continued">
+		continued on the next slide ...
+	</p>
+</div>

@@ -1,0 +1,12 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Sierpinski Triangle</h1>
+
+  <p>
+    Write a Java program that draws the following output.... Just kidding!
+  </p>
+
+  <div class="figure">
+    <img src="images/ch03g-sierpinski.png" alt="sierpinski triangle" width="424"
+         height="408" />
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<!--#set var="LAB_NUMBER" value="5" -->
+<!--#set var="LAB_NAME" value="Midterm Practice" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>practice problems similar to what will be on a midterm exam</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT MIDTERM PRACTICE -->
+<!--#include virtual="problems/ch03-lastDigit.shtml" -->
+<!--#include virtual="problems/ch05-firstDigit.shtml" -->
+<!--#include virtual="problems/ch04-season.shtml" -->
+<!--#include virtual="problems/ch05-makeGuesses.shtml" -->
+<!--#include virtual="problems/ch05-allDigitsOdd.shtml" -->
+<!--#include virtual="problems/ch05-hopscotch.shtml" -->
+<!--#include virtual="problems/ch05-hasMidpoint.shtml" -->
+<!--#include virtual="problems/ch04-before.shtml" -->
+<!--#include virtual="problems/ch05-sameDashes.shtml" -->
+<!--#include virtual="problems/ch05-flip.shtml" -->
+<!--#include virtual="problems/ch05-boolean-zen.shtml" -->
+
+<!-- PROBLEMS STUART USES IN HIS LAB TO MORE CLOSELY EMULATE THE MIDTERM FORMAT -->
+<!--#include virtual="problems/ch03-parameter-mystery3.shtml" -->
+<!--#include virtual="problems/ch04-if-else-mystery4.shtml" -->
+<!--#include virtual="problems/ch05-while-loop-mystery4.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

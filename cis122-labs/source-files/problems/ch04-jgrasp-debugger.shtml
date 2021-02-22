@@ -1,0 +1,191 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: jGRASP Debugger
+	</h1>
+
+	<p>
+		We are going to practice using the jGRASP debugger with <code>Hailstone.java</code>.
+		This program computes a sequence of integers called a <em>hailstone sequence</em>.
+		(This is related to an unsolved problem in mathematics known as the
+		<a class="popup" href="http://en.wikipedia.org/wiki/Collatz_conjecture">Collatz Conjecture</a>.)
+	</p>
+
+	<ul>
+		<li>
+			Recall: To <strong>Set a breakpoint</strong>, move your cursor to the beginning of the desired line until you see a <strong>stop-sign icon</strong> 
+			<img src="images/jgrasp-stop-sign.png" alt="icon" width="18" height="18" />
+			and click.
+		</li>
+		<li>
+			Recall: To run a program in <strong>debug mode</strong>, click the debug icon
+			<img src="images/jgrasp-ladybug-icon.png" alt="icon" width="20" height="20" />
+			(looks like a ladybug).
+		</li>
+
+		<li>
+			Recall: To resume a stopped program, press the top-left <strong>play</strong>
+			<img src="images/jgrasp-play-icon.png" alt="icon" width="28" height="28" />
+			or <strong>step</strong>
+			<img src="images/jgrasp-step-icon.png" alt="icon" width="28" height="28" />
+			buttons.
+		</li>
+	</ul>
+
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - Values of <code>value</code></h1>
+	
+	<ul>
+		<li>
+			For this exercise you will trace the first call: <code>printHailstoneMaxMin(7, 10);</code>
+		</li>
+		<li>
+			Set a breakpoint
+			<img src="images/jgrasp-stop-sign.png" alt="icon" width="18" height="18" />
+			that will allow you to determine the first several distinct values of the variable <code>value</code> as the loop executes.
+		</li>
+	</ul>
+
+	<table class="expressiontable">
+		<tr>
+			<th style="text-align: left; padding-right: 3em;">
+				#
+			</th>
+			<th style="text-align: left;">
+				<code>value</code>
+			</th>
+		</tr>
+		<tr>
+			<td class="expression">
+				first value
+			</td>
+			<td>
+				<code>7</code>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				second value
+			</td>
+			<td>
+				<code>22</code>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				third value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">11</pre>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				fourth value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">34</pre>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				fifth value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">17</pre>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				sixth value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">52</pre>
+			</td>
+		</tr>
+	</table>
+
+	<p class="continued">
+		continued on the next slide...
+	</p>
+
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - Values of <code>min</code></h1>
+	
+	<ul>
+		<li>
+			Now you will trace the <em>second</em> call: <code>printHailstoneMaxMin(7, 20);</code>
+		</li>
+		<li>
+			<strong>Clear your previous breakpoint</strong> by clicking on it a second time, then <strong>set a new breakpoint</strong> for the second method call, and resume execution.
+		</li>
+		<li>
+			Use your new breakpoint to determine the first several distinct values of <code>min</code> during the second call.
+		</li>
+	</ul>
+	
+	<table class="expressiontable">
+		<tr>
+			<th style="text-align: left; padding-right: 3em;">
+				#
+			</th>
+			<th style="text-align: left;">
+				<code>min</code>
+			</th>
+		</tr>
+		<tr>
+			<td class="expression">
+				first value
+			</td>
+			<td>
+				<code>7</code>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				second value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">5</pre>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				third value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">4</pre>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				fourth value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">2</pre>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				fifth value
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<pre class="expressionsolution">1</pre>
+			</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,55 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Variable mutation</h1>
+                                
+  <p>
+    Suppose you have a variable named <code>balance</code>, set
+    to <code>463.23</code>:
+  </p>
+                                
+  <pre>
+double balance = 463.23
+</pre>
+                                
+  <p>
+    Suppose later in the program's code, we want to add 5 to the account balance.  Which is a correct statement to
+    do this?
+  </p>
+                                
+  <ol class="mcquestion shuffle">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>balance + 5;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>balance = 5;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mccorrect" />
+        <code>balance = balance + 5;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>5 + balance = balance;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>balance <-- 5;</code>
+      </label>
+    </li>
+  </ol>
+</div>

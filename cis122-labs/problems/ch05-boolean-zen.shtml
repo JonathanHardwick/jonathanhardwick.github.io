@@ -1,0 +1,91 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: "Boolean Zen"
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-s15-isVowel">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    This attempted solution to Self-Check 5.15 (<code>isVowel</code>) has
+    several problems:</p>
+  
+  <pre class="compressed">
+// Returns whether the given string represents a vowel:
+// a, e, i, o, or u, case insensitively.
+public static boolean isVowel(String s) {
+    if (s == "a") {
+        return true;
+    } else if (s == "e") {
+        return true;
+    } else if (s == "i") {
+        return true;
+    } else if (s == "o") {
+        return true;
+    } else if (s == "u") {
+        return true;
+    } else {
+        return false;
+    }
+}
+  </pre>
+
+  <p>
+    Open Practice-It from the link above, copy/paste this code into it, then
+    see the next slide.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - things to
+    fix
+  </h1>
+				
+  <p>
+    Fix the following aspects of the code:
+  </p>
+				
+  <ul>
+    <li>
+      It has a bug related to how strings are compared.
+    </li>
+    <li>
+      It isn't case sensitive; it fails for uppercase vowels.
+    </li>
+    <li>
+      It has too many unnecessary if/else statements.
+    </li>
+    <li>
+      <em>(advanced)</em> It does not use "Boolean Zen" as described in
+      textbook section 5.3.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+  
+  <pre class="compressed">
+public static boolean isVowel(String s) {
+    s = s.toLowerCase();
+    if (s.equals("a") || s.equals("e") || s.equals("i")
+            || s.equals("o") || s.equals("u")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+  </pre>
+
+  <p>
+    The above can be improved.  "Boolean Zen" version:
+  </p>
+
+  <pre class="compressed">
+public static boolean isVowel(String s) {
+    s = s.toLowerCase();
+    return s.equals("a") || s.equals("e") || s.equals("i")
+           || s.equals("o") || s.equals("u");
+}
+  </pre>
+</div>

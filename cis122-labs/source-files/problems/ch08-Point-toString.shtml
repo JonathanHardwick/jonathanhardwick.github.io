@@ -1,0 +1,27 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>Point toString</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+8&problem=bjp3-8-s14-toStringPoint">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Modify the <code>toString</code> method in the <code>Point</code> class.
+		Make it return a string in the following format.
+		For example, if a <code>Point</code> object stored in a variable <code>pt</code> represents the point (5, -17), return the string:
+	</p>
+
+	<pre class="output">
+java.awt.Point[x=5,y=-17]
+</pre>
+
+	<p>
+		If the client code were to call <code>System.out.println(pt);</code> ,
+		that text would be shown on the console.
+	</p>
+	
+	<p>
+		(Test your code in Practice-It, or by running your <code>PointClient</code> or <code>PointMain</code> and printing a <code>Point</code> there.)
+	</p>
+</div>

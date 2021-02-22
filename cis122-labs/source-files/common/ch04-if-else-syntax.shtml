@@ -1,0 +1,27 @@
+<div class="slide">
+	<h1><code>if/else</code> Statements</h1>
+	
+	<p>
+		An <strong>if/else</strong> statement lets your program choose between 2 or more options.
+	</p>
+	
+	<pre>
+if (<var>test</var>) {
+    <var>statement(s)</var>;
+} else {
+    <var>statement(s)</var>;
+}
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+<em>if (gpa &gt;= 2.0) {</em>
+    System.out.println("Welcome to Mars University!");
+<em>} else {</em>
+    System.out.println("Please apply again soon.");
+<em>}</em>
+</pre>
+</div>

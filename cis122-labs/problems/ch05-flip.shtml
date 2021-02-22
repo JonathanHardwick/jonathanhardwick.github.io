@@ -1,0 +1,24 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: flip
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-flip">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    Write a method <code>flip</code> that takes a <code>Random</code> object as
+    a parameter and that prints information about a coin-flipping simulation.
+  </p>
+
+  <p>
+    Your method should use the <code>Random</code> object to produce a sequence
+    of simulated coin flips, printing whether each flip comes up "heads" or
+    "tails". Each outcome should be equally likely. Your method should stop
+    flipping when you see three heads in a row.
+  </p>
+
+  <p>
+    Solve this problem in Practice-It by clicking on the check-mark above.
+  </p>
+</div>

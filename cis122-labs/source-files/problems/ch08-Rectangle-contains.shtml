@@ -1,0 +1,20 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Rectangle contains
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+8&problem=bjp3-8-e20-containsRectangle">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			Write an instance method <code>contains</code> that will be placed inside the <code>Rectangle</code> class.
+			The method accepts integers for x and y as parameters and turns <code>true</code> if that x/y coordinate lies within this rectangle.
+			The edges are included; for example, a rectangle with x=2, y=5, width=8, height=10 will return <code>true</code> for any point from (2, 5) through (10, 15) inclusive.
+		</li>
+		
+		<li>
+			Test your solution to this problem in Practice-It.
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,60 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: ZuneBug
+  </h1>
+
+  <p>
+    The following code from Microsoft's Zune music player calculates today's
+    date from the years/days passed since 1980.  But all Zune players locked up
+    on Dec 31 2008.  Why?
+					
+    Download <a class="popup" href="problems/ZuneBug.java">
+      <img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+      ZuneBug.java
+    </a>
+    and modify it to fix the bug.
+  </p>
+
+  <pre class="compressed">
+int days = getTotalDaysSince1980();   // pretend this method exists
+int year = 1980;
+while (days &gt; 365) {                  // subtract out years
+    if (isLeapYear(year)) {           // pretend this method exists
+        if (days &gt; 366) {
+            days = days - 366;
+            year++;
+        }
+    } else {
+        days = days - 365;
+        year++;
+    }
+}
+  </pre>
+
+</div>
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber noincrement"></span>: ZuneBug - answer
+  </h1>
+
+  <p>
+    The bug occurs when the current year is a leap year and there are exactly
+    366 days left (i.e., if today is Jan 1 on a year after a leap year).  The
+    code gets stuck in an infinite loop with <code>days == 366</code> because
+    the <code>while</code> test is <code>true</code> but the <code>if (days
+    &gt; 366)</code> is <code>false</code>.  Here is a fixed version:
+  </p>
+
+  <pre class="compressed">
+int days = getTotalDaysSince1980();   // pretend this method exists
+int year = 1980;
+while (days &gt; 365<ins> || (isLeapYear(year) &amp;&amp; days &gt; 366)</ins>) {
+    if (isLeapYear(year)) {
+        days = days - 366;
+    } else {
+        days = days - 365;
+    }
+    year++;
+}
+  </pre>
+</div>

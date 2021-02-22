@@ -1,0 +1,51 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>for</code> loop
+    practice</h1>
+  <ul>
+    <li><strong>Copy and paste</strong> the following code into jGrasp.
+      <pre>
+public class Beer {
+    public static void main(String[] args) {
+        for ( <var>fill me in!</var> ) {
+            System.out.println( <var>fill me in!</var> );
+        }
+    }
+}
+</pre>
+    </li>
+  </ul>
+
+  <p class="continued">
+    continued on the next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - expected
+  output</h1>
+
+  <ul>
+    <li><strong>Modify</strong> the code to produce the song <em>99 Bottles of
+    Beer on the Wall</em>:
+
+      <pre>
+99 bottles of beer on the wall, 99 bottles of beer
+Take one down, pass it around, 98 bottles of beer on the wall
+
+98 bottles of beer on the wall, 98 bottles of beer
+Take one down, pass it around, 97 bottles of beer on the wall
+
+... (output continues in the same pattern) ...
+
+1 bottles of beer on the wall, 1 bottles of beer
+Take one down, pass it around, 0 bottles of beer on the wall
+</pre>
+    </li>
+
+    <li>
+      Use the <a class="popup" href="../diff-labs.html">Output
+      Comparison Tool</a> to check your work.  You can set your program to
+      count down from 9 to make it easier to copy the output.
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<!--#set var="LAB_NUMBER" value="4" -->
+<!--#set var="LAB_NAME" value="Cumulative Algorithms" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>write cumulative algorithms that compute their data over time</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT CUMULATIVE ALGORITHMS -->
+<!--#include virtual="common/ch04-cumulative-algorithms.shtml" -->   
+<!--#include virtual="problems/ch04-scanner.shtml" -->  
+<!--#include virtual="problems/ch04-pow.shtml" --> 
+<!--#include virtual="problems/ch04-repl.shtml" -->
+<!--#include virtual="problems/ch04-longestName.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

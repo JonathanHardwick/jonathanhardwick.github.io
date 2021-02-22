@@ -1,0 +1,45 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: seeMovie
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&amp;problem=lab4-seeMovie">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    You're thinking about going with your friends to a
+    movie.  <strong>Write</strong> a Java method <code>seeMovie</code> that
+    accepts two parameters: the <strong>cost</strong> of a ticket in dollars,
+    and the <strong>rating</strong> number of stars the movie received out of
+    5.  The method should print how interested you are (very, sort-of, or not).
+    Use the following criteria:
+  </p>
+
+  <ul>
+    <li>
+      You like bargains.  Any movie that costs less than $5.00 is one that you
+      want to see very much.
+    </li>
+
+    <li>
+      You dislike expensive movies.  You are not interested in seeing any movie
+      that costs $12.00 or more, unless it got 5 stars (and even then, you are
+      only sort-of interested).
+    </li>
+
+    <li>
+      You like quality.  You are very interested in seeing 5-star movies that
+      cost under $12.00.
+    </li>
+
+    <li>
+      You are sort-of interested in seeing movies costing between $5.00 -
+      $11.99 that also got between 2-4 stars inclusive.
+    </li>
+					
+    <li>
+      You are not interested in seeing any other movies not described
+      previously.
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,37 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Practice verifying
+    output</h1>
+                                
+  <p>
+    Part of your homework grades come from producing correct
+    output <strong>exactly</strong>.
+  </p>
+                                
+  <p>
+    Use our <strong>Output Comparison Tool</strong> web page to check if your
+    output is correct.
+  </p>
+                                
+  <ul>
+    <li>
+      Go to the <a class="popup" href="../labs.shtml">CSE 142
+      Labs page</a>.  Click the "<strong>Output Comparison Tool</strong> link."
+    </li>
+    <li>
+      Select <strong>MyFirstProgram</strong> from the list.  The expected
+      output should appear.
+    </li>
+    <li>
+      Go back to your program.  Run it and <strong>copy/paste its
+      output</strong> from jGRASP's console into the "Actual Output" box of the
+      web page.
+    </li>
+    <li>
+      Click <strong>Compare</strong> on the page.  Does your output match?  If
+      not, fix the program and try again.
+    </li>
+    <li>
+      If you had to fix any output, turn in the program again.
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Practice turning in a
+  program</h1>
+                                
+  <p>
+    In CSE 142 you'll use a web turnin system for your homework.  Let's
+    practice turning in a file by submitting
+    your <code>MyFirstProgram.java</code>.
+  </p>
+                                
+  <ul>
+    <li>
+      Go to the <a class="popup" href="../labs.shtml">CSE 142
+      Labs web page</a>.
+    </li>
+    <li>
+      Click the link that says "<strong>Turnin Page</strong> for turnin exercise."
+    </li>
+    <li>
+      <strong>Log in</strong> to the page and input your personal information.
+    </li>
+    <li>
+      Browse to your <code>MyFirstProgram.java</code> file
+      and <strong>submit</strong> it.
+    </li>
+    <li>
+      Look at the turnin receipt page.  Does it give you any <strong>warnings
+      or errors</strong>?  If so, fix them and try again.  (A common error is
+      giving a program/file the wrong name.)
+    </li>
+  </ul>
+</div>

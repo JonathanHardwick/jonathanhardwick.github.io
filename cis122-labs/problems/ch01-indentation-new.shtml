@@ -1,0 +1,96 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Practice indentation</h1>
+
+	<p>
+		Programs should be indented properly to make them easier to read:
+	</p>
+	
+	<ul>
+		<li>
+			<code>{</code> brace &rarr; increase indent of following lines by one tab
+		</li>
+		<li>
+			<code>}</code> brace &rarr; decrease indent of that line and following lines by one tab 
+		</li>
+	</ul>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+        System.out.println("How are you?");
+    }
+}
+</pre>   
+	<p>Make sure that your <code>Neighbors</code> program has good indentation.</p>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>: Practice indentation, cont'd</h1>
+
+	<p>
+		Our <strong>Indenter Tool</strong> web page can fix a program's indentation.
+	</p>
+	
+	<div style="text-align: center">
+		<img src="images/indenter-tool.png" width="619" height="246" alt="indenter tool screenshot" />
+	</div>
+	
+	<p>
+		In this exercise, we will use the Indenter Tool to fix the following program that has poor indentation.  Download it and open it in jGRASP:
+	</p>
+
+	<ul>
+		<li>
+			<a class="popup" href="problems/Icky.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				Icky.java</a>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>: Practice indentation, cont'd</h1>
+	
+	<ul>
+		<li>
+			Go to the <a class="popup" href="../labs.shtml">CSE 142 Labs page</a>.  Under Lab 1, click <strong>Indenter Tool</strong>.
+		</li>
+		<li>
+			<strong>Copy/paste the Icky.java code</strong> into the Indenter's text box.
+		</li>
+		<li>
+			Click <strong>Fix Indentation</strong>.  <em>(Indent by 3 spaces.)</em> <br /> Paste the properly indented code in the box below.
+		</li>
+	</ul>
+
+	<table class="expressiontable">
+		<tr>
+			<td>
+				<textarea class="expressionanswer" rows="9" cols="56" spellcheck="false"></textarea>
+				<pre class="expressionsolution">public class Icky {
+   public static void main(String[] args) {
+      System.out.println("Well-indented programs");
+      System.out.println("look much better.");
+      System.out.println("Please fix me");
+      System.out.println("so I look nicer");
+   }
+}</pre>
+			</td>
+		</tr>
+	</table>
+</div>

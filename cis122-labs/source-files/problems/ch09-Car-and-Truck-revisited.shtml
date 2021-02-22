@@ -1,0 +1,62 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>Car</code> and <code>Truck</code> revisited
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+9&problem=lab9-CarTruck2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<table>
+		<tr>
+			<td>
+				<pre class="compressed" style="padding-right: 1em">
+public class Car {
+   public void m1() {
+      System.out.println("car 1");
+   }
+
+   public void m2() {
+      System.out.println("car 2");
+   }
+
+   public String toString() {
+      return "vroom";
+   }
+}
+</pre>
+			</td>
+			
+			<td>
+				<pre class="compressed">
+public class Truck extends Car {
+   public void m1() {
+      System.out.println("truck 1");
+   }
+    
+   <strong>public void m2() {
+      super.m1();
+   }
+    
+   public String toString() {
+      return super.toString() + super.toString();
+   }</strong>
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+	
+	<ul>
+		<li style="margin-top: 0em">
+			Suppose the <code>Truck</code> code changes as shown above.
+			What is the output now?
+		</li>
+	</ul>
+	
+	<pre class="compressed">
+Truck mycar = new Truck();
+System.out.println(mycar);    // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="12" spellcheck="true" /><span class="expressionsolution">vroomvroom</span></span>
+mycar.m1();                   // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="12" spellcheck="true" /><span class="expressionsolution">truck 1</span></span>
+mycar.m2();                   // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="12" spellcheck="true" /><span class="expressionsolution">car 1</span></span>
+</pre>
+</div>

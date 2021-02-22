@@ -1,0 +1,189 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>for</code> loop table w/ constant
+	</h1>
+
+	<p>
+		You already found loop expressions for the slash figure at size 6.  Now make a <strong>table</strong> at size 4 and use the two to generalize the loop expression in terms of a <strong>constant</strong> for the figure size.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="margin-top: 1em; line-height: 1.4em;">
+!!!!!!!!!!!!!!
+\\!!!!!!!!!!//
+\\\\!!!!!!////
+\\\\\\!!//////
+</pre>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller">
+					<tr>
+						<th style="text-align: left">Line</th>
+						<th style="text-align: left"><code>\</code></th>
+						<th style="text-align: left"><code>!</code></th>
+						<th style="text-align: left"><code>/</code></th>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>1</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">14</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>2</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>3</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>4</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+					</tr>
+				</table>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller">
+					<tr>
+						<th colspan="2" style="text-align: left"><code>\</code> and <code>/</code></th>
+					</tr>
+					<tr>
+						<th style="text-align: left">size 6</th>
+						<td>
+							<code>&nbsp;2 * line + </code>
+						</td>
+						<td class="expressionarea correct">
+							<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="-2" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: left">size 4</th>
+						<td>
+							<code>&nbsp;2 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<th style="text-align: left; padding-right: 1em">size SIZE</th>
+						<td>
+							<code>&nbsp;2 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+				</table>
+
+				<table class="expressiontable" style="font-size: smaller">
+					<tr>
+						<th colspan="2" style="text-align: left"><code>!</code></th>
+					</tr>
+
+					<tr>
+						<th style="text-align: left">size 6</th>
+						<td>
+							<code>-4 * line + </code>
+						</td>
+						<td class="expressionarea correct">
+							<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="26" />
+							<pre class="expressionsolution">26</pre>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: left">size 4</th>
+						<td>
+							<code>-4 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">18</pre>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: left; padding-right: 1em">size SIZE</th>
+						<td>
+							<code>-4 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<code>(</code>
+							<span class="expressionarea" style="padding-right: 0">
+								<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+								<pre class="expressionsolution">4</pre>
+							</span>
+							<code>&nbsp;* SIZE + </code>
+							<span class="expressionarea" style="padding-right: 0">
+								<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+								<pre class="expressionsolution">2</pre>
+							</span><code>)</code>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>

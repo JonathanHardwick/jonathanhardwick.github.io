@@ -1,0 +1,54 @@
+<div class="slide">
+	<h1>File <code>Scanner</code> usage</h1>
+
+      <!--
+         <p>
+           To use these methods, you need a variable of
+           type <code>Scanner</code>:
+         </p>
+
+         <pre>
+Scanner fileScanner = new Scanner(new File("input.txt"));
+String theNextString = <strong>fileScanner.next();</strong>
+</pre>
+         -->
+    <table class="linenumbertable">
+		<tr>
+			<td>
+		<pre class="linenumbers">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+
+</pre>  
+			  </td>
+			  <td>
+<pre>
+<ins>import java.io.*;	// for File
+import java.util.*;	// for Scanner</ins>
+
+public class FileScannerDemo {
+   public static void main(String[] args) <ins>throws FileNotFoundException</ins> {
+      File f = new File("test.txt");
+      Scanner input = new Scanner(f);	
+   }
+}	
+</pre>   
+</td>
+</tr>
+</table>         
+<ul>
+	<li>The <code>File</code> class is in the <code>java.io</code> package</li>
+	<!--<li>When constructing a new <code>File</code> object, specify the path of a file</li>  -->
+	<li>To read from a file, construct a <code>Scanner</code> object on that file's <code>File</code> object</li>
+	<li>Any method that constructs a <code>Scanner</code> object on a <code>File</code> needs to acknowledge the possibility of a <code>FileNotFoundException</code></li>                
+	<li>The <code>throws</code> clause is like a legal waiver: "I know bad things will happen if the file is missing but I accept that"
+</ul>
+</div>
+

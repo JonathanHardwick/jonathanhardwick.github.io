@@ -1,0 +1,40 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: What's the output?
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-s16-oddStuff">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		What output is produced by the following Java program?  Write the output in the box on the right side.
+	</p>
+	
+	<table class="expressiontable">
+		<tr>
+			<td>
+				<pre>
+public class OddStuff {
+    public static void main(String[] args) {
+        int number = 32;
+        for (int count = 1; count &lt;= number; count++) {
+            System.out.println(number);
+            number = number / 2;
+        }
+    }
+}
+</pre>
+			</td>
+			
+			<td>
+				<p>Output:</p>
+				<textarea class="expressionanswer" rows="4" cols="4" spellcheck="false"></textarea>
+				<pre class="expressionsolution">32
+16
+8
+4
+</pre>
+			</td>
+		</tr>
+	</table>
+</div>

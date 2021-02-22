@@ -1,0 +1,21 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Modify an existing
+    program</h1>
+
+  <p>
+    Modify your <code>MyFirstProgram</code> file to produce the following
+    console output.  Note the blank lines; you should include those in your
+    output.
+  </p>
+
+  <pre>
+Hello, world!
+I am learning to program in Java.
+I hope it is a lot of fun!
+
+I hope I get a good grade!
+
+Maybe I'll change my major to computer science.
+</pre>
+
+</div>

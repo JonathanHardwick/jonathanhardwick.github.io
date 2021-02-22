@@ -1,0 +1,57 @@
+<div class="slide">
+	<h1>Arrays as parameter/return (declare)</h1>
+
+	<pre>
+public static <var>type</var> <var>name</var>(<em><var>type</var>[] <var>name</var></em>) {   <span class="comment">// pass array parameter</span>
+</pre>
+
+	<pre>
+public static <em><var>type</var>[]</em> <var>name</var>(<var>parameters</var>) {   <span class="comment">// return array</span>
+</pre>
+
+	<ul>
+		<li>
+			Arrays can be passed as parameters and returned from methods.
+		</li>
+
+		<li>
+			This method takes an array of <code>double</code>s, and returns a new array of rounded <code>int</code>s:
+		</li>
+	</ul>
+
+	<pre class="compressed">
+public static <strong>int[]</strong> roundAll(<strong>double[]</strong> realNums) {
+    int[] roundedNums = new int[realNums.length];
+    for (int i = 0; i &lt; realNums.length; i++) {
+        roundedNums[i] = (int) Math.round(realNums[i]);
+    }
+    return roundedNums;
+}
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Arrays as parameter/return (call)</h1>
+
+	<ul>
+		<li>
+			Below is an example usage of the <code>roundAll</code> method from the previous slide:
+		</li>
+	</ul>
+
+	<pre class="compressed">
+import java.util.*; // to use Arrays
+
+public class MyProgram {
+    public static void main(String[] args) {
+        double[] realNumbers = {5.5, 7.31, 8.09, -3.234234, 2.0, 0.0};
+        int[] roundedNumbers = <em>roundAll(realNumbers)</em>;
+        System.out.println(Arrays.toString(roundedNumbers));
+    }
+    ...
+}
+
+<span class="comment">// Output: [5, 7, 8, -3, 2, 0]</span>
+</pre>
+</div>
+

@@ -1,0 +1,46 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: SlashFigure2
+	</h1>
+
+	<ul>
+		<li>
+			<p>
+				<strong>Add a class constant</strong> to your slash figure program so that it can be resized from its default of 6:
+			</p>
+
+			<table class="calltable">
+				<tr>
+					<th>size 4</th>
+					<th>size 7</th>
+				</tr>
+
+				<tr>
+					<td>
+						<pre class="output">
+!!!!!!!!!!!!!!
+\\!!!!!!!!!!//
+\\\\!!!!!!////
+\\\\\\!!//////
+</pre>
+					</td>
+					<td>
+						<pre class="output">
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+\\!!!!!!!!!!!!!!!!!!!!!!//
+\\\\!!!!!!!!!!!!!!!!!!////
+\\\\\\!!!!!!!!!!!!!!//////
+\\\\\\\\!!!!!!!!!!////////
+\\\\\\\\\\!!!!!!//////////
+\\\\\\\\\\\\!!////////////
+</pre>
+					</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+		
+	<p>
+		Test your code in the <a class="popup" href="../diff.html">Output Comparison Tool</a>.
+	</p>
+</div>

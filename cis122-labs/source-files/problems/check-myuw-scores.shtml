@@ -1,0 +1,46 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Check MyUW scores</h1>
+  
+  <p>
+    The scores you receive on homework and lab assignments are available for
+    you to view in MyUW.  Follow the instructions on <a class="popup"
+    href="http://www.cs.washington.edu/education/courses/cse142/11wi/myuw.shtml">this
+    page</a> to check your scores.  For each lab, there is an attendance score
+    and a homework score.  Because this is lab 4, you shouldn't expect to see
+    scores yet for lab 3, but you should see scores for labs 1 and 2.  You need
+    to get credit for both attendance and homework to get credit for a lab.
+    Make sure that you have scores for lab 1 and lab 2.  If you don't have
+    credit and you think you should, contact the head TA managing the labs,
+    Will Beebe (<a href="mailto:
+    nedrager@cs.washington.edu">nedrager@cs.washington.edu</a>).
+  </p>
+
+  <p>
+    Using the information on your MyUW page, fill in the values below.
+  </p>
+
+  <table class="expressiontable">
+    <tr>
+      <td class="expression">
+	class mean for a1 (i.e., average score for assignment 1)
+      </td>
+      <td>
+	<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+      </td>
+      <td>
+	<pre class="expressionsolution">8.81</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="expression">
+	class mean for lab1 (i.e., average score for lab 1)
+      </td>
+      <td>
+	<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+      </td>
+      <td>
+	<pre class="expressionsolution">0.98</pre>
+      </td>
+    </tr>
+  </table>
+</div>

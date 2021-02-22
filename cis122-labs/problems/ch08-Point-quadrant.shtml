@@ -1,0 +1,29 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>quadrant</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+8&problem=bjp3-8-e1-quadrantPoint">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Add the following method to the <code>Point</code> class:
+	</p>
+
+	<pre class="java">
+public int quadrant()
+</pre>
+
+	<p>
+		Returns which quadrant of the x/y plane this <code>Point</code> object falls in.
+		Quadrant 1 contains all points whose x and y values are both positive.
+		Quadrant 2 contains all points with negative x but positive y.
+		Quadrant 3 contains all points with negative x and y values.
+		Quadrant 4 contains all points with positive x but negative y.
+		If the point lies directly on the x and/or y axis, return 0.
+	</p>
+	
+	<p>
+		(Test your code in Practice-It! or by running the <code>PointMain</code> program.)
+	</p>
+</div>

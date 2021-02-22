@@ -1,0 +1,64 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: PromptNumbers2
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+7&problem=lab7-PromptNumbers2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			<strong>Modify</strong> your <code>PromptNumbers.java</code> program from a previous exercise.
+		</li>
+
+		<li>
+			<strong>Add a method</strong> that accepts an array as a parameter and prints the elements of that array in forward order.
+		</li>
+
+		<li>
+			Then <strong>add a second method</strong> that accepts an array as a parameter and prints the elements of that array in <em>backward</em> order.
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+	<ul style="float: right; font-size: smaller; display: none">
+		<li>
+			<a class="popup" href="problems/PromptNumbers2.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				PromptNumbers2.java
+			</a><br/>
+			(complete solution)
+		</li>
+	</ul>
+
+	<pre class="compressed">
+public class PromptNumbers2 {
+    public static void main(String[] args) {
+        int count = console.nextInt();
+        int[] nums = new int[count];
+        ...
+        System.out.println("Your numbers in forward order:");
+        <ins>printForward(nums);</ins>
+
+        System.out.println("Your numbers in backward order:");
+        <ins>printBackward(nums);</ins>
+    }
+
+    <ins>// Prints the elements of the given array in forward order.
+    public static void printForward(int[] a) {
+        for (int i = 0; i &lt; a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+    // Prints the elements of the given array in backward order.
+    public static void printBackward(int[] a) {
+        for (int i = a.length - 1; i &gt;= 0; i--) {
+            System.out.println(a[i]);
+        }
+    }</ins>
+}
+</pre>
+</div>

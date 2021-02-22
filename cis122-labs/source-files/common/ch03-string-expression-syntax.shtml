@@ -1,0 +1,85 @@
+<div class="slide">
+  <h1><code>String</code> methods</h1>
+
+  <table class="standard">
+    <tr>
+      <th>
+	Method name
+      </th>
+
+      <th>
+	Description
+      </th>
+    </tr>
+    
+    <tr>
+      <td>
+	<code>charAt(<var>index</var>)</code>
+      </td>
+      <td>
+	character at given index
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>indexOf(<var>str</var>)</code>
+      </td>
+      <td>
+	index where the start of the given <code>String</code> appears in this
+	string (-1 if not found)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>length()</code>
+      </td>
+      <td>
+	number of characters in this <code>String</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>replace(<var>str1</var>, <var>str2</var>)</code>
+      </td>
+      <td>
+	a new string with all occurrences of <var>str1</var> changed
+	to <var>str2</var>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="white-space: nowrap">
+	<code>substring(<var>index1</var>, <var>index2</var>)</code> <br />
+	or <code>substring(<var>index1</var>)</code><br />
+      </td>
+      <td>
+	the characters in this string from <var>index1</var> (inclusive)
+	to <var>index2</var> (exclusive); if <var>index2</var> is omitted,
+	grabs till end of string
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>toLowerCase()</code>
+      </td>
+      <td>
+	a new string with all lowercase letters
+      </td>
+					</tr>
+    
+    <tr>
+      <td>
+	<code>toUpperCase()</code>
+      </td>
+      <td>
+	a new string with all uppercase letters
+      </td>
+    </tr>
+  </table>
+
+</div>
+

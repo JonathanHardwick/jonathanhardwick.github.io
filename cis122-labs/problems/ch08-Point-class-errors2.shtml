@@ -1,0 +1,133 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Point class errors 2
+	</h1>
+
+	<table class="linenumbertable">
+		<tr>
+			<td>
+				<pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre>
+			</td>
+			<td>
+				<pre class="compressed">
+public class Point {
+    int x;                                       // Each Point object has
+    int y;                                       // an int x and y inside.
+
+    public void Point(int initX, int initY) {    // Constructor
+        initX = x;
+        initY = y;
+    }
+
+    public static double distanceFromOrigin() {  // Returns this point's
+        int x;                                   // distance from (0, 0).
+        int y;
+        double dist = Math.sqrt(x*x + y*y);
+        return dist;
+    }
+
+    public void translate(int dx, int dy) {      // Shifts this point's x/y
+        int x = x + dx;                          // by the given amounts.
+        int y = y + dy;
+    }
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		The above <code>Point</code> class has 8 errors.	Can you find them all?
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+	<ol>
+		<li>line 5: constructor header should not have the word <code>void</code></li>
+		<li>line 6-7: the assignment statements are backwards; reverse left/right sides of each</li>
+		<li>line 10: method header should not have the word <code>static</code></li>
+		<li>line 11-12: should not re-declare fields <code>x</code> and <code>y</code></li>
+		<li>lines 18-19: should not re-declare fields <code>x</code> and <code>y</code> (remove word <code>int</code>)</li>
+	</ol>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber noincrement"></span> - solution
+	</h1>
+
+	<table class="linenumbertable">
+		<tr>
+			<td>
+				<pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre>
+			</td>
+			<td>
+				<pre class="compressed">
+public class Point {
+    int x;
+    int y;
+
+    public <ins>Point</ins>(int initX, int initY) {
+        <ins>x = initX;</ins>
+        <ins>y = initY;</ins>
+    }
+
+    public <ins>double</ins> distanceFromOrigin() {
+        double dist = Math.sqrt(x*x + y*y);
+        return dist;
+    }
+
+    public void translate(int dx, int dy) {
+        <ins>x</ins> = x + dx;
+        <ins>y</ins> = y + dy;
+    }
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+</div>

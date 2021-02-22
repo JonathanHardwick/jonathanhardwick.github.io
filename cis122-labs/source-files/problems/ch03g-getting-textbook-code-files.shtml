@@ -1,0 +1,43 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Getting textbook code
+    files</h1>
+
+  <p>
+    The textbook includes many complete programs.  It can be helpful to
+    download and run these programs on your own computer.  To practice this, we
+    are going to have you download and store the case study from the end of
+    Chapter 3G.  To do so, follow these steps:
+    <ol>
+      <li>
+	Go to the <a class="popup"
+	href="../">class
+	web page</a>.
+      </li>
+      <li>
+	Click on the "textbook" tab.
+      </li>
+      <li>
+	Find the section labeled "Code Files" and click on the "code files"
+	link.
+      </li>
+      <li>
+	This will bring you to a directory listing that includes an entry for
+	each chapter.  Click on the link for "ch3g".
+      </li>
+      <li>
+	You want to download and save the file Pyramids.java.  Right-click on
+	the file name and choose the option to save the link in whatever folder
+	you have been using for lab work.
+      </li>
+      <li>
+	If you don't already have <code>DrawingPanel</code> in the folder you
+	have been using, then go back to the previous page or click on "Parent
+	Directory" and save <code>DrawingPanel.java</code> to your lab folder
+	as well.
+      </li>
+      <li>
+	Compile and run <code>Pyramids.java</code> in jGRASP.
+      </li>
+    </ol>
+  </p>
+</div>

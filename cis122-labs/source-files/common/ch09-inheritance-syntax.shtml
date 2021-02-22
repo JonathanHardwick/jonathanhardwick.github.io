@@ -1,0 +1,21 @@
+<div class="slide">
+  <h1>Inheritance (syntax)</h1>
+
+  <pre>
+public class <var>ClassName</var> extends <var>SuperClass</var> {
+    ...
+}
+</pre>
+
+  <ul>
+    <li>a subclass <em>inherits</em> all of the superclass's behavior and
+      can <em>override</em> methods.</li>
+    <li>To call an overridden method from the superclass, use
+      the <code>super</code> keyword:</li>
+  </ul>
+
+  <pre>
+super.<var>methodName</var>(<var>parameters</var>);
+</pre>
+</div>
+

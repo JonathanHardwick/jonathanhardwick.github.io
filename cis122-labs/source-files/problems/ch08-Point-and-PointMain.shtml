@@ -1,0 +1,23 @@
+<div class="slide">
+	<h1>
+		<code>Point</code> and <code>PointMain</code>
+	</h1>
+
+	<ul>
+		<li>
+			<strong>Download</strong> the following file
+			<a class="popup" href="problems/PointMain.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" /> 
+				PointMain.java
+			</a>
+			to your machine and open it with jGrasp.
+		</li>
+
+		<li>
+			Now edit <code>Point.java</code> and <strong>add two methods</strong> to the <code>Point</code> class as described on the next two slides.
+			The <code>PointMain</code> program calls these methods; you can use it to test your code.
+			Or you can test your code in Practice-It!
+		</li>
+	</ul>
+</div>
+

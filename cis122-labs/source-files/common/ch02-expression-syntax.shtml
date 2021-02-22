@@ -1,0 +1,37 @@
+<div class="slide">
+	<h1>Expressions</h1>
+	
+	<p>
+		Recall that Java has <strong>expressions</strong> to represent math and other computations.	Expressions may use <strong>operators</strong>, which are evaluated according to rules of <strong>precedence</strong>.  Every expression produces a value of a given <strong>type</strong>.
+	</p>
+	
+	<table class="calltable">
+		<tr>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Example</th>
+			<th>Result</th>
+		</tr>
+		
+		<tr>
+			<td><code>int</code></td>
+			<td>integers (up to 2<sup>31</sup> - 1)</td>
+			<td><code>3 + 4 * 5</code></td>
+			<td><code>23</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>double</code></td>
+			<td>real numbers (up to 10<sup>308</sup>)</td>
+			<td><code>3.0 / 2.0 + 4.1</code></td>
+			<td><code>5.6</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>String</code></td>
+			<td>text characters</td>
+			<td><code>"hi" + (1 + 1) + "u"</code></td>
+			<td><code>"hi2u"</code></td>
+		</tr>
+	</table>
+</div>

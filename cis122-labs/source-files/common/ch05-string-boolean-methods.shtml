@@ -1,0 +1,68 @@
+<div class="slide">
+	<h1><code>String</code> methods with <code>boolean</code> results</h1>
+
+	<table class="standard">
+		<tr>
+			<th>
+				Method name
+			</th>
+
+			<th>
+				Description
+			</th>
+		</tr>
+		
+		<tr>
+			<td>
+				<var>string</var><code>.equals(<var>string</var>)</code>
+			</td>
+			<td>
+				whether the two strings are identical
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.equalsIgnoreCase(<var>string</var>)</code>
+			</td>
+			<td>
+				whether the two strings are identical, ignoring capitalization
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.startsWith(<var>string</var>)</code>
+			</td>
+			<td>
+				whether this string begins with the characters of the given string
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.endsWith(<var>string</var>)</code>
+			</td>
+			<td>
+				whether this string ends with the characters of the given string
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.contains(<var>string</var>)</code>
+			</td>
+			<td>
+				whether the characters of the given string occur within this string
+			</td>
+		</tr>
+	</table>
+	
+	<pre class="compressed">
+String name = "Professor Smith";
+if (<em>name.startsWith("Prof")</em>) {
+    System.out.println("When are your office hours?");
+}
+</pre>
+</div>
+

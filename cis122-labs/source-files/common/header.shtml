@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!--#set var="SCHOOL" value="Building Java Programs" -->
+<!--#set var="COURSE" value="3rd edition" -->
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title><!--#echo var="SCHOOL" --> <!--#echo var="COURSE" --> Lab: <!--#echo var="LAB_NAME" --></title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1><!--#echo var="SCHOOL" -->, <!--#echo var="COURSE" --></h1>
+			<h2>Lab <!--#echo var="LAB_NUMBER" -->: <!--#echo var="LAB_NAME" --></h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1><!--#echo var="SCHOOL" -->, <!--#echo var="COURSE" --></h1>
+			<h2>Lab: <!--#echo var="LAB_NAME" --></h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2013 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>

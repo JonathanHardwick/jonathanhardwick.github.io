@@ -1,0 +1,27 @@
+<div class="slide">
+	<h1>
+		Point class
+	</h1>
+	
+	<p>
+		Suppose you are given a class named <code>Point</code> with the following contents:
+	</p>
+	
+	<pre class="compressed">
+// A Point represents a 2-D (x, y) position with integer coordinates.
+public class Point {
+    private int x;
+    private int y;
+    
+    public Point()                          // (0, 0)
+    public Point(int x, int y)
+    
+    public int getX()                       // return field values
+    public int getY()
+    public double distanceFromOrigin()      // distance from (0, 0)
+    public double distance(Point other)     // distance from another point
+    public void setLocation(int x, int y)   // set x/y to the given values
+    public void translate(int dx, int dy)   // shift x/y by the given amounts
+    public String toString()                // string e.g. "(4, -7)"
+</pre>
+</div>

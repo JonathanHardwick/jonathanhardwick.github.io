@@ -1,0 +1,71 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Array code tracing
+	</h1>
+
+	<p>
+		Fill in the array with the values that would be stored after the code executes:
+	</p>
+
+	<pre class="compressed">
+int[] data = new int[8];
+data[0] = 3;
+data[7] = -18;
+data[4] = 5;
+data[1] = data[0];
+
+int x = data[4];
+data[4] = 6;
+data[x] = data[0] * data[1];
+</pre>
+
+	<table class="arraytable">
+		<tr>
+			<th style="padding-right: 1em">index</th>
+			<th>0</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th>6</th>
+			<th>7</th>
+		</tr>
+
+		<tr>
+			<th style="padding-right: 1em">value</th>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">3</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">3</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">0</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">0</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">6</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">9</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">0</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">-18</span>
+			</td>
+		</tr>
+	</table>
+</div>

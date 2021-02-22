@@ -1,0 +1,25 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: pay
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&amp;problem=lab4-pay">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Write a method named <code>pay</code> that accepts two parameters: a real number for a TA's salary, and an integer for the number of hours the TA worked this week.
+		The method should return how much money to pay the TA.
+		For example, the call <code>pay(5.50, 6)</code> should return <code>33.0</code>.
+	</p>
+	
+	<p>
+		The TA should receive "overtime" pay of 1 &frac12; normal salary for any hours above 8.
+		For example, the call <code>pay(4.00, 11)</code> should return (4.00 * 8) + (6.00 * 3) or <code>50.0</code>.
+	</p>
+	
+	<ul>
+		<li>
+			(Try solving this problem in Practice-It by clicking the icon above.)
+		</li>
+	</ul>
+</div>

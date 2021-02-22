@@ -1,0 +1,25 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: lastDigit
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-e9-lastDigit">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Write a method named <code>lastDigit</code> that returns the last digit
+      of an integer.  For example, <code>lastDigit(3572)</code> should
+      return <code>2</code>.  It should work for negative numbers as well.  For
+      example, <code>lastDigit(-947)</code> should return <code>7</code>.
+    </li>
+					
+    <li>
+      Try solving this problem in Practice-It! using the link above.
+    </li>
+					
+    <li class="hint">
+      (Hint: This is a short method.)
+    </li>
+  </ul>
+</div>

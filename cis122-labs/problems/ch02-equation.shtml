@@ -1,0 +1,71 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Equation</h1>
+                                
+  <p>
+    Suppose you have a real number variable <code>x</code>.  Write a Java
+    expression that computes a variable named <code>y</code> storing the
+    following value:
+  </p>
+                                
+  <p style="margin-left: 2em">
+    y = 12.3x<sup>4</sup> - 9.1x<sup>3</sup> + 19.3x<sup>2</sup> - 4.6x + 34.2
+  </p>
+                                
+  <p>
+    (We haven't learned a way to do exponents yet, but you can simulate them
+    using several multiplications.)
+  </p>
+                                
+  <p class="continued">
+    Use the example program on the next slide to test your code.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - Example
+    code</h1>
+                                
+  <p>
+    Copy/paste this program into jGRASP to test your solution.
+  </p>
+                                
+  <pre>
+// expected output:
+// y is 7043.7
+
+public class EquationY {
+    public static void main(String[] args) {
+        double x = 5;
+
+        double y = <var>put your expression for y here</var> ;
+
+        System.out.println("y is " + y);
+    }
+}
+</pre>
+                                
+  <p class="continued">
+    (answer on next slide)
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <pre>
+double y = <strong>12.3*x*x*x*x - 9.1*x*x*x + 19.3*x*x - 4.6*x + 34.2</strong>;
+</pre>
+
+  <p>
+    If you want an added challenge, try to come up with a way to compute the
+    above value while using the <code>*</code> operator no more than 4 times.
+  </p>
+                                
+  <p class="continued">
+    (click Next &rarr; for answer)
+  </p>
+
+  <pre class="incremental">
+double y = <strong>(((12.3 * x - 9.1) * x + 19.3) * x - 4.6) * x + 34.2</strong>;
+</pre>
+</div>

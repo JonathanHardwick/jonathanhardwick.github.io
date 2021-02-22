@@ -1,0 +1,23 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>stretch</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Sections%2FSection+7&amp;problem=section7-stretch">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method named <code>stretch</code> that accepts an array of integers as a parameter and returns a new array twice as large as the original, replacing every integer from the original array with a pair of integers,
+		each half the original.
+		If a number in the original array is odd, then the first number in the new pair should be one higher than the second so that the sum equals the original number.
+	</p>
+	
+	<p>
+		For example, if a variable named <code>list</code> refers to an array storing the values <code>{18, 7, 4, 24, 11}</code>,
+		the call of <code>stretch(list)</code> should return a new array containing <code>{9, 9, 4, 3, 2, 2, 12, 12, 6, 5}</code>.
+		(The number 18 is stretched into the pair 9, 9, the number 7 is stretched into 4, 3, the number 4 is stretched into 2, 2, the number 24 is stretched into 12, 12 and the number 11 is stretched into 6, 5.)
+	</p>
+
+	<p>
+		Click on the check-mark above to try out your solution in Practice-it!
+	</p>
+</div>

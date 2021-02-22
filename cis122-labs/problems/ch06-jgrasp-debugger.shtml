@@ -1,0 +1,176 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: jGRASP Debugger
+  </h1>
+
+  <ul>
+    <p>
+      When you write a program that processes a large data file, the debugger
+      can be particularly helpful to allow you to see what's going on.  We are
+      going to debug the <code>ZipLookup</code> program that you downloaded
+      from the class web page.
+    </p>
+
+    <p>
+      This program makes two passes through the data file.  First it looks for
+      the target zip code in the method named <code>find</code>.  Then it
+      shows all matches in the method named <code>showMatches</code>.  We want
+      to debug <code>showMatches</code>.
+    </p>
+
+    <p>
+      The data file has a total of 43,191 zip codes in it, so it is not
+      practical to have it display all of the data.  That's why it's important
+      to have good debugging skills to be able to selectively stop the program
+      at certain points to see what is going on.  This will be a helpful skill
+      when you work on the programming assignment.
+    </p>
+
+    <p>
+      Ask a TA for help if you have trouble setting or clearing break points or
+      otherwise completing this exercise.
+    </p>
+
+    <p class="continued">
+      continued on the next slide...
+    </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP
+    Debugger</h1>
+                                
+  <ul>
+    <li>
+      We are going to debug the program as it searches for all zip codes with
+      0.3 miles of the White House, which has zip code 20500.  Run the program
+      with those input values:
+      <pre class="compressed">
+What zip code are you interested in? 20500
+And what proximity (in miles)? 0.3
+
+20500: Washington, DC
+zip codes within 0.3 miles:
+    20045 Washington, DC, 0.26 miles
+    20500 Washington, DC, 0.00 miles
+    20501 Washington, DC, 0.27 miles
+    20502 Washington, DC, 0.27 miles
+</pre>
+    </li>
+    <li>
+      Now let's see what is true just before the <code>while</code> loop in
+      the <code>showMatches</code> method executes.  Set a break point on the
+      while loop itself.  Then debug to find <code>lat1</code>
+      and <code>long1</code> (latitude and longitude of the White House zip
+      code).
+
+      <table class="expressiontable">
+        <tr>
+          <td class="expression"><code>lat1</code></td>
+          <td><input type="text" class="expressionanswer" size="12"
+                     spellcheck="false" /></td>
+          <td><pre class="expressionsolution">38.894781</pre></td>
+        </tr>
+        <tr>
+          <td class="expression"><code>long1</code></td>
+          <td><input type="text" class="expressionanswer" size="12"
+                     spellcheck="false" /></td>
+          <td><pre class="expressionsolution">-77.036122</pre></td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+                                
+  <p class="continued">
+    continued on the next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP
+    Debugger</h1>
+                                
+  <p>
+    Clear your previous break point and set a new break point inside on
+    the <code>printf</code> inside the <code>if</code>.  Then hit the resume
+    button that looks like a play button and fill in the table below with the
+    values for <code>zip</code>, <code>lat2</code>, and <code>long2</code>.
+  </p>
+
+  <table class="arraytable">
+    <tr>
+      <th><code>zip</code></th>
+      <th><code>lat2</code></th>
+      <th><code>long2</code></th>
+    </tr>
+
+    <tr>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="6"
+	       spellcheck="true" />
+	<span class="expressionsolution">20045</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">38.896599</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">-77.0319</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="6"
+	       spellcheck="true" />
+	<span class="expressionsolution">20500</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">38.894781</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">-77.036122</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="6"
+	       spellcheck="true" />
+	<span class="expressionsolution">20501</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">38.89872</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">-77.036198</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="6"
+	       spellcheck="true" />
+	<span class="expressionsolution">20502</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">38.89872</span>
+      </td>
+      <td class="expressionarea">
+	<input type="text" value="" class="expressionanswer" size="12"
+	       spellcheck="true" />
+	<span class="expressionsolution">-77.036198</span>
+      </td>
+    </tr>
+  </table>
+</div>

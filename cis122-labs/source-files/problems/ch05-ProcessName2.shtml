@@ -1,0 +1,31 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: ProcessName2
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&problem=lab4-ProcessName2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Modify your previous <code>ProcessName</code> program so that it re-prompts until
+		the user types a name that is at least 5 letters total in length and has at
+		least one space in it.	Example:
+	</p>
+	
+	<pre>
+Type your name: <span class="userinput">Joe</span>
+Error, must be at least 5 chars with a space.
+Type your name: <span class="userinput">O K!</span>
+Error, must be at least 5 chars with a space.
+Type your name: <span class="userinput">what</span>
+Error, must be at least 5 chars with a space.
+Type your name: <span class="userinput">Tyler Durden</span>
+Your name is: Durden, T.
+</pre>
+
+	<ul>
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>

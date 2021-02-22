@@ -1,0 +1,30 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: AgeCheck2</h1>
+
+  <ul>
+    <li>
+      Now <strong>replace</strong> your previous <code>AgeCheck</code>
+      program's <code>message</code> method with:
+
+      <pre style="font-size: smaller">
+    // Possibly prints some message(s) to the user based on the given age
+    public static void message(int age) {
+        if (age &gt;= 21) {
+            System.out.println("I can legally purchase alcohol!");
+        } else if (age &gt;= 17) {
+            System.out.println("I can purchase a ticket to an R-rated movie.");
+        } else if (age &gt;= 16) {
+            System.out.println("I can get my driver's license!");
+        }
+    }
+</pre>
+    </li>
+
+    <li>
+      For some age(s), the message(s) printed are not accurate.  (In some
+      cases, it should print no messages; in some cases, one message; and in
+      others, many messages.)  Improve the usage of <code>if</code>s
+      and <code>else</code>s in this method to behave properly. 
+    </li>
+  </ul>
+</div>

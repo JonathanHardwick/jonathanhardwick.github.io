@@ -1,0 +1,17 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>Shark</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+5&problem=practicefinal5-Shark">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		<code>Shark</code> objects should alternate between moving to the north and south as follows:
+		first move 1 step north, then 2 steps south, then 3 steps north, then 4 steps south, then 5 steps north, then 6 steps south, and so on, each time moving one farther than previously. 
+	</p>
+	
+	<p>
+		Solve this program in jGRASP with <code>CritterMain</code>, then test it using the Practice-it link above. 
+	</p>
+</div>

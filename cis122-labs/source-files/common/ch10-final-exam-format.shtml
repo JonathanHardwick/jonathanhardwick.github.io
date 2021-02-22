@@ -1,0 +1,38 @@
+<div class="slide">
+	<h1>
+		Final exam review
+	</h1>
+	
+	<p>
+		The CSE 142 final exam is usually very similar to the format of the <strong>practice exams</strong>.
+		The following kinds of problems will be on your final exam:
+	</p>
+	
+	<ul>
+		<li>
+			array simulation
+		</li>
+		
+		<li>
+			reference mystery
+		</li>
+		
+		<li>
+			inheritance mystery
+		</li>
+		
+		<li>
+			programming with Scanner (file I/O; Ch. 6)
+		</li>
+		
+		<li>
+			programming with arrays (Ch. 7)
+		</li>
+		
+		<li>
+			programming with Critters (Ch. 9)
+		</li>
+	</ul>
+	
+	<p>Feel free to <strong>skip ahead</strong> to the types of problems on which you need the most practice.</p>
+</div>

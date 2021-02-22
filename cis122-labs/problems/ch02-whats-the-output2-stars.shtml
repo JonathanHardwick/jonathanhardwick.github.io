@@ -1,0 +1,57 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: What's the output?</h1>
+
+  <ul>
+    <li>What output is produced by the following Java method?
+
+      <pre>
+public static void stars() {
+    for (int i = 1; i &lt;= 10; i++) {
+        for (int j = 1; j &lt;= i; j++) {
+            System.out.print(&quot;*&quot;);
+        }
+        for (int j = 1; j &lt;= 20 - 2 * i; j++) {
+            System.out.print(&quot; &quot;);
+        }
+        for (int j = 1; j &lt;= i; j++) {
+            System.out.print(&quot;*&quot;);
+        }
+        System.out.println();
+    }
+}
+</pre>
+    </li>
+                                        
+    <li>
+      (Try to figure it out without running the code... <br />
+      If you give up, copy and paste it into jGrasp and run it!)
+    </li>
+
+    <li class="incremental">
+      Hint: Think of each inner loop from 1 to <em>X</em> as a loop that
+      prints <em>X</em> copies of the given character.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <ul>
+    <li>
+      Answer:
+      <pre>
+*                  *
+**                **
+***              ***
+****            ****
+*****          *****
+******        ******
+*******      *******
+********    ********
+*********  *********
+********************
+</pre>
+    </li>
+  </ul>
+</div>

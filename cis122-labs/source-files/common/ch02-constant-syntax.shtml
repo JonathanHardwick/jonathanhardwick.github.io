@@ -1,0 +1,20 @@
+<div class="slide">
+	<h1>Class constants</h1>
+	
+	<p>
+		A <strong>class constant</strong> is a global value that cannot be changed.
+	</p>
+	
+	<pre>
+public static final <var>type</var> <var>name</var> = <var>expression</var>;
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+public static final int DAYS_PER_WEEK = 7;
+public static final double TAX_RATE = 0.10;
+</pre>
+</div>

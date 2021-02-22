@@ -1,0 +1,39 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Powers of 2
+		<a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-e2-printPowersOf2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			<strong>Write</strong> a Java method <code>printPowersOf2</code> that uses a cumulative algorithm to print out the powers of 2 up to 2<sup><em>x</em></sup>.
+			It should take a parameter that determines <em>x</em>; that is, the exponent of the highest power of 2 to be printed.
+			For example, the following call:
+
+			<pre>
+printPowersOf2(10);
+</pre>
+
+			<p>
+				should produce the following output, because 2<sup>10</sup> = 1024:
+			</p>
+
+			<pre>
+1 2 4 8 16 32 64 128 256 512 1024
+</pre>
+
+			<p>
+				(For this problem it's okay if your numbers have a <code>.0</code> at the end of them.)
+			</p>
+		</li>
+
+		<li>
+			<strong>Complete</strong> the program by writing a <code>main</code> method.
+			<strong>Call</strong> your method several times in <code>main</code> to ensure that it works.
+			Also check your answer using Practice-It by clicking the check-mark icon above.
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,51 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span> - Math expressions</h1>
+	
+	<p>
+		Write the results of each expression.
+		Use the proper type (<code>.0</code> for a <code>double</code>). 
+	</p>
+	
+	<table class="expressiontable">
+		<tr>
+			<td class="expression"><code>Math.ceil(9.17)</code></td>
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">10.0</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>Math.pow(2, 4)</code></td>
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">16.0</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>Math.sqrt(64)</code></td>
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">8.0</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>Math.floor(12.73) + Math.max(8, 5)</code></td> 
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td> 
+			<td><pre class="expressionsolution">20.0</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>Math.abs(Math.min(-1, -3))</code></td>
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td> 
+			<td><pre class="expressionsolution">3</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>Math.ceil(Math.random())</code></td>
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td> 
+			<td><pre class="expressionsolution">1.0</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>-Math.pow(2, 2) + Math.pow(-2, 3) + Math.pow(2, -2)</code></td> 
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td> 
+			<td><pre class="expressionsolution">-11.75</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>Math.round(4.25) + Math.round(5.38) + Math.round(6.49)</code></td> 
+			<td><input type="text" class="expressionanswer" size="8" spellcheck="false" /></td> 
+			<td><pre class="expressionsolution">15</pre></td>
+		</tr>
+	</table>
+</div>

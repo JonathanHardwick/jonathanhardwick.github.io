@@ -1,0 +1,20 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>printStrings</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+1&amp;problem=practicefinal1-printStrings">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> called
+    <code>printStrings</code> that takes as a parameter a <code>Scanner</code>
+    holding a sequence of integer/string pairs and that prints
+    to <code>System.out</code> one line of output for each pair with the given
+    string repeated the given number of times.
+  </p>
+
+  <p>
+    You should solve this problem in Practice-It!
+</p>
+
+</div>

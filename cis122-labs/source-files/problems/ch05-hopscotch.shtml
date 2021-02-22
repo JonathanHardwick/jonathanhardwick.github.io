@@ -1,0 +1,33 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: hopscotch
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+6&amp;problem=practicemidterm6-hopscotch">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> named <code>hopscotch</code> that accepts
+    an integer parameter for a number of "hops" and prints a hopscotch board of
+    that many hops.
+  </p>
+
+  <p>
+    For example, the call <code>hopscotch(3);</code> would produce the
+    following output:
+  </p>
+				
+  <pre>
+   1
+2     3
+   4
+5     6
+   7
+8     9
+   10
+</pre>
+
+  <p>
+    Try to solve this problem in Practice-It: click on the check-mark above!
+  </p>
+</div>

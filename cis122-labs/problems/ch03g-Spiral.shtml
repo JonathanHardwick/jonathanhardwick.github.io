@@ -1,0 +1,75 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Spiral
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Supplement+3G&problem=bjp3-3g-e13-Spiral">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<div class="figureright">
+		<img src="images/ch03g-spiral.png" alt="spiral" width="182" height="242" />
+	</div>
+	
+	<p>
+		Write a Java program that draws the following output using a <code>for</code> loop.
+	</p>
+	
+	<ul>
+		<li>
+			window size: 170 x 170 px
+		</li>
+		<li>
+			"spiral" lines starting from (0, 10), going right 160, down 150, left 150, up 140, right 140, down 130, left 130, up 120, ...
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+	
+	<pre style="font-size: smaller">
+import java.awt.*;
+
+public class Spiral {
+    public static void main(String[] args) {
+        DrawingPanel panel = new DrawingPanel(170, 170);
+        Graphics g = panel.getGraphics();
+        for (int i = 0; i &lt; 8; i++) {
+            g.drawLine(      10*i,   10 + 10*i, 160 - 10*i,  10 + 10*i);  // top
+            g.drawLine(160 - 10*i,   10 + 10*i, 160 - 10*i, 160 - 10*i);  // right
+            g.drawLine( 10 + 10*i,  160 - 10*i, 160 - 10*i, 160 - 10*i);  // bottom
+            g.drawLine( 10 + 10*i,   20 + 10*i,  10 + 10*i, 160 - 10*i);  // left
+        }
+    }
+}
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer, alternative version</h1>
+	
+	<pre style="font-size: smaller">
+import java.awt.*;
+
+public class Spiral {
+    public static void main(String[] args) {
+        DrawingPanel panel = new DrawingPanel(170, 170);
+        Graphics g = panel.getGraphics();
+        int x = 0, y = 10;
+        int len = 160;
+        for (int i = 0; i &lt; 8; i++) {
+            g.drawLine(x, y, x + len, y);  // right
+            x = x + len;
+            len = len - 10;
+            g.drawLine(x, y, x, y + len);  // down
+            y = y + len;
+            g.drawLine(x, y, x - len, y);  // left
+            x = x - len;
+            len = len - 10;
+            g.drawLine(x, y, x, y - len);  // up
+            y = y - len;
+        }
+    }
+}
+</pre>
+</div>

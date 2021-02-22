@@ -1,0 +1,19 @@
+<div class="slide">
+  <h1>If you finish them all...</h1>
+  
+  <p>
+    If you finish all the exercises, try out
+    our <a href="http://practiceit.cs.washington.edu/"><strong>Practice-It</strong></a>
+    web tool.  It lets you solve Java problems from our <em>Building Java
+    Programs</em> textbook.
+  </p>
+  
+  <p>
+    You can view an exercise, type a solution, and submit it to see if you
+    have solved it correctly.
+  </p>
+  
+  <p>
+    Choose some problems from the book and try to solve them!
+  </p>
+</div>

@@ -1,0 +1,169 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: inheritance mystery 2
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+8&problem=practicefinal8-inheritanceMystery">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Assume the following classes have been defined:
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre class="java compressed">
+public class Denny extends John {
+    public void method1() {
+        System.out.print("denny 1 ");
+    }
+    public String toString() {
+        return "denny " + super.toString();
+    }
+}
+</pre>
+			<td>
+				<pre class="java compressed">
+public class Cass {
+    public void method1() {
+        System.out.print("cass 1 ");
+    }
+    public void method2() {
+        System.out.print("cass 2 ");
+    }
+    public String toString() {
+        return "cass";
+    }
+}
+</pre>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">
+				<pre class="java compressed">
+public class Michelle extends John {
+    public void method1() {
+        System.out.print("michelle 1 ");
+    }
+}
+</pre>
+			<td style="vertical-align: top">
+				<pre class="java compressed">
+public class John extends Cass {
+    public void method2() {
+        method1();
+        System.out.print("john 2 ");
+    }
+    public String toString() {
+        return "john";
+    }
+}
+</pre>
+		</tr>
+	</table>
+
+		<p class="continued">
+			continued on the next slide...
+		</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - inheritance mystery 2</h1>
+	
+	<table class="expressiontable" style="float: right; margin-left: 1em; background-color: white; border: 1px dotted gray;">
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">cass 1</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">cass 2</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">cass</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">denny 1</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">denny 1 john 2</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">denny john</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">cass 1</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">cass 1 john 2</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">john</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">michelle 1</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">michelle 1 john 2</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" class="expressionanswer" size="16" spellcheck="false" />
+				<pre class="expressionsolution">john</pre>
+			</td>
+		</tr>
+	</table>
+	
+	<p>
+		Consider the code below that uses these classes. <br />
+		Write each line of its output in the boxes at right.
+	</p>
+
+	<pre class="compressed">
+Cass[] elements = {new Cass(),
+                   new Denny(),
+                   new John(),
+                   new Michelle()};
+for (int i = 0; i &lt; elements.length; i++) {
+    elements[i].method1();
+    System.out.println();
+    elements[i].method2();
+    System.out.println();
+    System.out.println(elements[i]);
+    System.out.println();
+}
+</pre>
+
+	</p>
+</div>

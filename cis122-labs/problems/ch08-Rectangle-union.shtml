@@ -1,0 +1,32 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Rectangle union
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+8&problem=bjp3-8-e21-unionRectangle">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			Write an instance method <code>union</code> that will be placed inside the <code>Rectangle</code> class.  The method accepts another rectangle <em>r</em> as a parameter and turns the current rectangle into the union of itself and <em>r</em>; that is, modifies the fields so that they represent the smallest rectangular region that completely contains both this rectangle and <em>r</em>.
+		</li>
+		
+		<li>
+			For example, the following calls would produce the following rectangles:
+			
+			<pre class="compressed">
+Rectangle rect1 = new Rectangle(5, 12, 4, 6);
+Rectangle rect2 = new Rectangle(6,  8, 5, 7);
+Rectangle rect3 = new Rectangle(14, 9, 3, 3);
+Rectangle rect4 = new Rectangle(10, 3, 5, 8);
+
+rect1.union(rect2);   <span class="comment">// {(5, 8), 6x10}</span>
+rect4.union(rect3);   <span class="comment">// {(10, 3), 7x9}</span>
+</pre>
+		</li>
+		
+		<li>
+			Test your solution to this problem in Practice-It.
+		</li>
+	</ul>
+</div>

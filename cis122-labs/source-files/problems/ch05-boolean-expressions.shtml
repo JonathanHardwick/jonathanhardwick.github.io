@@ -1,0 +1,58 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Boolean Expressions</h1>
+
+	<p>
+		Write the result of each expression as either <code>true</code>
+		or <code>false</code>, given the following variables.
+	</p>
+
+	<pre class="compressed">
+int x = 12;
+int y = 7;
+int z = 28;
+String s = "mid term";
+</pre>
+
+	<table class="expressiontable">
+		<tr>
+			<td class="expression"><code>x &lt; 14</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>!(x % 2 &lt; 1)</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">false</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>x &lt; y || x &lt; z</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>z / x &lt; x / y * x</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>s.length() == y</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">false</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>s.toUpperCase().equals("MID TERM")</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>!s.equals("mid term") || x * y != z</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>s.substring(z / x).length() &gt; y</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">false</pre></td>
+		</tr>
+	</table>
+</div>

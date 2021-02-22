@@ -1,0 +1,35 @@
+<div class="slide">
+  <h1><code>if</code>/<code>else</code> factoring</h1>
+  
+  <ul>
+    <li>
+      It's easy to introduce redundancy in the branches of
+      an <code>if</code>/<code>else</code>.  For example:
+
+      <pre style="font-size: smaller">
+if (x &lt; 30) {
+    <em class="bad">a = 2;</em>
+    x++;
+    <em class="bad">System.out.println("CSE 142 TAs are awesome! " + x);</em>
+} else {
+    <em class="bad">a = 2;</em>
+    <em class="bad">System.out.println("CSE 142 TAs are awesome! " + x);</em>
+}
+</pre>
+    </li>
+
+    <li>
+      The code can be <em>factored</em> out to become: (notice that
+      the <code>else</code> went away!) 
+
+      <pre style="font-size: smaller">
+<em class="good">a = 2;</em>
+if (x &lt; 30) {
+    x++;
+}
+<em class="good">System.out.println("CSE 142 TAs are awesome! " + x);</em>
+</pre>
+    </li>
+  </ul>
+</div>
+

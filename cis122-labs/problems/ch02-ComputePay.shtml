@@ -1,0 +1,19 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>ComputePay</code></h1>
+
+	<p>
+		The following program redundantly repeats the same expressions many times.  Download it and open it in jGRASP, then modify the program to remove the redundancy using <strong>variables</strong>.  Use an appropriate type for each variable.
+	</p>
+
+	<ul>
+		<li>
+			<a class="popup" href="problems/ComputePay.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				ComputePay.java</a>
+		</li>
+	</ul>
+	
+	<p>
+		The program's output should be the same after your modifications.  No expression should be computed more than once in the code.
+	</p>
+</div>

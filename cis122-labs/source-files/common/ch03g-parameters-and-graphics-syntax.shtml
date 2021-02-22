@@ -1,0 +1,25 @@
+<div class="slide">
+  <h1>Parameterized methods and Graphics</h1>
+				
+  <p>
+    When you want to divide a graphical program into multiple drawing methods,
+    you must pass Graphics g as a parameter in addition to any other
+    parameters.  Example:
+  </p>
+				
+  <pre>
+public static void main(String[] args) {
+    DrawingPanel panel = new DrawingPanel(400, 300);
+    Graphics g = panel.getGraphics();
+    ...
+    drawStuff(<em>g, </em>13, 52, 7);
+}
+
+public static void drawStuff(<em>Graphics g</em>, int a, int b, int c) {
+    g.drawLine(a, 45, b, c);
+    ...
+}
+</pre>
+				
+</div>
+

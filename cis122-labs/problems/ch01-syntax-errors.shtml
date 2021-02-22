@@ -1,0 +1,113 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+                                
+  <ul>
+    <li>
+      The following program contains 11 errors!  Work with a partner to find them all.  You may want to run the program and jGRASP and see what kinds of error messages are shown for each kind of mistake.
+
+      <table class="linenumbertable">
+        <tr>
+          <td>
+            <pre class="linenumbers">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+</pre>
+          </td>
+          <td>
+            <pre>
+public class Tricky
+    public static main(String args) {
+        System.out.println(Hello world);
+        system.out.Pritnln("Do you like this program"?);
+        System.out.println()
+
+        System.println("I wrote it myself.";
+    {
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      Once you think you've found the errors, create/compile/run a corrected
+      version of this program.
+    </li>
+  </ul>
+                                
+  <p class="continued">
+    answer on next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <ol style="font-size: smaller">
+    <li>
+      line 1: missing <code>{</code> after <code>Tricky</code>
+    </li>
+    <li>
+      line 2: missing <code>void</code> before <code>main</code>
+    </li>
+    <li>
+      line 2: missing <code>[]</code> after <code>String</code>
+    </li>
+    <li>
+      line 3: missing <code>"</code> marks around <code>Hello world</code>
+    </li>
+    <li>
+      line 4: <code>system</code> should be <code>System</code> (uppercase S)
+    </li>
+    <li>
+      line 4: <code>Pritnln</code> should be <code>println</code> (lowercase P
+      and fixed spelling)
+    </li>
+    <li>
+      line 4: <code>?</code> should be before <code>"</code>
+    </li>
+    <li>
+      line 5: missing semicolon after <code>()</code>
+    </li>
+    <li>
+      line 7: missing <code>)</code> after <code>"</code>
+    </li>
+    <li>
+      line 8: <code>System.println</code> should
+      be <code>System.out.println</code>
+    </li>
+    <li>
+      line 8: <code>{</code> should be <code>}</code>
+    </li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - corrected
+    version</h1>
+                                
+  <ul>
+    <li>
+      Here is a corrected version of the program:
+
+      <pre>
+public class Tricky <ins>{</ins>
+    public static <ins>void</ins> main(String<ins>[]</ins> args) {
+        System.out.println(<ins>"</ins>Hello world<ins>"</ins>);
+        <ins>S</ins>ystem.out.<ins>println</ins>("Do you like this program<ins>?</ins>");
+        System.out.println()<ins>;</ins>
+
+        System.<ins>out.</ins>println("I wrote it myself."<ins>)</ins>;
+    <ins>}</ins>
+}
+</pre>
+    </li>
+  </ul>
+</div>

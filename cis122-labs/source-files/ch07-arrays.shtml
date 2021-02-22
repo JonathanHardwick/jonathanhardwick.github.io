@@ -1,0 +1,40 @@
+<!--#set var="LAB_NUMBER" value="7" -->
+<!--#set var="LAB_NAME" value="Arrays" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use arrays for storing lists of data</li>
+		<li>practice using for loops to traverse and process array data</li>
+		<li>use arrays as parameters into and returns from methods</li>
+		<li>explore the idea of reference parameters</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>        
+</div> 
+
+<!--#include virtual="problems/ch07-array-declaration-syntax.shtml" -->
+<!--#include virtual="problems/ch07-quick-initialization-syntax.shtml" -->
+<!--#include virtual="problems/ch07-array-code-tracing.shtml" -->
+<!--#include virtual="problems/ch07-array-code-tracing-2.shtml" -->
+<!--#include virtual="problems/ch07-PromptNumbers.shtml" -->
+<!--#include virtual="common/ch07-array-parameter-return-syntax.shtml" -->
+<!--#include virtual="common/ch07-arrays-method-syntax.shtml" -->
+<!--#include virtual="problems/ch07-array-reference-mystery.shtml" -->  
+<!--#include virtual="problems/ch07-array-reference-mystery2.shtml" -->
+<!--#include virtual="problems/ch07-array-mystery.shtml" --> 
+<!--#include virtual="problems/ch07-jgrasp-debugger.shtml" -->
+<!--#include virtual="problems/ch07-max-errors.shtml" -->
+<!--#include virtual="problems/ch07-PromptNumbers2.shtml" -->
+<!--#include virtual="problems/ch07-minGap.shtml" -->
+<!--#include virtual="problems/ch07-percentEven.shtml" -->
+<!--#include virtual="problems/ch07-copyRange.shtml" -->
+<!--#include virtual="problems/ch07-equals.shtml" --> 
+<!--#include virtual="problems/ch07-append.shtml" -->
+<!--#include virtual="problems/ch07-swapAll.shtml" -->  
+<!--#include virtual="problems/ch07-longestSortedSequence.shtml" -->    
+	
+<!--#include virtual="common/footer.shtml" -->

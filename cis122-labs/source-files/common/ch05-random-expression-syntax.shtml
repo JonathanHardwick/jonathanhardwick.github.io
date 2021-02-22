@@ -1,0 +1,63 @@
+<div class="slide">
+  <h1><code>Random</code> methods</h1>
+
+  <p>
+    To use these methods, you need a variable of type <code>Random</code> in
+    scope:
+  </p>
+
+  <pre>
+Random randy = new Random();
+int aRandomNumber = <strong>randy.nextInt(10);</strong>  <span class="comment">// 0-9</span>
+</pre>
+
+  <table class="standard">
+    <tr>
+      <th>
+	Method name
+      </th>
+
+      <th>
+	Returns...
+      </th>
+    </tr>
+    
+    <tr>
+      <td style="white-space: nowrap">
+	<code>nextInt()</code>
+      </td>
+      <td>
+	a random integer
+      </td>
+    </tr>
+
+    <tr>
+      <td style="white-space: nowrap">
+	<code>nextInt(<var>max</var>)</code>
+      </td>
+      <td>
+	a random integer between 0 (inclusive) and <var>max</var> (exclusive)
+      </td>
+    </tr>
+
+    <tr>
+      <td style="white-space: nowrap">
+	<code>nextDouble()</code>
+      </td>
+      <td>
+	a random real number between 0.0 and 1.0
+      </td>
+    </tr>
+
+    <tr>
+      <td style="white-space: nowrap">
+	<code>nextBoolean()</code>
+      </td>
+      <td>
+	a random <code>boolean</code> value: <code>true</code>
+	or <code>false</code>
+      </td>
+    </tr>
+  </table>
+</div>
+

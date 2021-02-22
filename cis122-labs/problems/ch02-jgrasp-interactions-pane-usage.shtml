@@ -1,0 +1,63 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Using jGRASP Interactions Pane
+	</h1>
+
+	<p>
+		In this exercise, you'll use the Interactions Pane to quickly discover the result of some expressions that would be difficult to evaluate by hand.  <strong>Copy/paste</strong> each expression below into the Interactions Pane to evaluate it, then input the answer into this slide.
+	</p>
+	
+	<table class="expressiontable">
+		<tr>
+			<td class="expression">
+				<code>123 * 456 - 789</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">55299</pre>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">
+				<code>3.14 + 1.59 * 2.65</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">7.3535</pre>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">
+				<code>2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">1024</pre>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">
+				<code>2 + 2 + "xyz" + 3 + 3</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">"4xyz33"</pre>
+			</td>
+		</tr>
+	</table>
+	
+	<p class="aside" style="font-size: smaller">
+		<em>(For the last expression, the Interactions Pane doesn't put <code>""</code> quotes around Strings when displaying results, so you must add those yourself if needed.  For example, if the Interactions Pane gives you a result of <code>abc123</code>, it should be written here as <code>"abc123"</code>.)</em>
+	</p>
+</div>

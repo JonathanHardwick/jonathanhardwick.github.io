@@ -1,0 +1,505 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: Parameters</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 3: Parameters</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: Parameters</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+  <h1>Lab goals</h1>
+  <p>Goals for this problem set:</p>
+  <ul>
+    <li>practice declaring and passing <strong>parameters</strong> to methods</li>   
+  </ul>
+</div>
+
+<!-- PROBLEMS ABOUT PARAMETER-PASSING -->
+<div class="slide">
+	<h1>Parameters</h1>
+	
+	<p>
+		A <strong>parameter</strong> allows you to pass in a value to a method as you call it.
+	</p>
+	
+	<pre>
+public static void <var>name</var>(<var>type</var> <var>name</var>) {   <span class="comment">// declare</span>
+</pre>
+	
+	<pre>
+<var>methodName</var>(<var>expression</var>);                <span class="comment">// call</span>
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+public static void squared(<em>int num</em>) {
+    System.out.println(num + " times " + num + " is " + (num * num));
+}
+...
+squared(<em>3</em>);          <span class="comment">// 3 times 3 is 9</span>
+squared(<em>8</em>);          <span class="comment">// 8 times 8 is 64</span>
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Parameters output</h1>
+
+	<ul>
+		<li>
+			What two values are printed by each call below?  Write them in the boxes provided.
+
+			<pre style="font-size: smaller">
+public class MysteryNums {
+    public static void main(String[] args) {
+        int x = 15;
+        sentence(x, 42);      <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">15</span></span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">42</span></span>
+
+        int y = x - 5;
+        sentence(y, x + y);   <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">10</span></span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">25</span></span>
+    }
+    
+    public static void sentence(int num1, int num2) {
+        System.out.println(num1 + " " + num2);
+    }
+}
+</pre>
+
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Solving "Parameter Mystery" problems
+	</h1>
+
+	<ul>
+		<li>
+			Note the <strong>values</strong> passed, the <strong>order</strong> in which they are passed, and the order the method prints them.
+
+			<pre style="font-size: smaller">
+public class MysterySoda {
+    public static void main(String[] args) {
+        String soda = "coke";
+        String pop = "pepsi";
+        String pepsi = "soda";
+        
+        <span class="comment">// #1 = "coke", #2 = "pepsi", #3 = "soda"</span>
+        <strong>carbonated(soda, pop, pepsi);</strong>
+    }
+    <span class="comment">//                                    #1           #2           #3</span>
+    public static void <strong>carbonated</strong>(String coke, String soda, String pop) {
+        <span class="comment">//                           #2               #3             #1</span>
+        System.out.println("say " + soda + " not " + pop + " or " + coke);
+    }
+}
+</pre>
+
+        
+		</li>
+		
+		<li>
+			output: <code>// say<span class="comment" style="position: relative; top: 1em; left: 1em">#2</span>pepsi not<span class="comment" style="position: relative; top: 1em; left: 1em">#3</span>soda or<span class="comment" style="position: relative; top: 1em; left: 1em">#1</span>coke</code>
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Parameter Mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-s6-parameterMysterySoda">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			Fill in the boxes with the output that each method call would produce:
+
+			<pre style="font-size: smaller">
+public class MysterySoda {
+    public static void main(String[] args) {
+        String soda = "coke";
+        String pop = "pepsi";
+        String coke = "pop";
+        String pepsi = "soda";
+        String say = pop;
+
+        carbonated(soda, pop, pepsi);        <span class="comment">// say pepsi not soda or coke</span>
+        carbonated(coke, soda, pop);         <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say coke not pepsi or pop</span></span>
+        carbonated(pop, pepsi, pepsi);       <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say soda not soda or pepsi</span></span>
+        carbonated("pop", pop, "koolaid");   <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say pepsi not koolaid or pop</span></span>
+        carbonated(say, "say", pop);         <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say say not pepsi or pepsi</span></span>
+    }
+    public static void carbonated(String coke, String soda, String pop) {
+        System.out.println("say " + soda + " not " + pop + " or " + coke);
+    }
+}
+</pre>
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: Parameter Mystery
+					
+    <a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-s3-parameterMysteryNumbers">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Fill in the boxes with the output that each method call would produce:
+
+      <pre style="font-size: smaller">
+public class MysteryNumbers {
+    public static void main(String[] args) {
+        String one = "two";
+        String two = "three";
+        String three = "1";
+        int number = 20;
+
+        sentence(one, two, 3);                  // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">three times two = 6</span></span>
+        sentence(two, three, 14);               // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">1 times three = 28</span></span>
+        sentence(three, three, number + 1);     // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">1 times 1 = 42</span></span>
+        sentence(three, two, 1);                // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">three times 1 = 2</span></span>
+        sentence("eight", three, number / 2);   // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">1 times eight = 20</span></span>
+    }
+    public static void sentence(String three, String one, int number) {
+        System.out.println(one + " times " + three + " = " + (number * 2));
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: Parameter Mystery
+					
+    <a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-parameterMystery">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Fill in the boxes with the output that each method call would produce:
+
+      <pre style="font-size: smaller">
+public class Mystery {
+    public static void main(String[] args) {
+        String hear = "bad";
+        String song = "good";
+        String good = "hear";
+        String walk = "talk";
+        String talk = "feel";
+        String feel = "walk";
+        claim(feel, song, feel);       // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">to walk the walk is good</span></span>
+        claim(good, hear, song);       // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">to hear the good is bad</span></span>
+        claim(talk, "song", feel);     // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">to feel the walk is song</span></span>
+        claim("claim", talk, walk);    // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">to claim the talk is feel</span></span>
+    }
+
+    public static void claim(String hear, String good, String song) {
+        System.out.println("to " + hear + " the " + song + " is " + good);
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>
+   
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+
+  <ul>
+    <li>
+      The following Java program has 9 errors.  Can you find all of them?
+
+      <table class="linenumbertable">
+        <tr>
+          <td>
+            <pre class="linenumbers" style="font-size: smaller">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+</pre>
+          </td>
+          <td>
+            <pre style="font-size: smaller">
+public class Parameters {
+    public static void main() {
+        double bubble = 867.5309;
+        double x = 10.01;
+        printer(double x, double y);
+        printer(x);
+        printer("barack", "obama");
+        System.out.println("z = " + z);
+    }
+
+    public static void printer(x, y double) {
+        int z = 5;
+        System.out.println("x = " + double x + " and y = " + y);
+        System.out.println("The value from main is: " + bubble);
+    }
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <strong>Copy and paste</strong> the code into jGrasp and see if you can
+      fix the errors.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <ol style="font-size: smaller">
+    <li>line 5: cannot use variable <code>y</code> without declaring and
+      initializing it</li>
+    <li>line 5: cannot declare the type of <code>y</code> in the method
+      call</li>
+    <li>line 6: cannot call <code>printer</code> without the correct number of
+      parameters (2, in this case)</li>
+    <li>line 7: cannot call <code>printer</code> by passing the correct type of
+      parameters (double, in this case)</li>
+    <li>line 8: cannot refer to the variable <code>z</code>: it is in scope
+      inside <code>printer</code>, not <code>main</code></li>
+    <li>line 11: must provide a type for <code>x</code></li>
+    <li>line 11: must provide a variable name for the second parameter</li>
+    <li>line 12: must refer to the parameters using the exact same
+      spelling</li>
+    <li>line 13: cannot refer to variables in <code>main</code> that were not
+    passed into <code>printer</code> as a parameter</li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - Corrected
+    version</h1>
+
+  <ul>
+    <li>
+      Here is a corrected version of the program:
+
+      <pre style="font-size: smaller">
+public class Parameters {
+    public static void main(String[] args) {
+        double bubble = 867.5309;
+        double x = 10.01;
+        <ins>double y = 5.3;</ins>
+        printer(<del>double</del> x, <del>double</del> y);
+        printer(x, <ins>0.0</ins>);
+        <del>printer("barack", "obama");</del>
+        <ins>int z = 5;</ins>
+        System.out.println("z = " + z);
+    }
+
+    public static void printer(<ins>double</ins> x, <ins>double y</ins>) {
+        System.out.println("x = " + <ins>x</ins> + " and y = " + y);
+        <del>System.out.println("The value from main is: " + bubble);</del>
+        int z = 5;
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>printGrid</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-e5-printGrid">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<!--
+	<div class="attention">
+		We suggest you skip this problem if the lab time is more than half over already. 
+	</div>
+	-->
+	
+	<ul>
+		<li>
+			<strong>Write</strong> a method named <code>printGrid</code> that accepts two integers representing a number of rows and columns and prints a grid of integers from 1 to (rows*columns) in column-major order.
+		</li>
+		<li>
+			For example, the call:
+			<pre>
+printGrid(4, 6);
+</pre>
+			should produce the following output:
+			<pre>
+1 5 9 13 17 21
+2 6 10 14 18 22
+3 7 11 15 19 23
+4 8 12 16 20 24
+</pre>
+		</li>
+		<li>
+			Check your answer using Practice-It from the check-mark icon above.
+		</li>
+	</ul>
+</div>
+ 
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>printSquare</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-e4-printSquare">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<!--
+	<div class="attention">
+		We suggest you skip this problem if the lab time is more than half over already.
+	</div>
+	-->
+	
+	<ul>
+		<li>
+			<strong>Write</strong> a method <code>printSquare</code> that accepts min and max integers and prints a square of lines of increasing numbers.  The first line should start with the minimum; each line that follows should start with the next-higher number. The numbers on a line wrap back to the minimum after it hits the maximum.  For example, the call:
+			
+			<pre>
+printSquare(3, 6);
+</pre>
+			
+			should produce the following output:
+			
+			<pre>
+3456
+4563
+5634
+6345
+</pre>
+		</li>
+		
+		<li>
+			If the maximum passed is less than the minimum, the method produces no output.  Check your answer using Practice-It from the check-mark icon above.
+		</li> 
+		<li>
+	       <b>Hint</b>: remember the mod operator or think of each lines as having two parts...
+		</li>
+	</ul>
+</div>
+  
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+  
+

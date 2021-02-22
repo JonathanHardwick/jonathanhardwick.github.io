@@ -1,0 +1,29 @@
+<div class="slide">
+	<h1>Cumulative algorithms</h1>
+	
+	<ul>
+		<li>
+			A <strong>cumulative algorithm</strong> is one where you incrementally accumulate a larger value by repeatedly adding, multiplying, etc., and storing the result into a variable over and over.
+		</li>
+		
+		<li>
+			Key aspect of a cumulative algorithm: A loop, and a variable declared <strong>outside</strong> the loop whose value is modified inside the loop.
+		</li>
+		
+		<li>
+			Example: Cumulative algorithm to sum the numbers 1-100:
+
+			<pre>
+<em>int sum = 0;</em>
+for (int i = 1; i &lt;= 100; i++) {
+    <em>sum = sum + i;</em>
+}
+System.out.println(sum);    <span class="comment">// 5050</span>
+</pre>
+		</li>
+
+		<li>
+			Some of the following problems ask you to write cumulative algorithms.
+		</li>
+	</ul>
+</div>

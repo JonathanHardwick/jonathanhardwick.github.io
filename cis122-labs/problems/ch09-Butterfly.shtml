@@ -1,0 +1,27 @@
+<div class="slide">
+  <h1>
+		Exercise <span class="exercisenumber"></span>: <code>Butterfly</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+9&problem=lab9-Butterfly">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		<strong>Write a class <code>Butterfly</code></strong> that extends the <code>Critter</code> class, along with its movement behavior.
+		All unspecified aspects of <code>Butterfly</code> use the default behavior. 
+	</p>
+	
+	<p>
+		A <code>Butterfly</code> should be yellow in color.
+		Its <code>toString</code> should alternate between being an <code>x</code> character and a <code>-</code> character each move. 
+	<p>
+	
+	<p>
+		A <code>Butterfly</code> flies upward in the following pattern: N, W, N, E, repeat.
+	</p>
+	
+	<p>
+		Solve this program in jGRASP using the <code>CritterMain</code> simulator.
+		Test it in Practice-it.
+	</p>
+</div>

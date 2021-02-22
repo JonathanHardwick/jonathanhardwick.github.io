@@ -1,0 +1,135 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Point class errors
+	</h1>
+
+	<table class="linenumbertable">
+		<tr>
+			<td>
+				<pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre>
+			</td>
+			<td>
+				<pre class="compressed">
+import java.awt.*;
+public class Point {
+    int x;                                   // Each Point object has
+    int y;                                   // an int x and y inside.
+
+    public static void draw(Graphics g) {    // draws this point
+        g.fillOval(p1.x, p1.y, 3, 3);
+        g.drawString("(" + p1.x + ", " + p1.y + ")", p1.x, p1.y);
+    }
+
+    public void translate(int dx, int dy) {  // Shifts this point's x/y
+        int x = x + dx;                      // by the given amounts.
+        int y = y + dy;
+    }
+
+    public double distanceFromOrigin() {     // Returns this point's
+        Point p = new Point();               // distance from (0, 0).
+        double dist = Math.sqrt(p.x * p.x + p.y * p.y);
+        return dist;
+    }
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		The above <code>Point</code> class has 5 errors.	Can you find them all?
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+	<ol>
+		<li>line 6: method header should not have the word <code>static</code></li>
+		<li>line 12: should not re-declare field <code>x</code> (delete word <code>int</code>)</li>
+		<li>line 13: should not re-declare field <code>y</code> (delete word <code>int</code>)</li>
+		<li>line 17: should not declare <code>Point p</code></li>
+		<li>line 18: should not use <code>p.</code> in front of the fields</li>
+	</ol>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber noincrement"></span> - solution
+	</h1>
+
+	<table class="linenumbertable">
+		<tr>
+			<td>
+				<pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre>
+			</td>
+			<td>
+				<pre class="compressed">
+import java.awt.*;
+public class Point {
+    int x;                                   // Each Point object has
+    int y;                                   // an int x and y inside.
+
+    public <ins>void</ins> draw(Graphics g) {           // draws this point
+        g.fillOval(<ins>x</ins>, <ins>y</ins>, 3, 3);
+        g.drawString("(" + <ins>x</ins> + ", " + <ins>y</ins> + ")", <ins>x</ins>, <ins>y</ins>);
+    }
+
+    public void translate(int dx, int dy) {  // Shifts this point's x/y
+        <ins>x</ins> = x + dx;                          // by the given amounts.
+        <ins>y</ins> = y + dy;
+    }
+
+    public double distanceFromOrigin() {         // Returns this point's
+        double dist = Math.sqrt(<ins>x</ins> * <ins>x</ins> + <ins>y</ins> * <ins>y</ins>);  // distance from (0, 0).
+        return dist;
+    }
+}
+</pre>
+			</td>
+		</tr>
+	</table>
+</div>

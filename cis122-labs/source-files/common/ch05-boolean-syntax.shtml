@@ -1,0 +1,19 @@
+<div class="slide">
+	<h1>The <code>boolean</code> type</h1>
+	
+	<p>
+		The <code>boolean</code> type represents logical values of <code>true</code> or <code>false</code>.  Combine <code>boolean</code> expressions with logical operators <code>&amp;&amp;</code> (and), <code>||</code> (or), and <code>!</code> (not).
+	</p>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+boolean test1 = 7 &lt; 10;            <span class="comment">// true</span>
+boolean test2 = (1 == 2);          <span class="comment">// false</span>
+if ((test1 || test2) &amp;&amp; 2 + 2 != 5) {
+    System.out.print("hello");     <span class="comment">// output: hello</span>
+}
+</pre>
+</div>

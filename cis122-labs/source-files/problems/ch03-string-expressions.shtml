@@ -1,0 +1,88 @@
+<div class="slide">
+  <h1>
+  	Exercise <span class="exercisenumber"></span>: String expressions
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s19-stringExpressions">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+  </h1>
+
+  <p>
+    Write the results of each expression with <code>String</code>s in
+    "quotes" and characters in single quotes (<code>'a'</code>)
+  </p>
+
+  <pre class="compressed">
+<span class="comment">//       index 0123456789012345</span>
+String str1 = "Frodo Baggins";
+String str2 = "Gandalf the GRAY";
+</pre>
+
+  <table class="expressiontable">
+    <tr>
+      <td class="expression"><code>str1.length()</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">13</pre></td>
+    </tr>
+
+
+    <tr>
+      <td class="expression"><code>str1.charAt(7)</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">'a'</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.charAt(0)</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">'G'</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str1.indexOf("o")</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">2</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.toUpperCase()</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"GANDALF THE GRAY"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str1.toLowerCase().indexOf("B")</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">-1</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str1.substring(4)</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"o Baggins"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.substring(3, 14)</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"dalf the GR"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.replace("a", "oo")</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"Goondoolf the GRAY"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.replace("gray", "white")</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"Gandalf the GRAY"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>"str1".replace("r", "range")</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"strange1"</pre></td>
+    </tr>
+  </table>
+</div>

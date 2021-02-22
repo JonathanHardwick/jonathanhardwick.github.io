@@ -1,0 +1,26 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>BankAccount</code> <code>toString</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+8&problem=bjp3-8-e12-toStringBankAccount">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Add a <code>toString</code> method to the <code>BankAccount</code> class.
+		Your method should return a string that contains the account's name and balance separated by a comma and space.
+		For example, if an account object named <code>benben</code> has the name <code>"Benson"</code> and a balance of 17.25, <code>benben.toString()</code> should return:
+	</p>
+
+	<pre class="output">
+Benson, $17.25
+</pre>
+
+	<p>
+		If the client code were to call <code>System.out.println(benben);</code> , that text would be shown on the console.
+	</p>
+
+	<p>
+		(Test your code by writing a short client program that constructs and initializes an account, then prints it.)
+	</p>
+</div>

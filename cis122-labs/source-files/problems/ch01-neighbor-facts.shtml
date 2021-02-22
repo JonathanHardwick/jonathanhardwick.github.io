@@ -1,0 +1,19 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Meet your neighbors</h1>
+	 
+	<p>
+		In this exercise, you will meet your neighbors and write a program that displays facts about them. 
+	</p>
+	
+	<p>Create a complete Java program in a class named <code>Neighbors</code>.</p>
+	
+	<p>Introduce yourself to two people around you (get up to do so if you have no immediate neighbors).  Ask them for their full name, including their middle initial.  Make sure you know how to spell their name correctly!  Ask them for an interesting fact about themselves.</p>
+   
+	<p>Your program should output the name and interesting fact of two of your neighbors.  You may put all of your code in the <code>main</code> method.</p>
+
+	<p>Your output should look like the following: </p>
+	
+<pre>
+Talib K. Greene's mother is an English professor in New York.
+Jermaine L. Cole was born in Germany.</pre>
+</div>

@@ -1,0 +1,24 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: smallestLargest
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+4&amp;problem=4-e6-smallestLargest">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+				
+  <p>
+    Write a method named <code>smallestLargest</code> that prompts the user to
+    enter numbers, reads them, then prints the smallest and largest of all the
+    numbers typed in by the user.  For example:
+  </p>
+				
+  <pre>
+How many numbers do you want to enter? <span class="userinput">4</span>
+Number 1: <span class="userinput">5</span>
+Number 2: <span class="userinput">11</span>
+Number 3: <span class="userinput">-2</span>
+Number 4: <span class="userinput">3</span>
+Smallest = -2
+Largest = 11
+</pre>
+</div>

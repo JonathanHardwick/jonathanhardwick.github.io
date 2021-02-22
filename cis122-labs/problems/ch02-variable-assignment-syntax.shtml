@@ -1,0 +1,57 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Variable assignment
+    syntax</h1>
+                                
+  <p>
+    Suppose you have a variable named <code>grade</code>, set
+    to <code>1.6</code>:
+  </p>
+                                
+  <pre>
+double grade = 1.6;   // uh-oh
+</pre>
+                                
+  <p>
+    Suppose later in the program's code, we want to change the value
+    of <code>grade</code> to <code>4.0</code>.  Which is the correct syntax to
+    do this?
+  </p>
+                                
+  <ol class="mcquestion shuffle">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>grade : 4.0;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>double grade = 4.0;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mccorrect" />
+        <code>grade = 4.0;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>4.0 = grade;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>set grade = 4.0;</code>
+      </label>
+    </li>
+  </ol>
+</div>

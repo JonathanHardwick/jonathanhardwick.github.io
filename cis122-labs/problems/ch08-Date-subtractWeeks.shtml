@@ -1,0 +1,31 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Date subtractWeeks
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+8&problem=practicefinal8-subtractWeeks">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			Write an instance method <code>subtractWeeks</code> that will be placed inside the <code>Date</code> class.  The method accepts an integer parameter and shifts the date backward by that many weeks. (A week is exactly 7 days.)  The date before 1/1 is 12/31.
+		</li>
+		
+		<li>
+			Here are some example calls on a given date object:
+			
+			<pre class="compressed">
+Date d = new Date(9, 19);
+d.subtractWeeks(1);    <span class="comment">// d is now 9/12</span>
+d.subtractWeeks(2);    <span class="comment">// d is now 8/29</span>
+d.subtractWeeks(5);    <span class="comment">// d is now 7/25</span>
+d.subtractWeeks(20);   <span class="comment">// d is now 3/7</span>
+d.subtractWeeks(110);  <span class="comment">// d is now 1/26 (2 years prior)</span>
+</pre>
+		</li>
+		
+		<li>
+			Test your solution to this problem in Practice-It.
+		</li>
+	</ul>
+</div>

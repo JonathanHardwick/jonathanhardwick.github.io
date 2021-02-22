@@ -1,0 +1,34 @@
+<!--#set var="LAB_NUMBER" value="6" -->
+<!--#set var="LAB_NAME" value="File Processing" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>Scanner</code> and <code>File</code> objects to read input data from files</li>
+		<li>understand the way a <code>Scanner</code> breaks input into tokens</li>
+		<li>explore token-based and line-based input</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+    
+<!-- PROBLEMS ABOUT FILE PROCESSING WITH SCANNER -->
+<!--#include virtual="common/ch06-scanner-method-syntax.shtml" -->
+<!--#include virtual="problems/ch06-file-scanner-declaration-syntax.shtml" -->
+<!--#include virtual="problems/ch06-tokenizing.shtml" -->
+<!--#include virtual="problems/ch06-scanner-practice.shtml" -->
+<!--#include virtual="problems/ch06-words.shtml" -->
+<!--#include virtual="problems/ch06-ZipCode.shtml" -->
+<!--#include virtual="problems/ch06-runningSum.shtml" -->
+<!--#include virtual="problems/ch06-flipLines.shtml" -->
+<!--#include virtual="problems/ch06-countWords-errors.shtml" -->
+<!--#include virtual="problems/ch06-coinFlip.shtml" -->
+<!--#include virtual="problems/ch06-printDuplicates.shtml" -->
+<!--#include virtual="problems/ch06-mostCommonNames.shtml" -->
+<!--#include virtual="problems/ch06-frequentFlier.shtml" -->
+<!--#include virtual="problems/ch06-stripHtmlTags.shtml" -->   
+
+<!--#include virtual="common/footer.shtml" -->

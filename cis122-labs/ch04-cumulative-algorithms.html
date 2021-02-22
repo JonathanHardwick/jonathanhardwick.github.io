@@ -1,0 +1,281 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: Cumulative Algorithms</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 4: Cumulative Algorithms</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: Cumulative Algorithms</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>write cumulative algorithms that compute their data over time</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT CUMULATIVE ALGORITHMS -->
+<div class="slide">
+	<h1>Cumulative algorithms</h1>
+	
+	<ul>
+		<li>
+			A <strong>cumulative algorithm</strong> is one where you incrementally accumulate a larger value by repeatedly adding, multiplying, etc., and storing the result into a variable over and over.
+		</li>
+		
+		<li>
+			Key aspect of a cumulative algorithm: A loop, and a variable declared <strong>outside</strong> the loop whose value is modified inside the loop.
+		</li>
+		
+		<li>
+			Example: Cumulative algorithm to sum the numbers 1-100:
+
+			<pre>
+<em>int sum = 0;</em>
+for (int i = 1; i &lt;= 100; i++) {
+    <em>sum = sum + i;</em>
+}
+System.out.println(sum);    <span class="comment">// 5050</span>
+</pre>
+		</li>
+
+		<li>
+			Some of the following problems ask you to write cumulative algorithms.
+		</li>
+	</ul>
+</div>
+   
+			<div class="slide">
+				<h1>Exercise <span class="exercisenumber"></span>: <code>Scanner</code> sum</h1>
+				
+				<p>
+					<strong>Copy and paste</strong> the following code into jGrasp.
+					<pre>
+public class SumNumbers {
+    public static void main(String[] args) {
+        int low = 1;
+        int high = 1000;
+        int sum = 0;
+        for (int i = low; i &lt;= high; i++) {
+            sum += i;
+        }
+        System.out.println("sum = " + sum);
+    }
+}
+</pre>
+				</p>
+
+				<p class="continued">
+					continued on next slide...
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Exercise <span class="exercisenumber noincrement"></span>: <code>Scanner</code> sum</h1>
+				<p>
+					<strong>Modify</strong> the code to use a <code>Scanner</code> to prompt the user for the values of <code>low</code> and <code>high</code>.  Below is a sample execution in which the user asks for the same values as in the original program (1 through 1000):
+
+					<pre>
+low? 1
+high? 1000
+sum = 500500
+</pre>
+				</p>
+
+				<p>
+					Below is an execution with different values for <code>low</code> and <code>high</code>:
+					<pre>
+low? 300
+high? 5297
+sum = 13986903
+</pre>
+				</p>
+
+				<p>
+						You should exactly reproduce this format.
+				</p>
+
+				<p>
+						Use the <a class="popup" href="../diff-labs.html">Output Comparison Tool</a> to check your work.
+				</p>
+			</div>
+  
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: pow
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+4&problem=bjp3-4-e5-pow">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+				
+  <p>
+    Write a method named <code>pow</code> that accepts a base and an exponent as parameters and returns the base raised to the given power.  For example, the call <code>pow(3, 4)</code> returns 3 * 3 * 3 * 3 or 81.  Do not use <code>Math.pow</code> in your solution; use a cumulative algorithm instead.  Assume that the base and exponent are non-negative.
+  </p>
+				
+  <ul>
+    <li>
+      (Try solving this problem in Practice-It by clicking the icon above.)
+    </li>
+    <li>
+      For added challenge, try turning your solution into a second
+      version <code>pow2</code> that works with real number bases and negative
+      exponents.
+      <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+4&problem=bjp3-4-e14-pow2">
+				<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+      </a>
+    </li>
+  </ul>
+</div>
+ 
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: repl
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+4&amp;problem=4-e2-repl">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Write a method named <code>repl</code> that accepts a <code>String</code>
+      and a number of repetitions as parameters and returns
+      the <code>String</code> concatenated that many times. For example, the
+      call <code>repl("hello", 3)</code>
+      returns <code>"hellohellohello"</code>. If the number of repetitions is 0
+      or less, an empty string is returned.
+    </li>
+					
+    <li>
+      Try solving this problem in Practice-It! using the link above.
+    </li>
+					
+    <li class="hint">
+      (Hint: This is best solved with a cumulative algorithm.  Start with an
+      empty string and build it up piece by piece.)
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: longestName
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+10&amp;problem=practicemidterm10-longestName">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> named <code>longestName</code> that reads
+    names typed by the user and prints the longest name (the name that contains
+    the most characters) in the format shown below. Your method should accept a
+    console <code>Scanner</code> and an integer <em>n</em> as parameters and
+    should then prompt for <em>n</em> names.
+  </p>
+
+  <p>
+    A sample execution of the call <code>longestName(console, 4)</code> might
+    look like the following:
+				</p>
+
+  <pre>
+name #1? roy
+name #2? DANE
+name #3? sTeFaNiE
+name #4? Erik
+Stefanie's name is longest
+</pre>
+
+  <p>
+    Try to solve this problem in Practice-It: click on the check-mark above!
+  </p>
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

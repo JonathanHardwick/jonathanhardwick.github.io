@@ -1,0 +1,30 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>printDuplicates</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+6&problem=6-e12-printDuplicates">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method <code>printDuplicates</code> that accepts a <code>Scanner</code> for an input file.
+		Examine each line for consecutive occurrences of the same token on the same line and print each duplicated token along how many times it appears consecutively.  For example the file: 
+	</p>
+
+	<pre class="compressed">
+hello how how are you you you you
+I I I am Jack's Jack's smirking smirking smirking smirking smirking revenge
+one fish two fish red fish blue fish
+   bow  wow wow yippee yippee   yo yippee   yippee yay  yay yay
+</pre>
+
+	<p>
+		leads to the following console output:
+	</p>
+
+	<pre class="compressed">
+how*2 you*4
+I*3 Jack's*2 smirking*5
+
+wow*2 yippee*2 yippee*2 yay*3
+</pre>
+</div>

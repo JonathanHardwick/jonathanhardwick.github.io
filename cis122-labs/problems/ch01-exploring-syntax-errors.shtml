@@ -1,0 +1,36 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Exploring syntax
+    errors</h1>
+                                
+  <p>
+    Discover what error messages the compiler produces when you make each of
+    the following mistakes.  How many unique error messages are you able to
+    cause the compiler to produce?
+  </p>
+                                
+  <ul>
+    <li>
+      Naming your file incorrectly, then compiling.
+    </li>
+    <li>
+      Forgetting a keyword such as <code>void</code> or <code>class</code>
+    </li>
+    <li>
+      Forgetting a quotation mark <code>"</code>
+    </li>
+    <li>
+      Forgetting a parenthesis <code>(</code> or <code>)</code>
+    </li>
+    <li>
+      Forgetting a dot <code>.</code>
+    </li>
+    <li>
+      Using too many or too few braces <code>{</code> or <code>}</code>
+    </li>
+  </ul>
+                                
+  <p>
+    Notice that the error messages don't always make it obvious what is wrong.
+    But they usually tell you the right line number to fix.
+  </p>
+</div>

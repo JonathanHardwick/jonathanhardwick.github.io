@@ -1,0 +1,30 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: PointClient
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+8&amp;problem=lab8-PointClient">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			<strong>Download</strong> the following files
+			<a class="popup" href="problems/Point.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				Point.java
+			</a>
+			and
+			<a class="popup" href="problems/PointClient.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" /> 
+				PointClient.java
+			</a>
+			to your machine and open them with jGrasp.  (or solve this problem in Practice-It!)
+		</li>
+
+		<li>
+			The <code>PointClient</code> program is supposed to construct two <code>Point</code> objects, translate each, and then print their coordinates.
+			Finish the program so that it runs properly.
+			(You don't need to modify <code>Point.java</code>.)
+		</li>
+	</ul>
+</div>

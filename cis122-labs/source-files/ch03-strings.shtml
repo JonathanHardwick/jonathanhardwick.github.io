@@ -1,0 +1,22 @@
+<!--#set var="LAB_NUMBER" value="3" -->
+<!--#set var="LAB_NAME" value="Strings" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>String</code>s to represent and manipulate text data</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It! 
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT STRINGS -->
+<!--#include virtual="common/ch03-string-expression-syntax.shtml" -->
+<!--#include virtual="problems/ch03-string-expressions.shtml" -->
+<!--#include virtual="problems/ch04-syntax-errors-strings.shtml" -->
+<!--#include virtual="problems/ch05-ProcessName.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

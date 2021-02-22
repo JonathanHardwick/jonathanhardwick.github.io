@@ -1,0 +1,64 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>while</code> loop mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&problem=5-s3-whileLoopMystery1">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Fill in the boxes at right with the output produced by each method call.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre class="compressed">
+public static void mystery(int x) {
+    int y = 1;
+    int z = 0;
+    while (2 * y &lt;= x) {
+        y = y * 2;
+        z++;
+    }
+    System.out.println(y + " " + z);
+}
+</pre>
+			</td>
+
+			<td>
+				<table class="expressiontable">
+					<tr>
+						<td class="expression"><code>mystery(1);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1 0</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery(6);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">4 2</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery(19);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">16 4</pre></td>
+					</tr>
+					
+					<tr>
+						<td class="expression"><code>mystery(39);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">32 5</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery(74);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">64 6</pre></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>

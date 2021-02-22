@@ -1,0 +1,251 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: jGRASP Debugger
+	</h1>
+
+	<ul>
+		<li>
+			<strong>Download</strong> the file
+			<a class="popup" href="problems/TriangleCount.java"> 
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				TriangleCount.java
+			</a>
+			to your machine and open it with jGrasp.
+		</li>
+
+		<li>
+			This program explores patterns of digits for what are called the <em><a class="popup" href="http://en.wikipedia.org/wiki/Triangular_number">triangle numbers</a></em>.
+			The program counts how many times a triangle number ends in a particular 2-digit sequence.
+			For example, the 15th triangle number is 120, which ends in the 2-digit sequence 20.
+		</li>
+
+		<li>
+			<strong>Run</strong> the program and you will see a pattern: 
+			Most counts are 0 and most of the rest are exactly 200.
+			<strong>Which 2-digit sequences have a count of 500?</strong>
+
+			<table class="arraytable">
+				<tr>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">3</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">28</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">53</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">78</span>
+					</td>
+				</tr>
+			</table>
+		</li>
+
+		<p class="continued">
+			continued on the next slide...
+		</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+	
+	<ul>
+		<li>
+			The program prints a progress dot every 200 iterations.
+			<strong>Set a breakpoint</strong>
+			<img src="images/jgrasp-stop-sign.png" alt="icon" width="18" height="18" />
+			on the <code>System.out.print</code> inside the <code>if</code> on line 23 and <strong>debug</strong> the program.
+			<img src="images/jgrasp-ladybug-icon.png" alt="icon" width="20" height="20" />
+		</li>
+		
+		<li>
+			Once the program pauses, <strong>click and drag</strong> the array at left named <code>count</code>,
+			and drop it on the main code window.  This will show a view of its contents. <br />
+			<img src="images/ch07-jgrasp-01.png" alt="screenshot" /> &nbsp; &nbsp;
+			<img src="images/ch07-jgrasp-03.png" alt="screenshot" />
+		</li>
+		
+		<li>
+			What are the <strong>first eight element values</strong> stored in the <code>count</code> array?
+			
+			<table class="arraytable" style="font-size: smaller">
+				<tr>
+					<th style="padding-right: 1em">index</th>
+					<th>0</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+				</tr>
+
+				<tr>
+					<th style="padding-right: 1em">value</th>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">4</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">4</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">10</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">4</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">4</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+	
+	<ul>
+		<li>
+			Leave the array viewer open and click the <strong>Resume</strong> button
+			<img src="images/jgrasp-play-icon.png" alt="icon" width="28" height="28" /> .
+			<em>(This runs until the second time the <code>System.out.print</code> is about to execute, then stops.)</em>
+		</li>
+		<li>
+			What values do the <strong>first 8 array elements</strong> have now?
+			
+			<table class="arraytable">
+				<tr>
+					<th style="padding-right: 1em">index</th>
+					<th>0</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+				</tr>
+
+				<tr>
+					<th style="padding-right: 1em">value</th>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">8</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">8</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">20</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">8</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">8</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+				</tr>
+			</table>
+		</li>
+		
+		<li>
+			This is a very long array with 100 total values. <br />
+			Scroll to the far right in the array viewer.  What values do the <strong>last 8 elements</strong> have?
+			
+			<table class="arraytable">
+				<tr>
+					<th style="padding-right: 1em">index</th>
+					<th>92</th>
+					<th>93</th>
+					<th>94</th>
+					<th>95</th>
+					<th>96</th>
+					<th>97</th>
+					<th>98</th>
+					<th>99</th>
+				</tr>
+
+				<tr>
+					<th style="padding-right: 1em">value</th>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">8</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">8</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+					<td class="expressionarea">
+						<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+						<span class="expressionsolution">0</span>
+					</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,152 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: printing a design
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e15-printDesign">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a program to produce the following output using nested <code>for</code> loops.  Use a table to help you figure out the patterns of characters on each line.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="margin-top: 1em; margin-right: 1em; line-height: 1.4em;">
+-----1-----
+----333----
+---55555---
+--7777777--
+-999999999-
+</pre>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">Line</th>
+						<th style="text-align: left">Dashes</th>
+						<th style="text-align: left">Numbers</th>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>1</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">5</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">1</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>2</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" /> 
+							<pre class="expressionsolution">4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">3</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>3</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">3</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">5</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>4</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">7</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>5</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">1</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">9</pre>
+						</td>
+					</tr>
+				</table>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">dashes expression</th>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="expressionarea expressionarealeft">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">-1</pre>
+							</span>
+							<code>* line + </code>
+							<span class="expressionarea">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">6</pre>
+							</span>
+						</td>
+					</tr>
+				</table>
+
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">numbers expression</th>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="expressionarea expressionarealeft">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">2</pre>
+							</span>
+							<code>* line + </code>
+							<span class="expressionarea">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">-1</pre>
+							</span>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<p>
+		Test your loop expressions in <strong>Practice-It!</strong> using the checkmark icon above.  Use your expressions in the loop tests of the inner loops of your code.
+	</p>
+</div>

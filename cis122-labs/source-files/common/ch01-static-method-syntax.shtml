@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>Static methods</h1>
+                            
+  <p>
+    Recall the syntax for writing a static method.  Methods are useful for
+    representing a program's <strong>structure</strong> and capturing
+    common code to avoid <strong>redundancy</strong>:
+  </p>
+                            
+  <pre>
+public static void <var>name</var>() {
+    <var>statements</var>;
+}
+</pre>
+
+  <p>
+    Example:
+  </p>
+
+  <pre>
+public static void song() {
+    System.out.println("This is the song that never ends,");
+    System.out.println("Yes, it goes on and on, my friends.");
+}
+</pre>
+</div>

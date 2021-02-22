@@ -1,0 +1,115 @@
+    <div class="slide">
+      <h1><code>Scanner</code> methods</h1>
+
+      <!--
+         <p>
+           To use these methods, you need a variable of
+           type <code>Scanner</code>:
+         </p>
+
+         <pre>
+Scanner fileScanner = new Scanner(new File("input.txt"));
+String theNextString = <strong>fileScanner.next();</strong>
+</pre>
+         -->
+
+      <table class="standard">
+        <tr>
+          <th>
+            Method name
+          </th>
+
+          <th>
+            Description
+          </th>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>next()</code>
+          </td>
+
+          <td>
+            reads and returns the next token as a <code>String</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>nextLine()</code>
+          </td>
+
+          <td>
+            reads and returns as a <code>String</code> all the characters up to
+            the next new line (<code>\n</code>)
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>nextInt()</code>
+          </td>
+
+          <td>
+            reads and returns the next token as an <code>int</code>, if
+            possible
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>nextDouble()</code>
+          </td>
+
+          <td>
+            reads and returns the next token as <code>double</code>, if
+            possible
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNext()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if there is still a token in
+            the <code>Scanner</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNextLine()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if there is still at least one line left
+            to be read in the <code>Scanner</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNextInt()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if the next token can be read as
+            an <code>int</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNextDouble()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if the next token can be read as
+            an <code>double</code>
+          </td>
+        </tr>
+      </table>
+    </div>
+

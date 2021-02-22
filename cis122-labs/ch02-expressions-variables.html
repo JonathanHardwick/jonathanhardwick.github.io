@@ -1,0 +1,869 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: Expressions and Variables</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 2: Expressions and Variables</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: Expressions and Variables</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+  <h1>Lab goals</h1>
+  <p>Goals for this problem set:</p>
+  <ul> 
+    <li>write and evaluate <strong>expressions</strong> to compute numeric values</li>
+		<li>use <strong>variables</strong> to store results of a computation into memory</li>     	     
+  </ul>
+</div>
+
+<!-- PROBLEMS ABOUT EXPRESSIONS AND VARIABLES -->
+<div class="slide">
+	<h1>Expressions</h1>
+	
+	<p>
+		Recall that Java has <strong>expressions</strong> to represent math and other computations.	Expressions may use <strong>operators</strong>, which are evaluated according to rules of <strong>precedence</strong>.  Every expression produces a value of a given <strong>type</strong>.
+	</p>
+	
+	<table class="calltable">
+		<tr>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Example</th>
+			<th>Result</th>
+		</tr>
+		
+		<tr>
+			<td><code>int</code></td>
+			<td>integers (up to 2<sup>31</sup> - 1)</td>
+			<td><code>3 + 4 * 5</code></td>
+			<td><code>23</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>double</code></td>
+			<td>real numbers (up to 10<sup>308</sup>)</td>
+			<td><code>3.0 / 2.0 + 4.1</code></td>
+			<td><code>5.6</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>String</code></td>
+			<td>text characters</td>
+			<td><code>"hi" + (1 + 1) + "u"</code></td>
+			<td><code>"hi2u"</code></td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Expressions (2.1)</h1>
+	
+	<p>
+		Write the results of each of the following expressions.	If you're stuck, ask a TA or neighbor.
+	</p>
+	
+	<table class="expressiontable">
+		<tr>
+			<td class="expression">
+				<code>12 / 5 + 8 / 4</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">4</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>3 * 4 + 15 / 2</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">19</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>-(1 + 2 * 3 + (1 + 2) * 3)</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">-16</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>42 % 5 + 16 % 3</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">3</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>2.5 * 2 + 17 / 4</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">9.0</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>4.5 / 3 / 2 + 1</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">1.75</pre>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: More expressions (2.1)</h1>
+	
+	<p>
+		Write the results of each of the following expressions.
+	</p>
+	
+	<table class="expressiontable">
+		<tr>
+			<td class="expression">
+				<code>2 + 6 + "cse 142"</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">"8cse 142"</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>"cse 142" + 2 + 6</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">"cse 14226"</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>1 + 9 / 2 * 2.0</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">9.0</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>46 / 3 / 2.0 / 3 * 4/5</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">2.0</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>50 / 9 / 2.0 + 200 / 10 / (5.0 / 2)</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">10.5</pre>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		jGRASP Interactions Pane
+	</h1>
+
+	<ul>
+		<li>
+			jGRASP has a useful feature called the <strong>Interactions Pane</strong> that allows you to type in Java expressions or statements one at a time and instantly see their results.
+		</li>
+		
+		<li>
+			To use it, run jGRASP and then click the "Interactions" tab near the bottom.
+		</li>
+		
+		<li>
+			<img src="images/jgrasp-interactions-clipped.png" width="660" height="237" alt="jGRASP Interactions Pane" />
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Using jGRASP Interactions Pane
+	</h1>
+
+	<p>
+		In this exercise, you'll use the Interactions Pane to quickly discover the result of some expressions that would be difficult to evaluate by hand.  <strong>Copy/paste</strong> each expression below into the Interactions Pane to evaluate it, then input the answer into this slide.
+	</p>
+	
+	<table class="expressiontable">
+		<tr>
+			<td class="expression">
+				<code>123 * 456 - 789</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">55299</pre>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">
+				<code>3.14 + 1.59 * 2.65</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">7.3535</pre>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">
+				<code>2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">1024</pre>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="expression">
+				<code>2 + 2 + "xyz" + 3 + 3</code>
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="12" spellcheck="false" />
+			</td>
+			<td>
+				<pre class="expressionsolution">"4xyz33"</pre>
+			</td>
+		</tr>
+	</table>
+	
+	<p class="aside" style="font-size: smaller">
+		<em>(For the last expression, the Interactions Pane doesn't put <code>""</code> quotes around Strings when displaying results, so you must add those yourself if needed.  For example, if the Interactions Pane gives you a result of <code>abc123</code>, it should be written here as <code>"abc123"</code>.)</em>
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Variables</h1>
+	
+	<p>
+		Recall that you can use a <strong>variable</strong> to store the results of an expression in memory and use them later in the program.
+	</p>
+	
+	<pre>
+<var>type</var> <var>name</var>;                       <span class="comment">// declare</span>
+<var>name</var> = <var>value or expression</var>;        <span class="comment">// assign a value</span>
+...
+<var>type</var> <var>name</var> = <var>value or expression</var>;   <span class="comment">// declare-and-initialize together</span>
+</pre>
+	
+	<p>
+		Examples:
+	</p>
+	
+	<pre>
+double iphonePrice;
+iPhonePrice = 299.95;
+
+int siblings = 3;
+System.out.println("I have " + siblings + " brothers/sisters.");
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Variable declaration
+  syntax</h1>
+                                
+  <p>
+    Which of the following choices is the correct syntax for declaring a real
+    number variable named <code>grade</code> and initializing its value
+    to <code>4.0</code>?
+  </p>
+                                
+  <ol class="mcquestion shuffle">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>grade : 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>int grade = 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>4.0 = grade;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>grade = 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mccorrect" />
+        <code>double grade = 4.0;</code>
+        <img class="mcresultimage" src="correct.gif" alt="correct" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>grade = double 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Variable assignment
+    syntax</h1>
+                                
+  <p>
+    Suppose you have a variable named <code>grade</code>, set
+    to <code>1.6</code>:
+  </p>
+                                
+  <pre>
+double grade = 1.6;   // uh-oh
+</pre>
+                                
+  <p>
+    Suppose later in the program's code, we want to change the value
+    of <code>grade</code> to <code>4.0</code>.  Which is the correct syntax to
+    do this?
+  </p>
+                                
+  <ol class="mcquestion shuffle">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>grade : 4.0;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>double grade = 4.0;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mccorrect" />
+        <code>grade = 4.0;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>4.0 = grade;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>set grade = 4.0;</code>
+      </label>
+    </li>
+  </ol>
+</div>
+ 
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Variable mutation</h1>
+                                
+  <p>
+    Suppose you have a variable named <code>balance</code>, set
+    to <code>463.23</code>:
+  </p>
+                                
+  <pre>
+double balance = 463.23
+</pre>
+                                
+  <p>
+    Suppose later in the program's code, we want to add 5 to the account balance.  Which is a correct statement to
+    do this?
+  </p>
+                                
+  <ol class="mcquestion shuffle">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>balance + 5;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>balance = 5;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mccorrect" />
+        <code>balance = balance + 5;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>5 + balance = balance;</code>
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="mcquestion2" value="answer1"
+               class="mcincorrect" />
+        <code>balance <-- 5;</code>
+      </label>
+    </li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: <code>a</code>, 
+    <code>b</code>, and <code>c</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-s11-valuesOfABC">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+                                
+  <p>
+    What are the values of <code>a</code>, <code>b</code>, and <code>c</code>
+    after the following statements?  Write your answers in the boxes on the
+    right.
+  </p>
+                                
+  <pre>
+int a = 5;
+int b = 10;
+int c = b;
+
+a = a + 1;            // a? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">6</span></span>
+b = b - 1;            // b? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">9</span></span>
+c = c + a;            // c? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">16</span></span>
+</pre>
+</div>
+    
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+
+  <ul>
+    <li>
+      The following program contains 9 mistakes!  What are they?  Copy and
+      paste the following code into jGRASP and correct the various mistakes.
+      The answer is on the next 2 slides if you need some help.
+
+      <table class="linenumbertable">
+        <tr>
+          <td>
+            <pre class="linenumbers">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+</pre>
+          </td>
+          <td>
+            <pre>
+public class Oops {
+    public static void main(String[] args) {
+        int x;
+        System.out.println("x is" x);
+
+        int x = 15.2;   // set x to 15.2
+        System.out.println("x is now + x");
+
+        int y;          // set y to 1 more than x
+        y = int x + 1;
+        System.out.println("x and y are " + x + and + y);
+    }
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+
+  <p class="continued">
+    answer on next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <ol style="font-size: smaller">
+    <li>
+      line 4: missing <code>+</code> between <code>"x is"</code>
+      and <code>x</code>
+    </li>
+    <li>
+      line 4: cannot print the value of <code>x</code> before assigning it a
+      value
+    </li>
+    <li>
+      line 6: cannot assign <code>15.2</code> into a variable of
+      type <code>int</code>
+    </li>
+    <li>
+      line 6: should not redeclare the variable's type
+    </li>
+    <li>
+      line 7: <code>"</code> mark should be between <code>now</code>
+      and <code>+</code>
+    </li>
+    <li>
+      line 10: should not write the word <code>int</code> here
+    </li>
+    <li>
+      line 10: variable <code>y</code> should be same type as <code>x</code>
+    </li>
+    <li>
+      line 10: does not properly set <code>y</code> to be 1 more
+      than <code>x</code> (should not write the word <code>int</code> here)
+    </li>
+    <li>
+      line 11: <code>and</code> should be in quotes with surrounding spaces
+    </li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - corrected
+    version</h1>
+                                
+  <ul>
+    <li>
+      Here is a corrected version of the program:
+
+      <pre>
+public class Oops {
+    public static void main(String[] args) {
+        <ins>double</ins> x <ins>= 0.0</ins>;
+        System.out.println("x is" <ins>+</ins> x);
+
+        x = 15.2;       // set x to 15.2
+        System.out.println("x is now <ins>"</ins> + x);
+
+        <ins>double</ins> y;       // set y to 1 more than x
+        y = <ins>x + 1</ins>;
+        System.out.println("x and y are " + x + <ins>" and "</ins> + y);
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: <code>i</code>, 
+    <code>j</code>, and <code>k</code>
+  </h1>
+                                
+  <p>
+    What are the values of <code>i</code>, <code>j</code>, and <code>k</code>
+    after the following statements?
+  </p>
+                                
+  <pre>
+int i = 2;
+int j = 3;
+int k = 4;
+int x = i + j + k;
+
+i = x - i - j;            // i? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">4</span></span>
+j = x - j - k;            // j? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">2</span></span>
+k = x - i - k;            // k? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">1</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Equation</h1>
+                                
+  <p>
+    Suppose you have a real number variable <code>x</code>.  Write a Java
+    expression that computes a variable named <code>y</code> storing the
+    following value:
+  </p>
+                                
+  <p style="margin-left: 2em">
+    y = 12.3x<sup>4</sup> - 9.1x<sup>3</sup> + 19.3x<sup>2</sup> - 4.6x + 34.2
+  </p>
+                                
+  <p>
+    (We haven't learned a way to do exponents yet, but you can simulate them
+    using several multiplications.)
+  </p>
+                                
+  <p class="continued">
+    Use the example program on the next slide to test your code.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - Example
+    code</h1>
+                                
+  <p>
+    Copy/paste this program into jGRASP to test your solution.
+  </p>
+                                
+  <pre>
+// expected output:
+// y is 7043.7
+
+public class EquationY {
+    public static void main(String[] args) {
+        double x = 5;
+
+        double y = <var>put your expression for y here</var> ;
+
+        System.out.println("y is " + y);
+    }
+}
+</pre>
+                                
+  <p class="continued">
+    (answer on next slide)
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <pre>
+double y = <strong>12.3*x*x*x*x - 9.1*x*x*x + 19.3*x*x - 4.6*x + 34.2</strong>;
+</pre>
+
+  <p>
+    If you want an added challenge, try to come up with a way to compute the
+    above value while using the <code>*</code> operator no more than 4 times.
+  </p>
+                                
+  <p class="continued">
+    (click Next &rarr; for answer)
+  </p>
+
+  <pre class="incremental">
+double y = <strong>(((12.3 * x - 9.1) * x + 19.3) * x - 4.6) * x + 34.2</strong>;
+</pre>
+</div>
+ 
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Birthday variables</h1>
+
+  <ul>
+    <li>
+      Create a complete Java program in a class named <code>Bday</code> that
+      declares four variables and assigns appropriate values to them.
+                                                
+      <ul>
+        <li>
+          your birthday month (1-12)
+        </li>
+        <li>
+          your birthday day (1-31)
+        </li>
+        <li>
+          the birthday month of another student sitting near you today (1-12)
+        </li>
+        <li>
+          the birthday day of that same student near you (1-31)
+        </li>
+      </ul>
+    </li>
+    <li>
+      Ask your neighbor for their name and for the proper numbers to store in
+      the variables for his/her birthday.  Then produce output in this format
+      using your four variables:
+
+    <pre>
+My birthday is 9/19, and Suzy's is 6/14.
+</pre>
+    </li>
+  </ul>
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

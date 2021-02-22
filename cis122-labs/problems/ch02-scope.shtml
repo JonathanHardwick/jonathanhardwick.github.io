@@ -1,0 +1,69 @@
+<div class="slide">
+	<h1>Variable Scope</h1>
+
+	<p>
+		A variable's <b>scope</b> is the part of a program in which it exists.  In Java, the scope of a variable starts when it is declared and ends when the closing curly brace <b>for the block that contains it</b> is reached.  A variable is said to be <b>in scope</b> where it is accessible.
+	</p>
+
+<table class="expressiontable">
+	<tbody>
+		<tr>
+			<td>
+<pre>
+public class Example {
+    public static void main(String[] args) {
+        performTest();
+    }
+	
+    public static void performTest() {
+        int count = 12;
+        for (int i = 1; i <= 12; i++) {
+            runSample();
+            System.out.print(count);   
+        }
+    }
+
+    public static void runSample() {
+	    System.out.print("sample");
+    }
+} 
+</pre>
+			</td>
+			<td>
+			In which of these <b>two</b> blocks is the variable <code>count</code> in scope?
+
+			<ol class="mcquestion shuffle">
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mcincorrect" />
+			      <code>main</code> method
+			    </label>
+			  </li>
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mccorrect" />
+			      <code>for</code> loop
+			    </label>
+			  </li>
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mccorrect" />
+			      <code>performTest</code> method
+			    </label>
+			  </li>
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mcincorrect" />
+			      <code>runSample</code> method
+			    </label>
+			  </li>
+			</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>     
+</div>

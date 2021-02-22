@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Spell your name</h1>
+                                
+  <ul>
+    <li>
+      Write a complete program that outputs your name in giant letters like the
+      following:
+
+      <pre>
+M     M    IIIII     SSSSS     PPPPPP
+MM   MM      I      S     S    P     P
+M M M M      I      S          P     P
+M  M  M      I       SSSSS     PPPPPP
+M     M      I            S    P
+M     M      I      S     S    P
+M     M    IIIII     SSSSS     P
+</pre>
+
+      <p>
+        The giant letters should flow vertically.  Use methods to avoid redundancy
+        when the same giant letter appears multiple times in your name.
+        (Use only the material from Chapter 1.)
+      </p>
+    </li>
+  </ul>
+</div>

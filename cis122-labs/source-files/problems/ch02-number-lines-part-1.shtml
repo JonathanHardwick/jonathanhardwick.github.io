@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: Number lines, part 1
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e12-nestedNumbers">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      <strong>Write</strong> some nested <code>for</code> loops to produce the
+      following output:
+
+      <pre>
+000111222333444555666777888999
+000111222333444555666777888999
+000111222333444555666777888999
+</pre>
+    </li>
+
+    <li>
+      You can use the <a class="popup"
+      href="../diff-labs.html">Output Comparison Tool</a> to check your work.
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,68 @@
+<div class="slide">
+	<h1>User input and <code>Scanner</code></h1>
+	
+	<table class="standard">
+		<tr>
+			<th>
+				Method name
+			</th>
+
+			<th>
+				Description
+			</th>
+		</tr>
+
+		<tr>
+		<tr>
+			<td style="white-space: nowrap">
+				<code>nextInt()</code>
+			</td>
+
+			<td>
+				reads and returns the next token as an <code>int</code>, if possible
+			</td>
+		</tr>
+
+		<tr>
+			<td style="white-space: nowrap">
+				<code>nextDouble()</code>
+			</td>
+
+			<td>
+				reads and returns the next token as <code>double</code>, if possible
+			</td>
+		</tr>
+
+			<td style="white-space: nowrap">
+				<code>next()</code>
+			</td>
+
+			<td>
+				reads and returns a single word as a <code>String</code>
+			</td>
+		</tr>
+
+		<tr>
+			<td style="white-space: nowrap">
+				<code>nextLine()</code>
+			</td>
+
+			<td>
+				reads and returns an entire line as a <code>String</code>
+			</td>
+		</tr>
+	</table>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre class="compressed">
+import java.util.*;   // so you can use Scanner
+...
+<em>Scanner console = new Scanner(System.in);</em>
+System.out.print("How old are you? ");   // prompt
+int age = <em>console.nextInt();</em>
+System.out.println("You typed " + age);
+</pre>
+</div>

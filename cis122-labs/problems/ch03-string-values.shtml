@@ -1,0 +1,24 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>String</code>
+    values</h1>
+
+  <ul>
+    <li>
+      The <code>String</code> constants we have been using since chapter 1 can
+      be stored in variables of type <code>String</code>.  What output is
+      produced by the following code?
+
+      <pre style="font-size: smaller">
+String first = "James";
+String last = "Kirk";
+String middle = "T."
+System.out.println(last);                               // <span class="expressionarea"><input type="text" class="expressionanswer" size="20" spellcheck="true" /><span class="expressionsolution">Kirk</span></span>
+System.out.println("My name is " + first);              // <span class="expressionarea"><input type="text" class="expressionanswer" size="20" spellcheck="true" /><span class="expressionsolution">My name is James</span></span>
+System.out.println(first + " " + last);                 // <span class="expressionarea"><input type="text" class="expressionanswer" size="20" spellcheck="true" /><span class="expressionsolution">James Kirk</span></span>
+System.out.println(last + ", " + first + " " + middle); // <span class="expressionarea"><input type="text" class="expressionanswer" size="20" spellcheck="true" /><span class="expressionsolution">Kirk, James T.</span></span>
+System.out.println(middle + " is for Tiberius");        // <span class="expressionarea"><input type="text" class="expressionanswer" size="20" spellcheck="true" /><span class="expressionsolution">T. is for Tiberius</span></span>
+</pre>
+
+    </li>
+  </ul>
+</div>

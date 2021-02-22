@@ -1,0 +1,30 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Debugging textbook code files</h1>
+
+	<p>
+		In this exercise we will practice the jGRASP debugger using the Case Study example from the end of Chapter 6.
+		To download this example, follow these steps:
+	</p>
+	
+	<ol>
+		<li>
+			Go to the <a class="popup" href="../">class web page</a> and click the "Textbook" link.
+		</li>
+		<li>
+			Find the section labeled "Code Files" and click the "code files" link.
+		</li>
+		<li>
+			This will bring you to a directory listing that includes an entry for each chapter.  Click the link for "ch06".
+		</li>
+		<li>
+			You want to download and save the files <code>ZipLookup.java</code> and <code>zipcode.txt</code>.
+			Right-click the file names and choose the option to save the link in whatever folder you have been using for lab work.
+			Make sure to save them in the same folder.
+		</li>
+		<li>
+			Compile and run <code>ZipLookup.java</code> in jGRASP.
+			You might try using your own ZIP code and a relatively small radius like 0.5 miles.
+			The program takes a while to run because it has to search a large data file.
+		</li>
+	</ol>
+</div>

@@ -1,0 +1,28 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Parameters</h1>
+
+  <ul>
+    <li>
+      The following code passes some parameters to a method.  What output is
+      produced by the two method calls?  Write the output of each call in the
+      box provided.
+
+      <pre style="font-size: smaller">
+public class MysteryNums {
+    public static void main(String[] args) {
+        int x = 15;
+        sentence(x, 42);      // <span class="expressionarea"><input type="text" class="expressionanswer" size="8" spellcheck="true" /><span class="expressionsolution">15 42</span></span>
+
+        int y = x - 7;
+        sentence(y, x + y);   // <span class="expressionarea"><input type="text" class="expressionanswer" size="8" spellcheck="true" /><span class="expressionsolution">8 23</span></span>
+    }
+    
+    public static void sentence(int num1, int num2) {
+        System.out.println(num1 + " " + num2);
+    }
+}
+</pre>
+
+    </li>
+  </ul>
+</div>

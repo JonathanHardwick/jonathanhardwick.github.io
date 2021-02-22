@@ -1,0 +1,115 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>-A: <code>Scanner</code>
+    practice</h1>
+
+  <p>
+    The next couple problems are about a file called <code>readme.txt</code>
+    that has the following contents:
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output from the following code, as it would appear on the
+    console?
+  </p>
+<!--
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+System.out.println(input.nextLine());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">6.7  This file has</span></span>
+System.out.println(input.nextLine());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">several input</span></span>
+System.out.println(input.nextLine());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">LINES!</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement">
+    </span>-B: <code>Scanner</code> practice</h1>
+
+  <p>
+    Input file: <code>readme.txt</code>
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output if the code was changed to the following?
+  </p>
+ -->
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+System.out.println(input.next());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">6.7</span></span>
+System.out.println(input.next());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">This</span></span>
+System.out.println(input.next());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">file</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement">
+    </span>-B: <code>Scanner</code> practice</h1>
+
+  <p>
+    Input file: <code>readme.txt</code>
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output for the following code?  If there would be an
+    error, write <strong>error</strong> .
+  </p>
+
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+System.out.println(input.nextDouble());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">6.7</span></span>
+System.out.println(input.nextDouble());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">error</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement">
+    </span>-C: <code>Scanner</code> practice</h1>
+
+  <p>
+    Input file: <code>readme.txt</code>
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output for the following code?  If there would be an
+    error, write <strong>error</strong> .
+  </p>
+
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+while (!input.hasNextInt()) {
+    input.next();
+}
+System.out.println(input.nextInt());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">10</span></span>
+</pre>
+</div>

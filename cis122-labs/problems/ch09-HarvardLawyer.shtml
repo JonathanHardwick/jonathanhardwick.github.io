@@ -1,0 +1,27 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>HarvardLawyer</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+9&problem=9-e3-HarvardLawyer">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			<strong>Write an employee class <code>HarvardLawyer</code></strong> to accompany the other employees.
+			Harvard lawyers are like normal lawyers, but they make 20% more money than a normal lawyer,
+			they get 3 days more vacation, and they have to fill out four of the lawyer's forms to go on vacation.
+			That is, the <code>getVacationForm</code> method should return <code>"pinkpinkpinkpink"</code>.
+		</li>
+		
+		<li>
+			(If the normal <code>Lawyer</code>'s vacation form ever changed, the <code>HarvardLawyer</code>'s should as well.
+			For example, if <code>Lawyer</code>'s vacation form changed to <code>"red"</code>,
+			the <code>HarvardLawyer</code>'s should return <code>"redredredred"</code>.)
+		</li>
+		
+		<li>
+			Use the <code>super</code> keyword to interact with the <code>Employee</code> superclass as appropriate.
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,32 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: simple <code>for</code> loop
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+2&problem=bjp3-2-s18-Count2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li><strong>Copy/paste</strong> the following code into jGRASP.
+			<pre>
+public class Count2 {
+    public static void main(String[] args) {
+        for ( <var>fill me in!</var> ) {
+            System.out.println( <var>fill me in!</var> );
+        }
+    }
+}
+</pre>
+		</li>
+
+		<li><strong>Modify</strong> the code to produce the following output:
+
+			<pre>
+2 times 1 = 2
+2 times 2 = 4
+2 times 3 = 6
+2 times 4 = 8
+</pre>
+		</li>
+	</ul>
+</div>

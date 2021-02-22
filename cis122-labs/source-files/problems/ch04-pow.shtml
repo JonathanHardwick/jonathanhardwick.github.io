@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: pow
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+4&problem=bjp3-4-e5-pow">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+				
+  <p>
+    Write a method named <code>pow</code> that accepts a base and an exponent as parameters and returns the base raised to the given power.  For example, the call <code>pow(3, 4)</code> returns 3 * 3 * 3 * 3 or 81.  Do not use <code>Math.pow</code> in your solution; use a cumulative algorithm instead.  Assume that the base and exponent are non-negative.
+  </p>
+				
+  <ul>
+    <li>
+      (Try solving this problem in Practice-It by clicking the icon above.)
+    </li>
+    <li>
+      For added challenge, try turning your solution into a second
+      version <code>pow2</code> that works with real number bases and negative
+      exponents.
+      <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+4&problem=bjp3-4-e14-pow2">
+				<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+      </a>
+    </li>
+  </ul>
+</div>

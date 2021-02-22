@@ -1,0 +1,52 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: File Scanner declaration
+    syntax</h1>
+                                
+  <p>
+    Which of the following choices is the correct syntax for declaring
+    a <code>Scanner</code> to read the file <code>example.txt</code> in the
+    current directory ?
+  </p>
+                                
+  <ol class="mcquestion">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>Scanner input = new Scanner("C:\example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mccorrect" />
+        <code>Scanner input = new Scanner(new File("example.txt"));</code>
+        <img class="mcresultimage" src="images/correct.gif" alt="correct" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>Scanner input = new File("example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>File input = new Scanner("/example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>Scanner input = new Scanner("C:/example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+  </ol>
+</div>

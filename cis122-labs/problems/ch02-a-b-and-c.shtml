@@ -1,0 +1,25 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: <code>a</code>, 
+    <code>b</code>, and <code>c</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-s11-valuesOfABC">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+                                
+  <p>
+    What are the values of <code>a</code>, <code>b</code>, and <code>c</code>
+    after the following statements?  Write your answers in the boxes on the
+    right.
+  </p>
+                                
+  <pre>
+int a = 5;
+int b = 10;
+int c = b;
+
+a = a + 1;            // a? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">6</span></span>
+b = b - 1;            // b? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">9</span></span>
+c = c + a;            // c? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">16</span></span>
+</pre>
+</div>

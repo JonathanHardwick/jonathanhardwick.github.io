@@ -1,0 +1,32 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: longestName
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+10&amp;problem=practicemidterm10-longestName">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> named <code>longestName</code> that reads
+    names typed by the user and prints the longest name (the name that contains
+    the most characters) in the format shown below. Your method should accept a
+    console <code>Scanner</code> and an integer <em>n</em> as parameters and
+    should then prompt for <em>n</em> names.
+  </p>
+
+  <p>
+    A sample execution of the call <code>longestName(console, 4)</code> might
+    look like the following:
+				</p>
+
+  <pre>
+name #1? roy
+name #2? DANE
+name #3? sTeFaNiE
+name #4? Erik
+Stefanie's name is longest
+</pre>
+
+  <p>
+    Try to solve this problem in Practice-It: click on the check-mark above!
+  </p>
+</div>

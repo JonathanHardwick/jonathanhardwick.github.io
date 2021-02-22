@@ -1,0 +1,7 @@
+Hello, world!
+I am learning to program in Java.
+I hope it is a lot of fun!
+
+I hope I get a good grade!
+
+Maybe I'll change my major to computer science.

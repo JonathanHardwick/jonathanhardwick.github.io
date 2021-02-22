@@ -1,0 +1,20 @@
+<!--#set var="LAB_NUMBER" value="3" -->
+<!--#set var="LAB_NAME" value="Return" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>return</code> values to send data between methods</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT RETURN -->
+<!--#include virtual="common/ch03-return-syntax.shtml" -->
+<!--#include virtual="common/ch03-math-expression-syntax.shtml" -->
+<!--#include virtual="problems/ch03-math-expressions-new.shtml" -->
+<!--#include virtual="problems/ch03-area.shtml" -->  
+<!--#include virtual="problems/ch03-pay.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

@@ -1,0 +1,31 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: printFactors
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-e9-printFactors">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+		Write a method named <code>printFactors</code> that accepts an integer as its parameter and uses a fencepost loop to print the factors of that number, separated by the word <code>"and"</code>.
+		For example, the call <code>printFactors(24)</code> should print the following output:
+
+	<pre>
+1 and 2 and 3 and 4 and 6 and 8 and 12 and 24
+</pre>
+		</li>
+
+		<li>
+			You may assume that the parameter value passed is greater than 0.
+		</li>
+		
+		<li class="hint">
+			(Hint: This is an example of a fencepost problem.)
+		</li>
+
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>

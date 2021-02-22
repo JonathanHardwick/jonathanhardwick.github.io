@@ -1,0 +1,25 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: BankAccount transactionFee
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+8&problem=bjp3-8-e11-transactionFeeBankAccount">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			<strong>Add a <code>double</code> field to the <code>BankAccount</code> class named <code>transactionFee</code></strong> that represents an amount of money to deduct every time the user withdraws money.
+			The default value is <code>$0.00</code>, but the client can change the value.
+			Deduct the transaction fee money during every <code>withdraw</code> call (but not from deposits).
+		</li>
+
+		<li>
+			<strong>Make sure that the balance cannot go negative</strong> during a withdrawal.
+			If the withdrawal (amount plus transaction fee) would cause it to become negative, don't modify the <code>balance</code> value at all.
+		</li>
+		
+		<li>
+			Test your solution to this problem in Practice-It.
+		</li>
+	</ul>
+</div>

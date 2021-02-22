@@ -1,0 +1,28 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: repl
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+4&amp;problem=4-e2-repl">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Write a method named <code>repl</code> that accepts a <code>String</code>
+      and a number of repetitions as parameters and returns
+      the <code>String</code> concatenated that many times. For example, the
+      call <code>repl("hello", 3)</code>
+      returns <code>"hellohellohello"</code>. If the number of repetitions is 0
+      or less, an empty string is returned.
+    </li>
+					
+    <li>
+      Try solving this problem in Practice-It! using the link above.
+    </li>
+					
+    <li class="hint">
+      (Hint: This is best solved with a cumulative algorithm.  Start with an
+      empty string and build it up piece by piece.)
+    </li>
+  </ul>
+</div>

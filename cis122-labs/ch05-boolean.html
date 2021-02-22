@@ -1,0 +1,679 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: Boolean logic</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 5: Boolean logic</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: Boolean logic</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>boolean</code> expressions and variables to represent logical true/false expressions</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT BOOLEAN -->
+<div class="slide">
+	<h1>The <code>boolean</code> type</h1>
+	
+	<p>
+		The <code>boolean</code> type represents logical values of <code>true</code> or <code>false</code>.  Combine <code>boolean</code> expressions with logical operators <code>&amp;&amp;</code> (and), <code>||</code> (or), and <code>!</code> (not).
+	</p>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+boolean test1 = 7 &lt; 10;            <span class="comment">// true</span>
+boolean test2 = (1 == 2);          <span class="comment">// false</span>
+if ((test1 || test2) &amp;&amp; 2 + 2 != 5) {
+    System.out.print("hello");     <span class="comment">// output: hello</span>
+}
+</pre>
+</div>
+
+<div class="slide">
+	<h1><code>String</code> methods with <code>boolean</code> results</h1>
+
+	<table class="standard">
+		<tr>
+			<th>
+				Method name
+			</th>
+
+			<th>
+				Description
+			</th>
+		</tr>
+		
+		<tr>
+			<td>
+				<var>string</var><code>.equals(<var>string</var>)</code>
+			</td>
+			<td>
+				whether the two strings are identical
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.equalsIgnoreCase(<var>string</var>)</code>
+			</td>
+			<td>
+				whether the two strings are identical, ignoring capitalization
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.startsWith(<var>string</var>)</code>
+			</td>
+			<td>
+				whether this string begins with the characters of the given string
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.endsWith(<var>string</var>)</code>
+			</td>
+			<td>
+				whether this string ends with the characters of the given string
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<var>string</var><code>.contains(<var>string</var>)</code>
+			</td>
+			<td>
+				whether the characters of the given string occur within this string
+			</td>
+		</tr>
+	</table>
+	
+	<pre class="compressed">
+String name = "Professor Smith";
+if (<em>name.startsWith("Prof")</em>) {
+    System.out.println("When are your office hours?");
+}
+</pre>
+</div>
+
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Boolean Expressions</h1>
+
+	<p>
+		Write the result of each expression as either <code>true</code>
+		or <code>false</code>, given the following variables.
+	</p>
+
+	<pre class="compressed">
+int x = 12;
+int y = 7;
+int z = 28;
+String s = "mid term";
+</pre>
+
+	<table class="expressiontable">
+		<tr>
+			<td class="expression"><code>x &lt; 14</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>!(x % 2 &lt; 1)</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">false</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>x &lt; y || x &lt; z</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>z / x &lt; x / y * x</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>s.length() == y</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">false</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>s.toUpperCase().equals("MID TERM")</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>!s.equals("mid term") || x * y != z</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">true</pre></td>
+		</tr>
+		<tr>
+			<td class="expression"><code>s.substring(z / x).length() &gt; y</code></td>
+			<td><input type="text" class="expressionanswer" size="10" spellcheck="false" /></td>
+			<td><pre class="expressionsolution">false</pre></td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: allDigitsOdd
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+5&amp;problem=lab5-allDigitsOdd">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    Write a method named <code>allDigitsOdd</code> that returns whether every
+    digit of a positive integer is odd.  Your method should
+    return <code>true</code> if the number consists entirely of odd digits
+    and <code>false</code> if any of its digits are even.  0, 2, 4, 6, and 8
+    are even digits, and 1, 3, 5, 7, 9 are odd digits.
+  </p>
+				
+  <p>
+    For example, <code>allDigitsOdd(135319)</code> returns <code>true</code>
+    but <code>allDigitsOdd(91<strong>4</strong>5<strong>2</strong>93)</code>
+    returns <code>false</code>.
+  </p>
+				
+  <p>
+    <em>Hint:</em> You can pull apart a number into its digits using <code>/
+    10</code> and <code>% 10</code>.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: hasMidpoint
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-hasMidpoint">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> <code>hasMidpoint</code> that accepts three
+    integers as parameters, and returns <code>true</code> if one of the numbers
+    is the midpoint of the other two and returns <code>false</code> otherwise.
+  </p>
+
+  <p>
+    For example, the call <code>hasMidpoint(3, 7, 5)</code> would
+    return <code>true</code> because one of the parameters (5) is the midpoint
+    of the other two (3 and 7).
+  </p>
+
+  <p>
+    Try to solve this problem in Practice-It: click on the check-mark above!
+  </p>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: before
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+5&amp;problem=lab5-before">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    Write a method <code>before</code> that takes as parameters two month/day
+    combinations and that returns whether or not the first date comes before
+    the second date (<code>true</code> if the first month/day comes before the
+    second month/day, <code>false</code> if it does not).  The method will take
+    four integers as parameters that represent the two month/day combinations.
+  </p>
+
+  <p>
+    The first integer in each pair represents the month and will be a value
+    between 1 and 12 (1 for January, 2 for February, etc, up to 12 for
+    December).  The second integer in each pair represents the day of the month
+    (a value between 1 and 31).  One date is considered to come before another
+    if it comes earlier in the year.
+  </p>
+
+  <p>
+    Solve this problem in Practice-It by clicking on the check-mark above.
+  </p>
+
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: sameDashes
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-sameDashes">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    Write a method <code>sameDashes</code> that takes two strings as parameters
+    and that returns whether or not they have dashes in the same places
+    (returning <code>true</code> if they do and returning <code>false</code>
+    otherwise). For example, below are four pairs of strings of equal length
+    that have the same pattern of dashes. Notice that the last pair has no
+    dashes at all.
+    <pre>
+string 1:    "hi--there-you."    "-15-389"    "criminal-plan"    "abc"
+string 2:    "12--(134)-7539"    "-xy-zzy"    "(206)555-1384"    "9.8"
+</pre>
+    To be considered a match, the strings must have exactly the same number of
+    dashes in exactly the same positions. The Strings might be of different
+    length.
+  </p>
+
+  <p>
+    Solve this problem in Practice-It by clicking on the check-mark above.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: "Boolean Zen"
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-s15-isVowel">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    This attempted solution to Self-Check 5.15 (<code>isVowel</code>) has
+    several problems:</p>
+  
+  <pre class="compressed">
+// Returns whether the given string represents a vowel:
+// a, e, i, o, or u, case insensitively.
+public static boolean isVowel(String s) {
+    if (s == "a") {
+        return true;
+    } else if (s == "e") {
+        return true;
+    } else if (s == "i") {
+        return true;
+    } else if (s == "o") {
+        return true;
+    } else if (s == "u") {
+        return true;
+    } else {
+        return false;
+    }
+}
+  </pre>
+
+  <p>
+    Open Practice-It from the link above, copy/paste this code into it, then
+    see the next slide.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - things to
+    fix
+  </h1>
+				
+  <p>
+    Fix the following aspects of the code:
+  </p>
+				
+  <ul>
+    <li>
+      It has a bug related to how strings are compared.
+    </li>
+    <li>
+      It isn't case sensitive; it fails for uppercase vowels.
+    </li>
+    <li>
+      It has too many unnecessary if/else statements.
+    </li>
+    <li>
+      <em>(advanced)</em> It does not use "Boolean Zen" as described in
+      textbook section 5.3.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+  
+  <pre class="compressed">
+public static boolean isVowel(String s) {
+    s = s.toLowerCase();
+    if (s.equals("a") || s.equals("e") || s.equals("i")
+            || s.equals("o") || s.equals("u")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+  </pre>
+
+  <p>
+    The above can be improved.  "Boolean Zen" version:
+  </p>
+
+  <pre class="compressed">
+public static boolean isVowel(String s) {
+    s = s.toLowerCase();
+    return s.equals("a") || s.equals("e") || s.equals("i")
+           || s.equals("o") || s.equals("u");
+}
+  </pre>
+</div>
+
+
+<!-- PROBLEMS ABOUT ASSERTIONS -->
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: assertions
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-assertions">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Identify whether each assertion is always/never/sometimes <code>true</code> at each point.
+	</p>
+
+	<table class="assertiontable" style="float: right; font-size: smaller; padding-top: 3em;">
+		<tr>
+			<th></th>
+			<th><code>x &gt; y</code></th>
+			<th><code>z == 0</code></th>
+			<th><code>x == y</code></th>
+		</tr>
+
+		<tr>
+			<th>A</th>
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">ALWAYS</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>B</th>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>C</th>
+			
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">ALWAYS</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>D</th>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>E</th>
+			
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">NEVER</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">SOMETIMES</span>
+			</td>
+
+			<td>
+				<select class="expressionanswer">
+					<option value="">(choose)</option>
+					<option value="ALWAYS">ALWAYS</option>
+					<option value="NEVER">NEVER</option>
+					<option value="SOMETIMES">SOMETIMES</option>
+				</select>
+				<span class="expressionsolution" style="display: none">ALWAYS</span>
+			</td>
+		</tr>
+	</table>
+
+	<pre class="compressed">
+public static void mystery(int x, int y) {
+    int z = 0;
+
+    <span class="assertionpoint">// Point A</span>
+    while (x != y) {
+        <span class="assertionpoint">// Point B</span>
+        z++;
+
+        if (x > y) {
+            <span class="assertionpoint">// Point C</span>
+            x = x / 10;
+        } else {
+            <span class="assertionpoint">// Point D</span>
+            y = y / 10;
+        }
+    }
+
+    <span class="assertionpoint">// Point E</span>
+    System.out.println(x + " " + y + " " + z);
+}
+	</pre>
+
+	<p>
+		You can also solve this problem in Practice-It by clicking on the check-mark above.
+	</p>
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

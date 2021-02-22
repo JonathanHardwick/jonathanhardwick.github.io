@@ -1,0 +1,32 @@
+<div class="slide">
+	<h1>
+		Date class
+	</h1>
+	
+	<p>
+		Suppose you are given a class named <code>Date</code> with the following contents:
+	</p>
+	
+	<pre class="compressed">
+// A Date stores a month and day of the (non-leap) year.
+public class Date {
+    private int month;
+    private int day;
+
+    // constructs a new Date with the given month/day
+    public Date(int m, int d)
+
+    // returns the fields' values
+    public int getMonth()
+    public int getDay()
+
+    public int daysInMonth()
+    public void nextDay()
+    public String toString()
+
+    ...
+}
+</pre>
+</div>
+
+

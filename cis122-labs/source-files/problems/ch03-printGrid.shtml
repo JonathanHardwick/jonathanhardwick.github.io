@@ -1,0 +1,37 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>printGrid</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-e5-printGrid">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<!--
+	<div class="attention">
+		We suggest you skip this problem if the lab time is more than half over already. 
+	</div>
+	-->
+	
+	<ul>
+		<li>
+			<strong>Write</strong> a method named <code>printGrid</code> that accepts two integers representing a number of rows and columns and prints a grid of integers from 1 to (rows*columns) in column-major order.
+		</li>
+		<li>
+			For example, the call:
+			<pre>
+printGrid(4, 6);
+</pre>
+			should produce the following output:
+			<pre>
+1 5 9 13 17 21
+2 6 10 14 18 22
+3 7 11 15 19 23
+4 8 12 16 20 24
+</pre>
+		</li>
+		<li>
+			Check your answer using Practice-It from the check-mark icon above.
+		</li>
+	</ul>
+</div>

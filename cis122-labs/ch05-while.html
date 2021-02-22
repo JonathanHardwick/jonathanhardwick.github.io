@@ -1,0 +1,572 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: While Loops</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 5: While Loops</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: While Loops</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>while</code> loops for indefinite repetition</li>
+		<li>practice the <strong>fencepost</strong> and <strong>sentinel</strong> loop patterns</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It! 
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT WHILE LOOPS -->
+<div class="slide">
+	<h1><code>while</code> Loops</h1>
+	
+	<p>
+		A <code>while</code> loop repeats indefinitely until a given condition is met.
+	</p>
+	
+	<pre>
+while (<var>test</var>) {
+    <var>statement(s)</var>;
+}
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+int num = 1;
+<em>while (num &lt; 5) {</em>
+    System.out.print(n + " ");     <span class="comment">// output: 1 2 3 4</span>
+    n++;
+<em>}</em>
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>while</code> loop basics</h1>
+
+	<p>
+Consider the following loop.
+	</p>
+
+	<pre>
+int x = 1;
+System.out.print(x);
+while (x &lt; 100) {
+    x = x + x;
+    System.out.print(", " + x);
+}
+</pre>
+
+	<table class="expressiontable">
+		<tr>
+			<td>
+				How many times does the code in the <code>while</code> loop execute?
+			</td>
+			<td>
+				<span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<span class="expressionsolution">7</span></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				What output is produced by the overall code?
+			</td>
+			<td>
+				<span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="false" />
+				<span class="expressionsolution">1, 2, 4, 8, 16, 32, 64, 128</span></span>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>while</code> loop mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&problem=5-s3-whileLoopMystery1">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Fill in the boxes at right with the output produced by each method call.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre class="compressed">
+public static void mystery(int x) {
+    int y = 1;
+    int z = 0;
+    while (2 * y &lt;= x) {
+        y = y * 2;
+        z++;
+    }
+    System.out.println(y + " " + z);
+}
+</pre>
+			</td>
+
+			<td>
+				<table class="expressiontable">
+					<tr>
+						<td class="expression"><code>mystery(1);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1 0</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery(6);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">4 2</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery(19);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">16 4</pre></td>
+					</tr>
+					
+					<tr>
+						<td class="expression"><code>mystery(39);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">32 5</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery(74);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">64 6</pre></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>while</code> loop mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+10&problem=practicemidterm10-whileLoopMystery">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Fill in the boxes at right with the output produced by each method call.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre class="compressed">
+public static void mystery2(int x, int y) {
+    int z = 0;
+    while (x % y != 0) {
+        x = x / y;
+        z++;
+        System.out.print(x + ", ");
+    }
+
+    System.out.println(z);
+}
+</pre>
+			</td>
+
+			<td>
+				<table class="expressiontable">
+					<tr>
+						<td class="expression"><code>mystery2(25, 2);</code></td>
+						<td><input type="text" class="expressionanswer" size="25" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">12, 1</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery2(32, 4);</code></td>
+						<td><input type="text" class="expressionanswer" size="25" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">0</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression" style="white-space: nowrap"><code>mystery2(10345, 10);</code></td>
+						<td><input type="text" class="expressionanswer" size="25" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1034, 103, 10, 3</pre></td>
+					</tr>
+					
+					<tr>
+						<td class="expression"><code>mystery2(63, 2);</code></td>
+						<td><input type="text" class="expressionanswer" size="25" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">31, 15, 7, 3, 1, 0, 6</pre></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>while</code> loop mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&problem=5-s4-whileLoopMystery2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Fill in the boxes at right with the output produced by each method call.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre class="compressed">
+public static void mystery3(int x) {
+    int y = 0;
+    while (x % 2 == 0) {
+        y++;
+        x = x / 2;
+    }
+    System.out.println(x + " " + y);
+}
+</pre>
+			</td>
+
+			<td>
+				<table class="expressiontable">
+					<tr>
+						<td class="expression"><code>mystery3(19);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">19 0</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery3(42);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">21 1</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery3(48);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">3 4</pre></td>
+					</tr>
+					
+					<tr>
+						<td class="expression"><code>mystery3(40);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">5 3</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery3(64);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1 6</pre></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>while</code> loop mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-whileLoopMystery">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h2>
+
+	<p>
+		Fill in the boxes at right with the output produced by each method call.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="font-size: smaller">
+public static void mystery4(int n) {
+    int x = 1;
+    int y = 2;
+    while (y &lt; n) {
+        if (n % y == 0) {
+            n = n / y;
+            x++;
+        } else {
+            y++;
+        }
+    }
+    System.out.println(x + " " + n);
+}
+</pre>
+			</td>
+
+			<td>
+				<table class="expressiontable">
+					<tr>
+						<td class="expression"><code>mystery4(2);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1 2</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery4(5);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1 5</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery4(24);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">4 3</pre></td>
+					</tr>
+					
+					<tr>
+						<td class="expression"><code>mystery4(28);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">3 7</pre></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: digitSum
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+5&amp;problem=lab5-digitSum">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			Write a method named <code>digitSum</code> that accepts an integer as a parameter and returns the sum of the digits of that number.
+			For example, the call <code>digitSum(29107)</code> returns 2+9+1+0+7 or 19.
+			For negative numbers, return the same value that would result if the number were positive.
+			For example, <code>digitSum(-456)</code> returns 4+5+6 or 15.
+			The call <code>digitSum(0)</code> returns 0.
+		</li>
+		
+		<li class="hint">
+			(Hint: This is a cumulative algorithm.  To extract a digit from a number, <code>use / 10</code> and <code>% 10</code> operations.)
+		</li>
+
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: ProcessName2
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&problem=lab4-ProcessName2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Modify your previous <code>ProcessName</code> program so that it re-prompts until
+		the user types a name that is at least 5 letters total in length and has at
+		least one space in it.	Example:
+	</p>
+	
+	<pre>
+Type your name: <span class="userinput">Joe</span>
+Error, must be at least 5 chars with a space.
+Type your name: <span class="userinput">O K!</span>
+Error, must be at least 5 chars with a space.
+Type your name: <span class="userinput">what</span>
+Error, must be at least 5 chars with a space.
+Type your name: <span class="userinput">Tyler Durden</span>
+Your name is: Durden, T.
+</pre>
+
+	<ul>
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>
+     
+
+<!-- PROBLEMS ABOUT FENCEPOST LOOPS -->
+<div class="slide">
+	<h1>Fencepost Loops</h1>
+	
+	<p>
+		A <strong>fencepost loop</strong> is a common algorithmic pattern where you want to perform <em>N</em> tasks with <em>N-1</em> things between them.
+		It's like a fence with <em>N</em> posts with <em>N-1</em> wires between the posts.
+	</p>
+	
+	<p>
+		To achieve this, place one "post" outside your loop, then alternate between "wires" and "posts" inside the loop.
+	</p>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+System.out.print(1);                 <span class="comment">// |==|==|==|==| fence</span>
+for (int i = 2; i &lt;= 5; i++) {
+    System.out.print(".." + i);      <span class="comment">// 1..2..3..4..5</span>
+}
+</pre>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: printLetters
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-s12-printLetters">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			Write a method named <code>printLetters</code> that takes a <code>String</code> as its parameter and that prints the letters of the String, separated by dashes.
+			For example, the call of <code>printLetters("Rabbit")</code> should print:
+
+			<pre>
+R-a-b-b-i-t
+</pre>
+    </li>
+
+		<li class="hint">
+			(Hint: This is a fencepost problem.
+			Remember that each <code>String</code> object has a <code>length</code> method that tells you how many characters are in the <code>String</code> and a <code>charAt</code> method that gets you individual characters of
+			the <code>String</code>.)
+		</li>
+
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: printFactors
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-e9-printFactors">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+		Write a method named <code>printFactors</code> that accepts an integer as its parameter and uses a fencepost loop to print the factors of that number, separated by the word <code>"and"</code>.
+		For example, the call <code>printFactors(24)</code> should print the following output:
+
+	<pre>
+1 and 2 and 3 and 4 and 6 and 8 and 12 and 24
+</pre>
+		</li>
+
+		<li>
+			You may assume that the parameter value passed is greater than 0.
+		</li>
+		
+		<li class="hint">
+			(Hint: This is an example of a fencepost problem.)
+		</li>
+
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

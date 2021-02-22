@@ -1,0 +1,33 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: BankAccount transactionFee
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+3&problem=practicefinal3-transactionFee">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			Write a method <code>transactionFee</code> to go in the <code>BankAccount</code> class.
+			It takes a fee (real number) parameter and applies the fee to all past transactions.
+			The fee is applied once for the first transaction, 2x for the second, 3x for the third, etc.
+			These fees are subtracted from the account's balance.
+		</li>
+		
+		<li>
+			If the balance is large enough to afford all fees with &gt; $0.00 remaining, the method returns <code>true</code>.
+			If not, the balance is 0.0 and it returns <code>false</code>.  For example:
+
+			<pre class="compressed">
+BankAccount savings = new BankAccount("Jimmy", 0.00);
+savings.deposit(10.00);
+savings.deposit(50.00);
+savings.deposit(10.00);
+savings.deposit(70.00);         <span class="comment">// balance = $140, with 4 transactions</span>
+
+savings.transactionFee(5.00);   <span class="comment">// deducts  $5+10+15+20; balance = $90; returns true</span>
+savings.transactionFee(10.00);  <span class="comment">// deducts $10+20+30+40; balance =  $0; returns false</span>
+</pre>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,23 @@
+<div class="slide">
+	<h1>
+		jGRASP Interactions Pane
+	</h1>
+
+	<ul>
+		<li>
+			jGRASP has a useful feature called the <strong>Interactions Pane</strong> that allows you to type in Java expressions or statements one at a time and instantly see their results.
+		</li>
+		
+		<li>
+			To use it, run jGRASP and then click the "Interactions" tab near the bottom.
+		</li>
+		
+		<li>
+			<img src="images/jgrasp-interactions-clipped.png" width="660" height="237" alt="jGRASP Interactions Pane" />
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>

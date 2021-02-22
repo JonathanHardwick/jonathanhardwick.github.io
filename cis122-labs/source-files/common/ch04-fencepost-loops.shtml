@@ -1,0 +1,23 @@
+<div class="slide">
+	<h1>Fencepost Loops</h1>
+	
+	<p>
+		A <strong>fencepost loop</strong> is a common algorithmic pattern where you want to perform <em>N</em> tasks with <em>N-1</em> things between them.
+		It's like a fence with <em>N</em> posts with <em>N-1</em> wires between the posts.
+	</p>
+	
+	<p>
+		To achieve this, place one "post" outside your loop, then alternate between "wires" and "posts" inside the loop.
+	</p>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+System.out.print(1);                 <span class="comment">// |==|==|==|==| fence</span>
+for (int i = 2; i &lt;= 5; i++) {
+    System.out.print(".." + i);      <span class="comment">// 1..2..3..4..5</span>
+}
+</pre>
+</div>

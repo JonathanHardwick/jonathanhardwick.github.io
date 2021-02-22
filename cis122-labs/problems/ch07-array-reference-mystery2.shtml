@@ -1,0 +1,17 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Array reference mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+2&problem=practicefinal2-referenceMystery">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Solve another <a class="popup" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+2&problem=practicefinal2-referenceMystery">reference mystery</a> problem on PracticeIt!
+	</p>
+	
+	<p>
+		Discuss it with your neighbor before submitting the answer and make sure you agree with each other's solution.  There will be a problem of this type on the final!
+	</p>
+
+</div>

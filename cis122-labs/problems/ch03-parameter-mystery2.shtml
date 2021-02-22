@@ -1,0 +1,36 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: Parameter Mystery
+					
+    <a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-s3-parameterMysteryNumbers">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Fill in the boxes with the output that each method call would produce:
+
+      <pre style="font-size: smaller">
+public class MysteryNumbers {
+    public static void main(String[] args) {
+        String one = "two";
+        String two = "three";
+        String three = "1";
+        int number = 20;
+
+        sentence(one, two, 3);                  // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">three times two = 6</span></span>
+        sentence(two, three, 14);               // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">1 times three = 28</span></span>
+        sentence(three, three, number + 1);     // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">1 times 1 = 42</span></span>
+        sentence(three, two, 1);                // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">three times 1 = 2</span></span>
+        sentence("eight", three, number / 2);   // <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">1 times eight = 20</span></span>
+    }
+    public static void sentence(String three, String one, int number) {
+        System.out.println(one + " times " + three + " = " + (number * 2));
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>

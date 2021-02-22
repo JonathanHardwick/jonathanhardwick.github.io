@@ -1,0 +1,35 @@
+<div class="slide">
+	<h1>
+		BankAccount class
+	</h1>
+
+	<ul>
+		<li>
+			The next exercise refers to the following
+			<a class="popup" href="problems/BankAccount.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" /> 
+				BankAccount
+			</a>
+			class (download it and open it in jGRASP).
+		</li>
+	</ul>
+	
+	<pre class="compressed">
+// Each BankAccount object represents one user's account
+// information including name and balance of money.
+
+public class BankAccount {
+    String name;
+    double balance;
+
+    public void deposit(double amount) {
+        balance = balance + amount;
+    }
+
+    public void withdraw(double amount) {
+        balance = balance - amount;
+    }
+}
+</pre>
+</div>
+

@@ -1,0 +1,62 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>while</code> loop mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-whileLoopMystery">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h2>
+
+	<p>
+		Fill in the boxes at right with the output produced by each method call.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="font-size: smaller">
+public static void mystery4(int n) {
+    int x = 1;
+    int y = 2;
+    while (y &lt; n) {
+        if (n % y == 0) {
+            n = n / y;
+            x++;
+        } else {
+            y++;
+        }
+    }
+    System.out.println(x + " " + n);
+}
+</pre>
+			</td>
+
+			<td>
+				<table class="expressiontable">
+					<tr>
+						<td class="expression"><code>mystery4(2);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1 2</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery4(5);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">1 5</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>mystery4(24);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">4 3</pre></td>
+					</tr>
+					
+					<tr>
+						<td class="expression"><code>mystery4(28);</code></td>
+						<td><input type="text" class="expressionanswer" size="15" spellcheck="false" /></td>
+						<td><pre class="expressionsolution">3 7</pre></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>

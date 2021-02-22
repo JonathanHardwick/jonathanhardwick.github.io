@@ -1,0 +1,39 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>:
+    Printing <code>String</code>s
+    
+    <a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-s7-printStrings">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      <p>
+        <strong>Write</strong> a method called <code>printStrings</code> that
+        accepts a <code>String</code> and a number of repetitions as parameters
+        and prints that <code>String</code> the given number of times.  For
+        example, the call:
+      </p>
+                                                
+      <pre>
+printStrings("abc", 5);
+</pre>
+      <p>
+        will print the following output:
+      </p>
+                                                
+      <pre>
+abcabcabcabcabc
+</pre>
+    </li>
+
+    <li>
+      <strong>Complete</strong> the program with a <code>main</code> method.
+      Try calling your method several times from <code>main</code> and see what
+      happens when you pass different values.
+    </li>
+  </ul>
+</div>

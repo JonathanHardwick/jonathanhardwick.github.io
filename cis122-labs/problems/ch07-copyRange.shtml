@@ -1,0 +1,33 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>copyRange</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+7&amp;problem=lab7-copyRange">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    Write a method named <code>copyRange</code> that takes as parameters two
+    arrays <code>a1</code> and <code>a2</code>, two starting
+    indexes <code>i1</code> and <code>i2</code>, and a length <code>l</code>,
+    and copies the first <code>l</code> elements of <code>a1</code> starting at
+    index <code>i1</code> into array <code>a2</code> starting at
+    index <code>i2</code>.
+  </p>
+
+  <p>
+    For example, if the following arrays are declared:
+  </p>
+
+  <pre>
+int[] a1 = {<strong>10, 20, 30</strong>, 40, 50, 60};
+int[] a2 = {91, 92, <strong>93, 94, 95</strong>, 96};
+copyRange(a1, a2, 0, 2, 3);
+</pre>
+
+  <p>
+    After the preceding call, the contents of <code>a2</code> would
+    be <code>{91, 92, 10, 20, 30, 96}</code>. You may assume that the
+    parameters' values are valid, that the arrays are large enough to hold the
+    data, and so on.
+  </p>
+</div>

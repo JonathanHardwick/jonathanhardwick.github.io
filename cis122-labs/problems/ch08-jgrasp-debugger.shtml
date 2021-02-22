@@ -1,0 +1,218 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: jGRASP Debugger</h1>
+
+	<p>
+		The debugger can help you learn how classes and objects work.
+		In this exercise we will debug the <strong>Ch. 8 "Stock" Case Study</strong> example.
+		This program tracks purchases of two stock investments.
+		To download the example:
+	</p>
+	
+	<ol>
+		<li>
+			Go to the <a class="popup" href="../">class web page</a> and click the "Textbook" link.
+		</li>
+		<li>
+			Find the section labeled "Code Files" and click the "code files" link.  Then click "ch08".
+		</li>
+		<li>
+			Download and save the files <code>Stock.java</code> and <code>StockMain.java</code>.
+			Right-click each file name and Save the Link in the same folder you use for lab work.
+		</li>
+		<li>
+			Compile and run <code>StockMain.java</code> in jGRASP to see that it works.
+		</li>
+	</ol>
+
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+
+	<ul>
+		<li>
+			<strong>Set a stop</strong>
+			<img src="images/jgrasp-stop-sign.png" alt="icon" width="18" height="18" />
+			on the <code>System.out.print</code> on line 53, and <strong>debug</strong> the program.
+			<img src="images/jgrasp-ladybug-icon.png" alt="icon" width="20" height="20" />
+		</li>
+		
+		<li>
+			Type the user input to recreate the following partial log:
+			
+			<pre class="compressed">
+First stock's symbol: <span class="userinput">AMZN</span>
+How many purchases did you make? <span class="userinput">2</span>
+1: How many shares, at what price per share? <span class="userinput">50 35.06</span>
+2: How many shares, at what price per share? <span class="userinput">25 38.52</span>
+</pre>
+		</li>
+		
+		<li>
+			At this point, what are the values of the fields in the <code>currentStock</code> object? <br />
+			<em>(Ask a TA if you need help.)</em>
+			
+			<table class="expressiontable">
+				<tr>
+					<td class="expression"><code>totalShares</code></td>
+					<td><input type="text" class="expressionanswer" size="9" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">75</pre></td>
+				</tr>
+				<tr>
+					<td class="expression"><code>totalCost</code></td>
+					<td><input type="text" class="expressionanswer" size="9" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">2716.0</pre></td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+
+	<ul>
+		<li>
+			Now let's debug inside one of the <code>Stock</code> object's methods.
+			Your program should still be stopped.
+			<strong>Set a new stop</strong> at the <code>return</code> on line 29 of <code>Stock.java</code>.
+		</li>
+		
+		<li>
+			<strong>Resume</strong> your program 
+			<img src="images/jgrasp-play-icon.png" alt="icon" width="28" height="28" /> .
+			It will prompt for today's price per share.  Enter <strong>37.29</strong> .
+			If you did it properly, the program should now call <code>getProfit</code> on the <code>Stock</code> and hit your stop point.
+			
+			
+			<pre class="compressed">
+What is today's price per share? <span class="userinput">37.29</span>
+</pre>
+		</li>
+		
+		<li>
+			What are the values of the object (<code>this</code>) 's fields, and the variable <code>marketValue</code> ?
+			
+			<table class="expressiontable">
+				<tr>
+					<td class="expression"><code>symbol</code></td>
+					<td><input type="text" class="expressionanswer" size="9" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">"AMZN"</pre></td>
+				</tr>
+				<tr>
+					<td class="expression"><code>totalShares</code></td>
+					<td><input type="text" class="expressionanswer" size="9" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">75</pre></td>
+				</tr>
+				<tr>
+					<td class="expression"><code>totalCost</code></td>
+					<td><input type="text" class="expressionanswer" size="9" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">2716.0</pre></td>
+				</tr>
+			</table>
+			
+			<hr />
+			
+			<table class="expressiontable">
+				<tr>
+					<td class="expression"><code>marketValue</code></td>
+					<td><input type="text" class="expressionanswer" size="9" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">2796.75</pre></td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+
+	<ul>
+		<li>
+			Now let's watch the total shares and cost of a stock change with each purchase.
+			<strong>Remove</strong> your existing stop points and <strong>set a new stop</strong>
+			<img src="images/jgrasp-stop-sign.png" alt="icon" width="18" height="18" />
+			somewhere in the <code>for</code> loop on lines 42-50 of <code>StockMain</code>, and Resume
+			<img src="images/jgrasp-play-icon.png" alt="icon" width="28" height="28" /> .
+		</li>
+		
+		<li>
+			Type the user input to continue recreating the following partial log:
+			
+			<pre class="compressed">
+Second stock's symbol: <span class="userinput">INTC</span>
+How many purchases did you make? <span class="userinput">3</span>
+1: How many shares, at what price per share? <span class="userinput">15 16.55</span>
+2: How many shares, at what price per share? <span class="userinput">10 18.09</span>
+3: How many shares, at what price per share? <span class="userinput">20 17.05</span>
+What is today's price per share? <span class="userinput">17.82</span>
+</pre>
+		</li>
+		
+		<li>
+			After each call of <code>purchase</code>, what are the field values of <code>currentStock</code>?
+			
+			<table class="expressiontable">
+				<tr>
+					<th>field</th>
+					<th>after 1st purchase</th>
+					<th>after 2nd</th>
+					<th>after 3rd</th>
+				</tr>
+				<tr>
+					<td><code>totalShares</code></td>
+					<td>
+						<span class="expressionarea" style="margin-left: 1em">
+							<input type="text" class="expressionanswer" size="9" spellcheck="false" />
+							<span class="expressionsolution">15</span>
+						</span>
+					</td>
+					<td>
+						<span class="expressionarea" style="margin-left: 1em">
+							<input type="text" class="expressionanswer" size="9" spellcheck="false" />
+							<span class="expressionsolution">25</span>
+						</span>
+					</td>
+					<td>
+						<span class="expressionarea" style="margin-left: 1em">
+							<input type="text" class="expressionanswer" size="9" spellcheck="false" />
+							<span class="expressionsolution">45</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td><code>totalCost</code></td>
+					<td>
+						<span class="expressionarea" style="margin-left: 1em">
+							<input type="text" class="expressionanswer" size="9" spellcheck="false" />
+							<span class="expressionsolution">248.25</span>
+						</span>
+					</td>
+					<td>
+						<span class="expressionarea" style="margin-left: 1em">
+							<input type="text" class="expressionanswer" size="9" spellcheck="false" />
+							<span class="expressionsolution">429.15</span>
+						</span>
+					</td>
+					<td>
+						<span class="expressionarea" style="margin-left: 1em">
+							<input type="text" class="expressionanswer" size="9" spellcheck="false" />
+							<span class="expressionsolution">770.15</span>
+						</span>
+					</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+</div>

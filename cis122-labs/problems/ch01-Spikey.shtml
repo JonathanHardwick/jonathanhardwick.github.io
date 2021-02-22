@@ -1,0 +1,28 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: <code>Spikey</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+1&amp;problem=1-e2-Spikey">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Write a complete program named <code>Spikey</code> that produces the following output:
+
+      <pre>
+  \/
+ \\//
+\\\///
+///\\\
+ //\\
+  /\
+</pre>
+
+      <p>
+        (Use only the material we have learned so far.  You can check your
+        output on the Output Comparison Tool web page.)
+      </p>
+    </li>
+  </ul>
+</div>

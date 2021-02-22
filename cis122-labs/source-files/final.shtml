@@ -1,0 +1,32 @@
+<!--#set var="LAB_NUMBER" value="10" -->
+<!--#set var="LAB_NAME" value="Final Exam Practice" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>practice problems similar to those that will be seen on a final exam</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It! 
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT FINAL EXAM PRACTICE -->
+<!--#include virtual="problems/ch07-array-simulation-2.shtml" -->  
+<!--#include virtual="problems/ch07-reference-mystery.shtml" -->     
+<!--#include virtual="problems/ch08-reference-mystery.shtml" -->
+<!--#include virtual="problems/ch09-inheritance-mystery.shtml" -->
+<!--#include virtual="problems/ch06-printStrings.shtml" -->
+<!--#include virtual="problems/ch07-isAllEven.shtml" -->
+<!--#include virtual="problems/ch07-longestSortedSequence.shtml" -->
+<!--#include virtual="problems/ch09-Hyena.shtml" -->
+<!--#include virtual="problems/ch09-Hyena-revisited.shtml" -->
+<!--#include virtual="problems/ch07-array-simulation.shtml" -->
+<!--#include virtual="problems/ch06-reverseLines.shtml" -->
+<!--#include virtual="problems/ch07-append.shtml" -->
+<!--#include virtual="problems/ch09-Shark.shtml" -->
+<!--#include virtual="problems/ch07-array-simulation-3.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

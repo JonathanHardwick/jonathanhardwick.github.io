@@ -1,0 +1,28 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Practice the Indenter
+    Tool</h1>
+				
+  <p>
+    In CSE 142 you can use a web page called the <strong>Indenter Tool</strong>
+    to automatically correct the indentation of a program.
+  </p>
+				
+  <ul>
+    <li>
+      Go to the <a class="popup" href="../labs.shtml">CSE 142
+        Labs web page</a>.
+    </li>
+    <li>
+      Click the link that says "<strong>Indenter Tool</strong>."
+    </li>
+    <li>
+      Go back to your program.  Select all of the code and <strong>copy/paste
+      the code</strong> into the text box of the web page.
+    </li>
+    <li>
+      Click <strong>Fix Indendation</strong> on the page.  The code should now
+      be indented correctly.  <strong>Copy/paste it</strong> back into jGRASP
+      and save the file.
+    </li>
+  </ul>
+</div>

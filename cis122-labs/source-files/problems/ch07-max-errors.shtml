@@ -1,0 +1,119 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: max errors
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+7&problem=bjp3-7-s10-max">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <table class="linenumbertable">
+    <tr>
+      <td>
+        <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+</pre>
+      </td>
+      <td>
+        <pre class="compressed">
+<span class="comment">// Returns the largest value in the given array.</span>
+public static int max(int data[10]) {
+    int max = 0;
+    for (int i = 0; i &lt; data[].length(); i++) {
+        if (array[i] &gt; max) {
+            max = array[i];
+        }
+    }
+    return max[];
+}
+</pre>
+      </td>
+    </tr>
+  </table>
+
+  <p>
+    The above attempted solution to Practice-It problem "<code>max</code>" has
+    7 problems.  Open Practice-It from the link above, copy/paste this code
+    into it, and fix the errors.  Complete the code so that it passes the test
+    cases.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <ol class="compressed">
+    <li>
+      line 2: should not write <code>[10]</code> after parameter name; should
+      write <code>[]</code> (without length) after <code>int</code>
+    </li>
+    <li>
+      line 3: starting <code>max</code> at <code>0</code> won't work if the
+      array is all negative.  Should initialize <code>max</code> variable to
+      be <code>data[0]</code> and start <code>for</code> loop at
+      index <code>1</code>
+    </li>
+    <li>
+      line 4: should not write <code>[]</code> after <code>data</code> here
+    </li>
+    <li>
+      line 4: should not write <code>()</code> after <code>length</code> here
+    </li>
+    <li>
+      line 5: <code>array</code> should be <code>data</code>
+    </li>
+    <li>
+      line 6: <code>array</code> should be <code>data</code>
+    </li>
+    <li>
+      line 9: should not write <code>[]</code> after <code>max</code> here
+    </li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber noincrement"></span> - solution
+  </h1>
+
+  <table class="linenumbertable">
+    <tr>
+      <td>
+        <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+</pre>
+      </td>
+      <td>
+        <pre class="compressed">
+// Returns the largest value in the given array.
+public static int max(int<ins>[]</ins> data) {
+    int max = <ins>data[0]</ins>;
+    for (int i = <ins>1</ins>; i &lt; <ins>data</ins>.<ins>length</ins>; i++) {
+        if (<ins>data</ins>[i] &gt; max) {
+            max = <ins>data</ins>[i];
+        }
+    }
+    return <ins>max</ins>;
+}
+</pre>
+      </td>
+    </tr>
+  </table>
+</div>

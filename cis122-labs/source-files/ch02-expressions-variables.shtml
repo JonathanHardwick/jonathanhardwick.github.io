@@ -1,0 +1,30 @@
+<!--#set var="LAB_NUMBER" value="2" -->
+<!--#set var="LAB_NAME" value="Expressions and Variables" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+  <h1>Lab goals</h1>
+  <p>Goals for this problem set:</p>
+  <ul> 
+    <li>write and evaluate <strong>expressions</strong> to compute numeric values</li>
+		<li>use <strong>variables</strong> to store results of a computation into memory</li>     	     
+  </ul>
+</div>
+
+<!-- PROBLEMS ABOUT EXPRESSIONS AND VARIABLES -->
+<!--#include virtual="common/ch02-expression-syntax.shtml" -->
+<!--#include virtual="problems/ch02-expressions.shtml" -->
+<!--#include virtual="problems/ch02-expressions-more.shtml" -->
+<!--#include virtual="common/ch02-jgrasp-interactions-pane.shtml" -->
+<!--#include virtual="problems/ch02-jgrasp-interactions-pane-usage.shtml" -->
+<!--#include virtual="common/ch02-variable-syntax.shtml" -->
+<!--#include virtual="problems/ch02-variable-declaration-syntax.shtml" -->
+<!--#include virtual="problems/ch02-variable-assignment-syntax.shtml" --> 
+<!--#include virtual="problems/ch02-variable-mutation.shtml" -->
+<!--#include virtual="problems/ch02-a-b-and-c.shtml" -->    
+<!--#include virtual="problems/ch02-syntax-errors.shtml" -->
+<!--#include virtual="problems/ch02-i-j-and-k.shtml" -->
+<!--#include virtual="problems/ch02-equation.shtml" --> 
+<!--#include virtual="problems/ch02-birthday-variables.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

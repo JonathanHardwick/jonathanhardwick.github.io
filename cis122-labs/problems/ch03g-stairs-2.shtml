@@ -1,0 +1,45 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Stairs 2
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+3&problem=lab3-stairs2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Modify your stairs program to draw one (or all) of the following outputs.
+		Modify only the body in your <code>for</code> loop.
+		<em>(You may want to make a new table to find the expressions for x, y, width, and height.)</em>
+	</p>
+	
+	<div class="figure">
+		<img src="images/ch03g-stairs1.png" alt="stairs 1" width="122" height="182" style="vertical-align: middle;" /> 
+		&rarr;
+		<img src="images/ch03g-stairs2.png" alt="stairs 2" width="122" height="182" style="vertical-align: middle;" />
+		<img src="images/ch03g-stairs3.png" alt="stairs 3" width="122" height="182" style="vertical-align: middle;" />
+		<img src="images/ch03g-stairs4.png" alt="stairs 4" width="122" height="182" style="vertical-align: middle;" />
+	</div>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+	
+	<p>
+		To get each output, change the <code>for</code> loop body to the following:
+	</p>
+	
+	<pre>
+<span class="comment">// output 2</span>
+g.drawRect(5, 5 + 10*i, <em>100 - 10*i</em>, 10);
+</pre>
+
+	<pre>
+<span class="comment">// output 3</span>
+g.drawRect(<em>95 - 10*i</em>, 5 + 10*i, 10 + 10*i, 10);
+</pre>
+
+	<pre>
+<span class="comment">// output 4</span>
+g.drawRect(<em>5 + 10*i</em>, 5 + 10*i, <em>100 - 10*i</em>, 10);
+</pre>
+</div>

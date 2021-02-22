@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Sequence of numbers</h1>
+
+  <ul>
+    <li><strong>Write</strong> a complete Java program that produces this
+    sequence of numbers using a <code>for</code> loop:
+
+      <pre>
+8
+11
+14
+17
+20
+23
+</pre>
+    </li>
+
+    <li>
+      Hint: You want to come up with an expression with a multiplier and a
+      constant.  First pick a multiplier (if your loop variable goes up by 1
+      each time, how much do these numbers go up by each time?).  Then pick a
+      constant (when your loop variable is 1, this is supposed to be 8, what do
+      you have to add to get this value?).
+    </li>
+  </ul>
+</div>

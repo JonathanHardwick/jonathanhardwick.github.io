@@ -1,0 +1,30 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>stripHtmlTags</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+6&problem=6-e10-stripHtmlTags">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method <code>stripHtmlTags</code> that accepts a <code>Scanner</code> for an input file containing an HTML web page, then reads that file and prints the file's text with all HTML tags removed.  A tag is any text between the character &lt; and &gt;.  For example, consider the following text:
+	</p>                                        
+<pre>
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;title&gt;My web page&lt;/title&gt;
+   &lt;/head&gt;  
+&lt;/html&gt;
+</pre>
+
+<p>
+If a file containing these lines were passed to your program, your program should output the following:
+</p>
+<pre>
+	
+	
+My web page
+
+
+</pre> 
+
+</div>

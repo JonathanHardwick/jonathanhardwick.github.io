@@ -1,0 +1,19 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>removeShorterStrings</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+10&amp;problem=10-e14-removeShorterStrings">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> called <code>removeShorterStrings</code>
+    that takes an <code>ArrayList</code> of strings as a
+    parameter and that removes from each successive pair of values the shorter
+    string in the pair.
+  </p>
+
+  <p>
+    You should solve this problem in Practice-It!
+</p>
+
+</div>

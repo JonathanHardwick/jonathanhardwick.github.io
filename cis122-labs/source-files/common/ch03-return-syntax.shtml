@@ -1,0 +1,31 @@
+<div class="slide">
+	<h1>Returning Values</h1>
+	
+	<p>
+		A <strong>return value</strong> is when a method sends a value back to the code that called it.
+	</p>
+	
+	<pre>
+public static <var>type</var> <var>name</var>(<var>parameters</var>) {      <span class="comment">// declare</span>
+    ...
+    return <var>expression</var>;
+}
+</pre>
+	
+	<pre>
+<var>variableName</var> = <var>methodName</var>(<var>parameters</var>);     <span class="comment">// call</span>
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+public static double fToC(double tempF) {
+    return (tempF - 32) * 5.0 / 9.0;
+}
+...
+<em>double bodyTemp =</em> fToC(98.6);          <span class="comment">// bodyTemp stores 37.0</span>
+<em>double freezing =</em> fToC(32);            <span class="comment">// freezing stores  0.0</span>
+</pre>
+</div>

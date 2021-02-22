@@ -1,0 +1,35 @@
+<div class="slide">
+	<h1>
+		Solving "Parameter Mystery" problems
+	</h1>
+
+	<ul>
+		<li>
+			Note the <strong>values</strong> passed, the <strong>order</strong> in which they are passed, and the order the method prints them.
+
+			<pre style="font-size: smaller">
+public class MysterySoda {
+    public static void main(String[] args) {
+        String soda = "coke";
+        String pop = "pepsi";
+        String pepsi = "soda";
+        
+        <span class="comment">// #1 = "coke", #2 = "pepsi", #3 = "soda"</span>
+        <strong>carbonated(soda, pop, pepsi);</strong>
+    }
+    <span class="comment">//                                    #1           #2           #3</span>
+    public static void <strong>carbonated</strong>(String coke, String soda, String pop) {
+        <span class="comment">//                           #2               #3             #1</span>
+        System.out.println("say " + soda + " not " + pop + " or " + coke);
+    }
+}
+</pre>
+
+        
+		</li>
+		
+		<li>
+			output: <code>// say<span class="comment" style="position: relative; top: 1em; left: 1em">#2</span>pepsi not<span class="comment" style="position: relative; top: 1em; left: 1em">#3</span>soda or<span class="comment" style="position: relative; top: 1em; left: 1em">#1</span>coke</code>
+		</li>
+	</ul>
+</div>

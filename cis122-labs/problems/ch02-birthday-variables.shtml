@@ -1,0 +1,34 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Birthday variables</h1>
+
+  <ul>
+    <li>
+      Create a complete Java program in a class named <code>Bday</code> that
+      declares four variables and assigns appropriate values to them.
+                                                
+      <ul>
+        <li>
+          your birthday month (1-12)
+        </li>
+        <li>
+          your birthday day (1-31)
+        </li>
+        <li>
+          the birthday month of another student sitting near you today (1-12)
+        </li>
+        <li>
+          the birthday day of that same student near you (1-31)
+        </li>
+      </ul>
+    </li>
+    <li>
+      Ask your neighbor for their name and for the proper numbers to store in
+      the variables for his/her birthday.  Then produce output in this format
+      using your four variables:
+
+    <pre>
+My birthday is 9/19, and Suzy's is 6/14.
+</pre>
+    </li>
+  </ul>
+</div>

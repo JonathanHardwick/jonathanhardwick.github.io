@@ -1,0 +1,125 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+	
+	<ul>
+		<li>
+			The following program contains 12 mistakes!  What are they?
+			Once you think you've found them all, compile/run your corrected code.
+
+			<table class="linenumbertable">
+				<tr>
+					<td>
+						<pre class="linenumbers">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+</pre>
+					</td>
+					<td>
+						<pre>
+import Java.*;
+
+public class PrettyPicture {
+    public static void main(String[] args) {
+        DrawingPanel panel = DrawingPanel(220, 150);
+        setBackgroundColor(Color.YELLOW);
+        
+        Graphics g = panel.Graphics();
+        panel.setColor(new Color.BLUE);
+        g.drawRectangle(50, 25);
+        g.setColor("RED");
+        g.fillEllipse(130, 25, 42.1, 40.5);
+    }
+}
+</pre>
+					</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		answer on next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+	
+	<ol style="font-size: smaller">
+		<li>
+			line 1: incorrect <code>import</code> statement; should import <code>java.awt.*</code>
+		</li>
+		<li>
+			line 5: missing word <code>new</code> before 2nd occurrence of <code>DrawingPanel</code>
+		</li>
+		<li>
+			line 6: method name should be <code>setBackground</code>
+		</li>
+		<li>
+			line 6: missing <code>panel.</code> before <code>setBackground</code>
+		</li>
+		<li>
+			line 8: method name should be <code>getGraphics</code>
+		</li>
+		<li>
+			line 9: the <code>setColor</code> method is part of object <code>g</code>, not <code>panel</code>
+		</li>
+		<li>
+			line 9: should not write <code>new</code> before <code>Color.BLUE</code>
+		</li>
+		<li>
+			line 10: method name should be <code>drawRect</code>
+		</li>
+		<li>
+			line 10: missing two parameters from <code>drawRect</code> (width and height)
+		</li>
+		<li>
+			line 11: color should be specified as <code>Color.RED</code>, not <code>"RED"</code>
+		</li>
+		<li>
+			line 12: method name should be <code>fillOval</code>
+		</li>
+		<li>
+			line 12: wrong parameter types; width/height must be integers
+		</li>
+	</ol>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - corrected version</h1>
+	
+	<ul>
+		<li>
+			Here is a corrected version of the program:
+
+			<pre>
+import <ins>java.awt.</ins>*;
+
+public class PrettyPicture {
+    public static void main(String[] args) {
+        DrawingPanel panel = <ins>new</ins> DrawingPanel(220, 150);
+        <ins>panel.</ins>setBackground(Color.YELLOW);
+        
+        Graphics g = panel.<ins>get</ins>Graphics();
+        <ins>g</ins>.setColor(Color.BLUE);
+        g.drawRect(50, 25<ins>, 10, 10</ins>);
+        g.setColor(<ins>Color.RED</ins>);
+        g.fill<ins>Oval</ins>(130, 25, <ins>42, 40</ins>);
+    }
+}
+</pre>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,37 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>while</code> loop basics</h1>
+
+	<p>
+Consider the following loop.
+	</p>
+
+	<pre>
+int x = 1;
+System.out.print(x);
+while (x &lt; 100) {
+    x = x + x;
+    System.out.print(", " + x);
+}
+</pre>
+
+	<table class="expressiontable">
+		<tr>
+			<td>
+				How many times does the code in the <code>while</code> loop execute?
+			</td>
+			<td>
+				<span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="false" />
+				<span class="expressionsolution">7</span></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				What output is produced by the overall code?
+			</td>
+			<td>
+				<span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="false" />
+				<span class="expressionsolution">1, 2, 4, 8, 16, 32, 64, 128</span></span>
+			</td>
+		</tr>
+	</table>
+</div>

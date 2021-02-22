@@ -1,0 +1,48 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: WazzuAdmit
+  </h1>
+				
+  <p>
+    Write a complete program <code>WazzuAdmit</code> with the behavior shown
+    below.  Use the <code>Scanner</code> to read user input for a student's
+    grade point average and SAT exam score.  A GPA of 1.8 or an SAT score of
+    900 or above (or both) will cause the student to be accepted; anything less
+    will cause him/her to be rejected.
+  </p>
+				
+  <pre>
+Washington State University admission program
+What is your GPA? <span class="userinput">3.2</span>
+What is your SAT score? <span class="userinput">1280</span>
+You were accepted!
+</pre>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber noincrement"></span> - answer
+  </h1>
+				
+  <pre style="font-size: smaller">
+import java.util.*;   // for Scanner
+
+public class WazzuAdmit {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.println("Washington State University admission program");
+        
+        System.out.print("What is your GPA? ");
+        double gpa = console.nextDouble();
+        System.out.print("What is your SAT score? ");
+        int sat = console.nextInt();
+        
+        if (gpa &gt;= 1.8 || sat &gt;= 900) {
+            System.out.println("You were accepted!");
+        } else {
+            System.out.println("You were rejected!");
+        }
+    }
+}
+</pre>
+</div>

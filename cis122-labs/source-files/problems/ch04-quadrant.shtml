@@ -1,0 +1,19 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: quadrant
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+4&problem=4-e16-quadrant">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Write a method <code>quadrant</code> that accepts a pair of real numbers x and y and returns the quadrant for that point: 
+	</p>   
+	
+	<img src="images/quadrant.png" />  
+	
+	<p>For example, <code>quadrant(-2.3, 14.2)</code> returns 2.  If the point falls directly on either axis, return 0.</p>   
+	
+	<ul><li>(Try solving this problem in Practice-It by clicking the icon above.)</li></ul>
+	
+</div>

@@ -1,0 +1,25 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>if</code>/<code>else</code> Factoring</h1>
+
+  <ul>
+    <li>
+      <strong>Download</strong> the following program
+      <a class="popup" href="problems/FactorExample.java">
+	<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+	FactorExample.java
+      </a>
+      to your machine and open it with jGrasp.
+    </li>
+
+    <li>
+      The program's method is redundant.  <strong>Factor</strong> the method,
+      restructuring the code to eliminate unnecessary statements while
+      retaining the same behavior.
+    </li>
+					
+    <li>
+      Insert some <strong>test calls</strong> of the method
+      in <code>main</code> and run it to make sure it works properly.
+    </li>
+  </ul>
+</div>

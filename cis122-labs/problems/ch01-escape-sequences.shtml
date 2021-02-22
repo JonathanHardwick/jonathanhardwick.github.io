@@ -1,0 +1,25 @@
+<div class="slide">
+  <h1>Escape sequences</h1>
+
+  <p>
+    An <em>escape sequence</em> inserts a special character into
+    a <code>println</code> statement.
+  </p>
+
+  <table>
+    <tr><th class="spaced">Sequence</th><th>Special character</th></tr>
+    <tr><td><code>\n</code></td><td>new-line (goes to the next line)</td></tr>
+    <tr><td><code>\t</code></td><td>tab (indents output by roughly 8
+        spaces)</td></tr> 
+    <tr><td><code>\"</code></td><td>quotation mark</td></tr>
+    <tr><td><code>\\</code></td><td>backslash</td></tr>
+  </table>
+
+  <p>
+    Example:
+  </p>
+
+  <pre>
+System.out.println("I said <em>\"</em>hello<em>\"</em> to Fred.");
+</pre>
+</div>

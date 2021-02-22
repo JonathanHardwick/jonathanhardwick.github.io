@@ -1,0 +1,99 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>FightSong</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+1&problem=bjp3-1-e12-FightSong">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<pre class="compressed" style="float: left; margin-right: 2.5em">
+Go, team, go!
+You can do it.
+
+Go, team, go!
+You can do it.
+You're the best,
+In the West.
+Go, team, go!
+You can do it.
+
+Go, team, go!
+You can do it.
+You're the best,
+in the West.
+Go, team, go!
+You can do it.
+
+Go, team, go!
+You can do it.
+</pre>
+
+	<p>
+		The following program produces the output at left, but it has poor structure and redundancy.  Download it and open it in jGRASP, then add at least <strong>two static methods</strong>.  
+	</p>
+
+	<ul>
+		<li>
+			<a class="popup" href="problems/FightSong.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				FightSong.java</a>
+		</li>
+	</ul>
+
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>: <code>FightSong</code>, cont'd</h1>
+	
+	<div style="float: left; margin-right: 2.5em; background-color: #eee; padding: 4px; border: 1px dashed gray;">
+		<pre class="compressed" style="background-color: #ffc; padding: 4px;">Go, team, go!
+You can do it.
+</pre>
+
+		<pre class="compressed" style="background-color: #cfc; padding: 4px;"><span style="background-color: #ffc;">Go, team, go! 
+You can do it.</span>
+You're the best,
+In the West.
+<span style="background-color: #ffd;">Go, team, go!
+You can do it.</span>
+</pre>
+
+		<pre class="compressed" style="background-color: #cfc; padding: 4px;"><span style="background-color: #ffc;">Go, team, go! 
+You can do it.</span>
+You're the best,
+In the West.
+<span style="background-color: #ffd;">Go, team, go!
+You can do it.</span>
+</pre>
+
+		<pre class="compressed" style="background-color: #ffc; padding: 4px;">Go, team, go!
+You can do it.
+</pre>
+</div>
+
+	<p>
+		Did you choose your methods well?  Avoid the following pitfalls:
+	</p>
+	
+	<ul>
+		<li>
+			Does the same <code>println</code> statement occur more than once in your code?
+		</li>
+		<li>
+			Are there any <code>println</code> statements in the <code>main</code> method?
+		</li>
+		<li>
+			Is your <code>main</code> method a good summary of the overall program?  (If <code>main</code> is only 1-2 lines long, it is not a good summary.)
+		</li>
+		<li>
+			Do you have any patterns of method calls that are repeated in the code?
+		</li>
+	</ul>
+	
+	<p>
+		Compare your method choice with your neighbor's.  Discuss any different decisions you made and ask a TA if you have questions about them.
+	</p>
+</div>

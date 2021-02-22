@@ -1,0 +1,112 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+  
+  <ul>
+    <li>
+      The following Java program has 7 errors.  Can you find all of them?
+
+      <table class="linenumbertable">
+	<tr>
+	  <td>
+	    <pre class="linenumbers" style="font-size: smaller">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre>
+	  </td>
+	  <td>
+	    <pre style="font-size: smaller">
+public class IfOops {
+    public static void main(String[] args) {
+        int a = 7, b = 42;
+        minimum(a, b);
+        if {smaller = a} {
+            System.out.println("a is the smallest!");
+        }
+    }
+
+    public static void minimum(int a, int b) {  // returns which int is smaller
+        if (a &lt; b) {
+            int smaller = a;
+        } else (a =&gt; b) {
+            int smaller = b;
+        }
+        return int smaller;
+    }
+}
+</pre>
+	  </td>
+	</tr>
+      </table>
+    </li>
+
+    <li>
+      <strong>Copy and paste</strong> the code into jGrasp and see if you can
+      fix the errors.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <ol>
+    <li>line 5: <code>if</code> statement should use <code>()</code>
+      parentheses, not <code>{}</code> brackets</li>
+    <li>line 5: <code>=</code> should be <code>==</code></li>
+    <li>line 5: <code>smaller</code> is out of scope here</li>
+    <li>line 10: <code>void</code> should be <code>int</code></li>
+    <li>line 13: <code>=&gt;</code> should be <code>&gt;=</code> (or better
+      yet, no <code>if</code> test is needed)</li>
+    <li>line 16: should not write variable's type of <code>int</code> when
+      returning it</li>
+    <li>line 16: <code>int smaller</code> is out of scope here (declare
+      outside <code>if</code> or return directly)</li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - Corrected
+    version</h1>
+
+  <ul>
+    <li>
+      <pre style="font-size: smaller">
+public class IfOops {
+    public static void main(String[] args) {
+        int a = 7, b = 42;
+        <ins>int smaller =</ins> minimum(a, b);
+        if <ins>(</ins>smaller =<ins>=</ins> a<ins>)</ins> {
+            System.out.println("a is the smallest!");
+        }
+    }
+
+    public static <del>void</del> <ins>int</ins> minimum(int a, int b) {  // returns which int is smaller
+        <ins>int smaller;</ins>
+        if (a &lt; b) {
+            <del>int</del> smaller = a;
+        } else <del>if (a &gt;= b)</del> {
+            <del>int</del> smaller = b;
+        }
+        return <del>int</del> smaller;
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>

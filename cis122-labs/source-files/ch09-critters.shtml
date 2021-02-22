@@ -1,0 +1,24 @@
+<!--#set var="LAB_NUMBER" value="10" -->
+<!--#set var="LAB_NAME" value="Critters" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>practice reading and writing Critter classes</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It! 
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT CRITTERS -->
+<!--#include virtual="common/ch09-critters-syntax.shtml" -->
+<!--#include virtual="problems/ch09-Skunk-errors.shtml" -->
+<!--#include virtual="problems/ch09-Butterfly.shtml" -->
+<!--#include virtual="problems/ch09-Hyena.shtml" -->
+<!--#include virtual="problems/ch09-Hyena-revisited.shtml" -->
+<!--#include virtual="problems/ch09-Shark.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

@@ -1,0 +1,10 @@
+Here is the text of Abe Lincoln's
+famous Gettysburg Address:
+
+"Four score and seven years ago,
+Our fathers brought forth on this continent
+a new nation,
+conceived in liberty,
+
+and dedicated to the proposition that
+all men are created equal."

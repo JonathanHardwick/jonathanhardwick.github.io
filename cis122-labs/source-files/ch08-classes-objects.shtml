@@ -1,0 +1,44 @@
+<!--#set var="LAB_NUMBER" value="8" -->
+<!--#set var="LAB_NAME" value="Classes and Objects" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>write our own new classes of objects</li>
+		<li>declare fields, methods, and constructors</li>
+		<li>understand the difference between class code and client code</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT CLASSES AND OBJECTS -->
+<!--#include virtual="common/ch08-class-declaration-syntax.shtml" -->
+<!--#include virtual="problems/ch08-class-and-client-code.shtml" -->
+<!--#include virtual="problems/ch08-PointCoordinates.shtml" -->
+<!--#include virtual="problems/ch08-Point-class-errors1.shtml" -->
+<!--#include virtual="problems/ch08-printing-objects.shtml" -->
+<!--#include virtual="problems/ch08-PointClient.shtml" -->
+<!--#include virtual="problems/ch08-jgrasp-debugger.shtml" -->
+<!--#include virtual="problems/ch08-BankAccount-class.shtml" -->
+<!--#include virtual="problems/ch08-BankAccount-transactionFee.shtml" -->
+<!--#include virtual="problems/ch08-Point-and-PointMain.shtml" -->
+<!--#include virtual="problems/ch08-Point-quadrant.shtml" -->
+<!--#include virtual="problems/ch08-Point-flip.shtml" -->
+<!--#include virtual="problems/ch08-Point-toString.shtml" -->
+<!--#include virtual="problems/ch08-BankAccount-toString.shtml" -->
+<!--#include virtual="problems/ch08-Point-manhattanDistance.shtml" -->
+<!--#include virtual="problems/ch08-TimeSpan.shtml" -->
+<!--#include virtual="problems/ch08-Circle.shtml" -->
+<!--#include virtual="problems/ch08-Point-class-errors2.shtml" -->     
+<!--#include virtual="problems/ch08-ClockTime-class.shtml" -->
+<!--#include virtual="problems/ch08-ClockTime-advance.shtml" -->
+<!--#include virtual="problems/ch08-ClockTime-isWorkTime.shtml" -->
+<!--#include virtual="problems/ch08-Rectangle-class.shtml" -->
+<!--#include virtual="problems/ch08-Rectangle-union.shtml" -->
+<!--#include virtual="problems/ch08-Rectangle-contains.shtml" -->   
+
+<!--#include virtual="common/footer.shtml" -->

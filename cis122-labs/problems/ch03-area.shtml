@@ -1,0 +1,31 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: area
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&amp;problem=lab4-area">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Consider the following method for converting milliseconds into days:
+	</p>
+
+		<pre>
+// converts milliseconds to days
+public static double toDays(double millis) {
+    return millis / 1000.0 / 60.0 / 60.0 / 24.0;
+}
+</pre>
+
+	<p>
+		Write a similar method named <code>area</code> that takes as a parameter the radius of a circle and that returns the area of the circle.
+		For example, the call <code>area(2.0)</code> should return <code>12.566370614359172</code>.
+		Recall that area can be computed as &pi; times the radius squared and that Java has a constant called <code>Math.PI</code>.
+	</p>
+
+	<ul>
+		<li>
+			(Try solving this problem in Practice-It by clicking the icon above.)
+		</li>
+	</ul>
+</div>

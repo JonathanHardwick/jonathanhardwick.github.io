@@ -1,0 +1,26 @@
+<div class="slide">
+	<h1>Variables</h1>
+	
+	<p>
+		Recall that you can use a <strong>variable</strong> to store the results of an expression in memory and use them later in the program.
+	</p>
+	
+	<pre>
+<var>type</var> <var>name</var>;                       <span class="comment">// declare</span>
+<var>name</var> = <var>value or expression</var>;        <span class="comment">// assign a value</span>
+...
+<var>type</var> <var>name</var> = <var>value or expression</var>;   <span class="comment">// declare-and-initialize together</span>
+</pre>
+	
+	<p>
+		Examples:
+	</p>
+	
+	<pre>
+double iphonePrice;
+iPhonePrice = 299.95;
+
+int siblings = 3;
+System.out.println("I have " + siblings + " brothers/sisters.");
+</pre>
+</div>

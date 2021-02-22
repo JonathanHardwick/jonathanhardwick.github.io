@@ -1,0 +1,28 @@
+<div class="slide">
+  <h1>Critters (syntax)</h1>
+
+  <pre>
+import java.awt.*;
+
+public class <var>ClassName</var> extends Critter {
+    <var>fields, constructors...</var>
+
+    public boolean eat() { ... }
+    public Attack fight(String opponent) { ... }
+    public Color getColor() { ... }
+    public Direction getMove() { ... }
+    public String toString() { ... }
+}
+</pre>
+
+  <ul>
+    <li>
+      Example Critter class:
+      <a target="_blank" href="problems/Cougar.java">
+        <img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+        Cougar.java
+      </a>
+    </li>
+  </ul>
+</div>
+

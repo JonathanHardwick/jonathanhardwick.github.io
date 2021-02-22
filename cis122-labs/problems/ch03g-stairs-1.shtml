@@ -1,0 +1,178 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Stairs loop table
+	</h1>
+	
+	<div class="figureright">
+		<img src="images/ch03g-stairs1.png" alt="stairs 1" width="122" height="182" />
+	</div>
+
+	<p>
+		Consider the output at right.
+		The first stair's top-left corner is at position (5, 5).
+		The first stair is 10x10 px in size.
+		Each stair is 10px wider than the one above it.
+	</p>
+	
+	<p>
+		<strong>Fill in the table</strong> below with the coordinates and sizes of the first five stairs.
+		Note which values change and which ones stay the same.
+	</p>
+
+	<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+		<tr>
+			<th>stair</th>
+			<th>x</th>
+			<th>y</th>
+			<th>width</th>
+			<th>height</th>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>1</code>
+			</td>
+			<td class="expressionarea correct">
+				<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="5" />
+				<pre class="expressionsolution">5</pre>
+			</td>
+			<td class="expressionarea correct">
+				<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="5" />
+				<pre class="expressionsolution">5</pre>
+			</td>
+			<td class="expressionarea correct">
+				<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="10" />
+				<pre class="expressionsolution">10</pre>
+			</td>
+			<td class="expressionarea correct">
+				<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="10" />
+				<pre class="expressionsolution">10</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>2</code>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">5</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">15</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">20</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">10</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>3</code>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">5</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">25</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">30</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">10</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>4</code>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">5</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">35</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">40</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">10</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="expression">
+				<code>5</code>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">5</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">45</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">50</pre>
+			</td>
+			<td class="expressionarea">
+				<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+				<pre class="expressionsolution">10</pre>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Stairs
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+3&problem=lab3-stairs">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<div class="figureright">
+		<img src="images/ch03g-stairs1.png" alt="stairs 1" width="122" height="182" />
+	</div>
+	
+	<p>
+		<strong>Write a complete Java program</strong> to draw the stairs.
+		Copy/paste the code template below into jGRASP and fill in your own expressions or values for each stair's x, y, width, and height.
+	</p>
+	
+	<p>
+		Use your <strong>table</strong> from the previous slide to help you find the correct expressions.
+		The values that change for each stair should become expressions in terms of the loop counter variable, <code>i</code>.
+	</p>
+
+	<pre class="compressed">
+import java.awt.*;
+
+public class Stairs1 {
+    public static void main(String[] args) {
+        DrawingPanel panel = new DrawingPanel(110, 110);
+        Graphics g = panel.getGraphics();
+        for (int i = 0; i &lt; 10; i++) {
+            g.drawRect(<var>x</var>, <var>y</var>, <var>width</var>, <var>height</var>);
+        }
+    }
+}
+</pre>
+</div>

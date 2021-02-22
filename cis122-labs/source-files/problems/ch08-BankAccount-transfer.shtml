@@ -1,0 +1,40 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: BankAccount transfer
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+10&problem=practicefinal10-transfer">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul style="font-size: smaller">
+		<li>
+			Write an instance method <code>transfer</code> that moves money from this bank account to another account.
+			The method takes two parameters: a <code>BankAccount</code> to accept money, and a real number for the amount to transfer.
+			There is a $5.00 fee for transferring, to be deducted from the current account's balance.
+		</li>
+		
+		<li>
+			The method should modify the two objects such that "this" has its balance decreased by the given amount plus $5 fee, and the other's balance is increased by the given amount.
+			A transfer also counts as a transaction on both accounts.
+			If this account object does not have enough money to make the full transfer, transfer whatever money is left after the $5 fee is deducted.
+			If this account has under $5 or the amount is 0 or less, no transfer should occur and neither account's state should be modified.
+		</li>
+		
+		<li>
+			For example, the following calls would produce the following results:
+			
+			<pre class="compressed">
+BankAccount ben = new BankAccount("Benson", 90.00);
+BankAccount mar = new BankAccount("Marty",  25.00);
+ben.transfer(mar, 20.00);     <span class="comment">// ben $65, mar $45   (ben loses $25, mar gains $20)</span>
+ben.transfer(mar, 10.00);     <span class="comment">// ben $50, mar $55   (ben loses $15, mar gains $10)</span>
+ben.transfer(mar, -1);        <span class="comment">// ben $50, mar $55   (no effect; negative amount)</span>
+mar.transfer(ben, 39.00);     <span class="comment">// ben $89, mar $11   (mar loses $44, ben gains $39)</span>
+mar.transfer(ben, 50.00);     <span class="comment">// ben $95, mar $ 0   (mar loses $11, ben gains $ 6)</span>
+mar.transfer(ben,  1.00);     <span class="comment">// ben $95, mar $ 0   (no effect; no money in account)</span>
+ben.transfer(mar, 88.00);     <span class="comment">// ben $ 2, mar $88   (ben loses $93, mar gains $88)</span>
+ben.transfer(mar,  1.00);     <span class="comment">// ben $ 2, mar $88   (no effect; can't afford fee)</span>
+</pre>
+		</li>
+	</ul>
+</div>

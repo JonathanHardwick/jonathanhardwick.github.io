@@ -1,0 +1,38 @@
+<div class="slide">
+	<h1>
+		Employee class hierarchy
+	</h1>
+	
+	<ul>
+		<li>
+			Recall the inheritance hierarchy of <strong>employee classes</strong> shown in lecture.
+		</li>
+		
+		<li>
+			Each type of employee extends a common base class <code>Employee</code> and has the methods
+			<code>getHours</code>,
+			<code>getSalary</code>,
+			<code>getVacationDays</code>, and
+			<code>getVacationForm</code>.
+		</li>
+		
+		<li>
+			For the next several exercises you will add classes to this inheritance hierarchy.
+		</li>
+			
+		<li>To do this, either solve the problems in Practice-It!, or <strong>download</strong> each of these files to your machine:
+			<a class="popup" href="problems/Employee.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				Employee</a>,
+			<a class="popup" href="problems/Secretary.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				Secretary</a>,
+			<a class="popup" href="problems/Lawyer.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				Lawyer</a>, and
+			<a class="popup" href="problems/LegalSecretary.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				LegalSecretary</a>.
+		</li>
+	</ul>
+</div>

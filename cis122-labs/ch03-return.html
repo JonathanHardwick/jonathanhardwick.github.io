@@ -1,0 +1,329 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: Return</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 3: Return</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: Return</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>return</code> values to send data between methods</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT RETURN -->
+<div class="slide">
+	<h1>Returning Values</h1>
+	
+	<p>
+		A <strong>return value</strong> is when a method sends a value back to the code that called it.
+	</p>
+	
+	<pre>
+public static <var>type</var> <var>name</var>(<var>parameters</var>) {      <span class="comment">// declare</span>
+    ...
+    return <var>expression</var>;
+}
+</pre>
+	
+	<pre>
+<var>variableName</var> = <var>methodName</var>(<var>parameters</var>);     <span class="comment">// call</span>
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+public static double fToC(double tempF) {
+    return (tempF - 32) * 5.0 / 9.0;
+}
+...
+<em>double bodyTemp =</em> fToC(98.6);          <span class="comment">// bodyTemp stores 37.0</span>
+<em>double freezing =</em> fToC(32);            <span class="comment">// freezing stores  0.0</span>
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Math expression syntax</h1>
+	
+	<table class="standard">
+		<tr>
+			<th>
+				Method
+			</th>
+			<th>
+				Description
+			</th>
+			<th>
+				Example
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.abs</code>
+			</td>
+			<td>
+				absolute value
+			</td>
+			<td>
+				<code>Math.abs(-308)</code> returns <code>308</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.ceil</code>
+			</td>
+			<td>
+				ceiling (rounds upward)
+			</td>
+			<td>
+				<code>Math.ceil(2.13)</code> returns <code>3.0</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.floor</code>
+			</td>
+			<td>
+				floor (rounds downward)
+			</td>
+			<td>
+				<code>Math.floor(2.93)</code> returns <code>2.0</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.max</code>
+			</td>
+			<td>
+				max of two values
+			</td>
+			<td>
+				<code>Math.max(45, 207)</code> returns <code>207</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.min</code>
+			</td>
+			<td>
+				min of two values
+			</td>
+			<td>
+				<code>Math.min(3.8, 2.75)</code> returns <code>2.75</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.pow</code>
+			</td>
+			<td>
+				power
+			</td>
+			<td>
+				<code>Math.pow(3, 4)</code> returns <code>81.0</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.round</code>
+			</td>
+			<td>
+				round to nearest integer
+			</td>
+			<td>
+				<code>Math.round(2.718)</code> returns <code>3</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>Math.sqrt</code>
+			</td>
+			<td>
+				square root
+			</td>
+			<td>
+				<code>Math.sqrt(81)</code> returns <code>9.0</code>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span> - Math expressions</h1>
+	
+	<p>
+		Write the results of each expression.
+		Use the proper type (such as <code>.0</code> for a <code>double</code>).
+		<em>Note that a variable's value changes only if you re-assign it using the <code>=</code> operator.</em>  Discuss any errors you make with your neighbor.
+	</p>
+	
+	<pre class="compressed">
+double grade = 2.7;
+Math.round(grade);                               <span class="comment">// grade = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">2.7</span></span>
+grade = Math.round(grade);                       <span class="comment">// grade = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">3.0</span></span>
+
+double min = Math.min(grade, Math.floor(2.9));   <span class="comment">//   min = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">2.0</span></span>
+
+double x = Math.pow(2, 4);                       <span class="comment">//     x = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">16.0</span></span>
+x = Math.sqrt(64);                               <span class="comment">//     x = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">8.0</span></span>
+
+int count = 25;
+Math.sqrt(count);                                <span class="comment">// count = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">25</span></span>
+count = (int) Math.sqrt(count);                  <span class="comment">// count = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">5</span></span>
+
+int a = Math.abs(Math.min(-1, -3));              <span class="comment">//     a = </span><span class="expressionarea"><input type="text" class="expressionanswer" size="6" spellcheck="true" /><span class="expressionsolution">3</span></span>
+</pre>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: area
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&amp;problem=lab4-area">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Consider the following method for converting milliseconds into days:
+	</p>
+
+		<pre>
+// converts milliseconds to days
+public static double toDays(double millis) {
+    return millis / 1000.0 / 60.0 / 60.0 / 24.0;
+}
+</pre>
+
+	<p>
+		Write a similar method named <code>area</code> that takes as a parameter the radius of a circle and that returns the area of the circle.
+		For example, the call <code>area(2.0)</code> should return <code>12.566370614359172</code>.
+		Recall that area can be computed as &pi; times the radius squared and that Java has a constant called <code>Math.PI</code>.
+	</p>
+
+	<ul>
+		<li>
+			(Try solving this problem in Practice-It by clicking the icon above.)
+		</li>
+	</ul>
+</div>
+  
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: pay
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-e13-pay">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Write a method named <code>pay</code> that accepts two parameters: a real number for a TA's salary, and an integer for the number of hours the TA worked this week.
+		The method should return how much money to pay the TA.
+		For example, the call <code>pay(5.50, 6)</code> should return <code>33.0</code>.
+	</p>
+	
+	<p>
+		The TA should receive "overtime" pay of 1 &frac12; normal salary for any hours above 8.
+		For example, the call <code>pay(4.00, 11)</code> should return (4.00 * 8) + (6.00 * 3) or <code>50.0</code>.
+	</p>
+	
+	<ul>
+		<li>
+			(Try solving this problem in Practice-It by clicking the icon above.)
+		</li>
+	</ul>
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

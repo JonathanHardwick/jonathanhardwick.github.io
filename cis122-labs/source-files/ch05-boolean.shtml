@@ -1,0 +1,29 @@
+<!--#set var="LAB_NUMBER" value="5" -->
+<!--#set var="LAB_NAME" value="Boolean logic" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>boolean</code> expressions and variables to represent logical true/false expressions</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT BOOLEAN -->
+<!--#include virtual="common/ch05-boolean-syntax.shtml" -->
+<!--#include virtual="common/ch05-string-boolean-methods.shtml" -->
+<!--#include virtual="problems/ch05-boolean-expressions.shtml" -->
+<!--#include virtual="problems/ch05-allDigitsOdd.shtml" -->
+<!--#include virtual="problems/ch05-hasMidpoint.shtml" -->
+<!--#include virtual="problems/ch04-before.shtml" -->
+<!--#include virtual="problems/ch05-sameDashes.shtml" -->
+<!--#include virtual="problems/ch05-boolean-zen.shtml" -->
+
+<!-- PROBLEMS ABOUT ASSERTIONS -->
+<!--#include virtual="problems/ch05-assertions2.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

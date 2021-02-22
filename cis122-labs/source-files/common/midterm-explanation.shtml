@@ -1,0 +1,16 @@
+<div class="slide">
+	<h1>
+		Midterm problems
+	</h1>
+
+	<p>
+		The following problems are similar to programming problems that will be asked on our upcoming <strong>midterm exam</strong>.
+		You don't need to solve all of them, but try a few to see how you fare.
+	</p>
+	
+	<p>
+		To solve each problem, you will need to use various concepts and syntax taught throughout the course so far,
+		such as System.out.println, expressions, variables, parameters, return, if/else, for/while loops, Scanner, and Random.
+		Part of the challenge is in figuring out which tools to use and how to use them together to solve the problem at hand.
+	</p>
+</div>

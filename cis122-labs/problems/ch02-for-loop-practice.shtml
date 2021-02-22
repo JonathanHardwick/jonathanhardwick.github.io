@@ -1,0 +1,144 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>for</code> loop
+  practice</h1>
+  <ul>
+    <li><strong>Copy and paste</strong> the following code into jGrasp.
+      <pre>
+public class Triangle {
+    public static void main(String[] args) {
+        for (int line = 1; line &lt;= 4; line++) {
+            for (int stars = 1; stars &lt;= <var> expression </var>; stars++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+</pre>
+    </li>
+
+  </ul>
+
+  <p class="continued">
+    continued on the next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - fill in a
+    table</h1>
+
+  <p>
+    We want to produce the following output:
+  </p>
+  <pre>
+*******
+*****
+***
+*
+</pre>
+
+  <p>
+    <strong>Fill in</strong> the table below indicating how many stars appear
+    on each line of output.
+  </p>
+                                
+  <table class="calltable">
+    <tr>
+      <th>Line</th>
+      <th>Stars</th>
+    </tr>
+
+    <tr align="center">
+      <td class="expression">
+        <code>1</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="4" spellcheck="false"
+               />
+        <pre class="expressionsolution">7</pre>
+      </td>
+    </tr>
+
+    <tr align="center">
+      <td class="expression">
+        <code>2</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="4" spellcheck="false"
+               /> 
+        <pre class="expressionsolution">5</pre>
+      </td>
+    </tr>
+
+    <tr align="center">
+      <td class="expression">
+        <code>3</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="4" spellcheck="false"
+               />
+        <pre class="expressionsolution">3</pre>
+      </td>
+    </tr>
+
+    <tr align="center">
+      <td class="expression">
+        <code>4</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="4" spellcheck="false"
+               />
+        <pre class="expressionsolution">1</pre>
+      </td>
+    </tr>
+  </table>
+
+  <p class="continued">
+    continued on the next slide...
+  </p>
+</div>
+
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - complete the
+    expression</h1>
+
+  <p>
+    We need an expression for the number of stars on each line of this form:
+    <blockquote>
+      <var>multiplier</var> * line + <var>constant</var>
+    </blockquote>
+  </p>
+
+  <ul>
+    <li>
+      First <strong>pick a multiplier</strong>.  Looking at the table, the line
+      numbers go up by 1 each time, and the number of stars changes by how much
+      each time?
+      <span class="expressionarea"><input type="text" class="expressionanswer"
+                                          size="4" spellcheck="false" />
+        <span class="expressionsolution">-2</span></span>
+    </li>
+
+    <li>
+      Now <strong>pick a constant</strong>.  Look at the table to see how many
+      stars are on line 1.  Given your multiplier, what constant do you need to
+      use in the expression to get that number of stars for line 1?
+      <span class="expressionarea"><input type="text" class="expressionanswer"
+      size="3" spellcheck="false" />
+        <span class="expressionsolution">9</span></span>
+    </li>
+
+    <li>
+      Using your multiplier and constant, <strong>fill in</strong> the
+      expression for this line of code in jGRASP:
+      <pre>
+for (int stars = 1; stars &lt;= <var> expression </var>; stars++) {
+</pre>
+      Your program should now produce the correct output.  You can verify with
+      the <a class="popup" href="../diff-labs.html">Output
+      Comparison Tool</a>.
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,54 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Array declaration syntax
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+7&problem=lab7-arrayDeclarationSyntax">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Which of the following choices is the correct syntax for declaring/initializing an array of integers?
+	</p>
+
+	<ol class="mcquestion shuffle">
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>[]int a = [10]int;</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>int a[10];</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>int[10] a = new int[10];</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>int a[10] = new int[10];</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mccorrect" />
+				<code>int[] a = new int[10];</code>
+				<img class="mcresultimage" src="images/correct.gif" alt="correct" />
+			</label>
+		</li>
+	</ol>
+</div>

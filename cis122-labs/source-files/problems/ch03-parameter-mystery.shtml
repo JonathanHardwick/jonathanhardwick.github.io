@@ -1,0 +1,36 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Parameter Mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" 
+href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+3&amp;problem=3-s6-parameterMysterySoda">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			Fill in the boxes with the output that each method call would produce:
+
+			<pre style="font-size: smaller">
+public class MysterySoda {
+    public static void main(String[] args) {
+        String soda = "coke";
+        String pop = "pepsi";
+        String coke = "pop";
+        String pepsi = "soda";
+        String say = pop;
+
+        carbonated(soda, pop, pepsi);        <span class="comment">// say pepsi not soda or coke</span>
+        carbonated(coke, soda, pop);         <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say coke not pepsi or pop</span></span>
+        carbonated(pop, pepsi, pepsi);       <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say soda not soda or pepsi</span></span>
+        carbonated("pop", pop, "koolaid");   <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say pepsi not koolaid or pop</span></span>
+        carbonated(say, "say", pop);         <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="30" spellcheck="true" /><span class="expressionsolution">say say not pepsi or pepsi</span></span>
+    }
+    public static void carbonated(String coke, String soda, String pop) {
+        System.out.println("say " + soda + " not " + pop + " or " + coke);
+    }
+}
+</pre>
+		</li>
+	</ul>
+</div>

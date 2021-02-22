@@ -1,0 +1,54 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Client code method call syntax
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+8&problem=lab8-methodCallSyntax">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Suppose a method in the <code>BankAccount</code> class is defined as:
+	</p>
+
+	<pre>
+public double computeInterest(int rate)
+</pre>
+
+	<p>
+		If the client code has declared a <code>BankAccount</code> variable named <code>acct</code>, which of the following would be a valid call to the above method?
+	</p>
+
+	<ol class="mcquestion shuffle">
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>int result = BankAccount.computeInterest(42);</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>double result = computeInterest(acct, 42);</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>acct.computeInterest(42.0, 15);</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mccorrect" />
+				<code>double result = acct.computeInterest(42);</code>
+				<img class="mcresultimage" src="images/correct.gif" alt="correct" />
+			</label>
+		</li>
+	</ol>
+</div>

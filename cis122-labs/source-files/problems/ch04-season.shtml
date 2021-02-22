@@ -1,0 +1,30 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: season
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+4&amp;problem=4-e3-season">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Write a method named <code>season</code> that takes two integers as
+      parameters representing a month and day and that returns a String
+      indicating the season for that month and day. Assume that months are
+      specified as an integer between 1 and 12 (1 for January, 2 for February,
+      and so on) and that the day of the month is a number between 1 and 31.
+    </li>
+
+    <li>
+      If the date falls between 12/16 and 3/15, you should
+      return <code>"Winter"</code>. If the date falls between 3/16 and 6/15,
+      you should return <code>"Spring"</code>. If the date falls between 6/16
+      and 9/15, you should return <code>"Summer"</code>. And if the date falls
+      between 9/16 and 12/15, you should return <code>"Fall"</code>.
+    </li>
+					
+    <li>
+      Try solving this problem in Practice-It! using the link above.
+    </li>
+  </ul>
+</div>

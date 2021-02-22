@@ -1,0 +1,26 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Parameters output</h1>
+
+	<ul>
+		<li>
+			What two values are printed by each call below?  Write them in the boxes provided.
+
+			<pre style="font-size: smaller">
+public class MysteryNums {
+    public static void main(String[] args) {
+        int x = 15;
+        sentence(x, 42);      <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">15</span></span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">42</span></span>
+
+        int y = x - 5;
+        sentence(y, x + y);   <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">10</span></span> <span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="true" /><span class="expressionsolution">25</span></span>
+    }
+    
+    public static void sentence(int num1, int num2) {
+        System.out.println(num1 + " " + num2);
+    }
+}
+</pre>
+
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,40 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: What's the output?
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+1&amp;problem=1-s9-Shaq">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      What output is produced by the following code?
+
+      <pre>
+System.out.println("Shaq is 7'1");
+System.out.println("The string \"\" is an empty message.");
+System.out.println("\\'\"\\\\\"");
+</pre>
+					
+      <p>
+	(Try to figure it out without running the code. <br /> If you give up,
+	paste it into jGRASP and run it.)
+      </p>
+      <p>
+	Note: when you see a purple check mark as in the upper-right corner of
+	this page, that means that this problem is also available in PracticeIt
+	by clicking on the check mark.
+      </p>
+    </li>
+					
+    <li class="incremental">
+      Answer:
+						
+      <pre>
+Shaq is 7'1
+The string "" is an empty message.
+\'"\\"
+</pre>
+    </li>
+  </ul>
+</div>

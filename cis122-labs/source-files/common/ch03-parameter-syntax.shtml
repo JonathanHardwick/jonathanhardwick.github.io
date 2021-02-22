@@ -1,0 +1,28 @@
+<div class="slide">
+	<h1>Parameters</h1>
+	
+	<p>
+		A <strong>parameter</strong> allows you to pass in a value to a method as you call it.
+	</p>
+	
+	<pre>
+public static void <var>name</var>(<var>type</var> <var>name</var>) {   <span class="comment">// declare</span>
+</pre>
+	
+	<pre>
+<var>methodName</var>(<var>expression</var>);                <span class="comment">// call</span>
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+public static void squared(<em>int num</em>) {
+    System.out.println(num + " times " + num + " is " + (num * num));
+}
+...
+squared(<em>3</em>);          <span class="comment">// 3 times 3 is 9</span>
+squared(<em>8</em>);          <span class="comment">// 8 times 8 is 64</span>
+</pre>
+</div>

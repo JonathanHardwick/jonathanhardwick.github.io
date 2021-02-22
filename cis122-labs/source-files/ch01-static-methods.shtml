@@ -1,0 +1,19 @@
+<!--#set var="LAB_NUMBER" value="1" -->
+<!--#set var="LAB_NAME" value="Static Methods" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+  <h1>Today's lab</h1>
+  <p>Goals for today:</p>
+  <ul> 
+		<li>practice using static <strong>methods</strong> to capture structure and redundancy</li>
+  </ul>
+</div>
+
+<!--#include virtual="common/ch01-static-method-syntax.shtml" -->
+<!--#include virtual="problems/ch01-Spikey.shtml" -->
+<!--#include virtual="problems/ch01-Lanterns.shtml" -->
+<!--#include virtual="problems/ch01-spell-your-name.shtml" -->
+<!--#include virtual="problems/ch01-FightSong.shtml" -->
+
+<!--#include virtual="common/footer.shtml" -->

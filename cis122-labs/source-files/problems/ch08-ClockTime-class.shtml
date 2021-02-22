@@ -1,0 +1,32 @@
+<div class="slide">
+	<h1>
+		ClockTime class
+	</h1>
+	
+	<p>
+		Suppose you are given a class named <code>ClockTime</code> with the following contents:
+	</p>
+	
+	<pre class="compressed">
+// A ClockTime object represents an hour:minute time during
+// the day or night, such as 10:45 AM or 6:27 PM.
+public class ClockTime {
+    private int hour;
+    private int minute;
+    private String amPm;
+
+    // Constructs a new time for the given hour/minute
+    public ClockTime(int h, int m, String ap)
+    
+    // returns the field values
+    public int getHour()
+    public int getMinute()
+    public String getAmPm()
+
+    // returns a String for this time; for example, "6:27 PM"
+    public String toString()
+
+    ...
+}
+</pre>
+</div>

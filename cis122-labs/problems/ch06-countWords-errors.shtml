@@ -1,0 +1,133 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: countWords errors
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+5&amp;problem=practicefinal5-countWords">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <table class="linenumbertable">
+    <tr>
+      <td>
+        <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+</pre>
+      </td>
+      <td>
+        <pre class="compressed">
+<span class="comment">// Counts the total lines and words in the given input scanner.</span>
+public static void countWords(Scanner input) {
+    Scanner input = new Scanner(new File("example.txt"));
+    int lineCount = 0;
+    int wordCount = 0;
+    
+    while (input.nextLine()) {
+        String line = input.line();       <span class="comment">// read one line</span>
+        lineCount++;
+        while (line.next()) {             <span class="comment">// count tokens in line</span>
+            String word = lineScan.hasNext;
+            wordCount++;
+        }
+    }
+}
+</pre>
+      </td>
+    </tr>
+  </table>
+                                        
+  <p>
+    The above attempted solution to Practice-It problem
+    "<code>countWords</code>" has 5 errors.
+    Open Practice-It from the link above, copy/paste this code into it, and fix
+    the errors.  Complete the code so that it passes the test cases.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <ol class="compressed">
+    <li>line 3: should not declare another <code>Scanner</code> for the
+      file</li>
+    <li>line 7: <code>nextLine</code> should be <code>hasNextLine</code></li>
+    <li>line 8: <code>line</code> should be <code>nextLine</code></li>
+    <li>line 10: need a second line <code>Scanner</code> to read the tokens of
+      each line</li>
+    <li>line 11: <code>hasNext</code> should be <code>next()</code></li>
+    <li>line 14: need to add 3 <code>println</code> statements to print
+      line/word stats</li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber noincrement"></span> - solution
+  </h1>
+
+  <table class="linenumbertable">
+    <tr>
+      <td>
+        <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre>
+      </td>
+      <td>
+        <pre class="compressed">
+// Counts the total lines and words in the given input scanner.
+public static void countWords(Scanner input) {
+    <del>Scanner input = new Scanner(new File("example.txt"));</del>
+    int lineCount = 0;
+    int wordCount = 0;
+    
+    while (input.<ins>hasN</ins>extLine()) {
+        String line = input.nextLine();   // read one line
+        lineCount++;
+        <ins>Scanner lineScan = new Scanner(line);</ins>
+        while (line<ins>Scan</ins>.<ins>hasN</ins>ext()) {      // count tokens in line
+            String word = lineScan.<ins>next</ins>();
+            wordCount++;
+        }
+    }
+    
+    <ins>System.out.println("Total lines = " + lineCount);
+    System.out.println("Total words = " + wordCount);
+    System.out.printf("Average words per line = %.3f\n", (double) wordCount / lineCount);</ins>
+}
+</pre>
+      </td>
+    </tr>
+  </table>
+</div>

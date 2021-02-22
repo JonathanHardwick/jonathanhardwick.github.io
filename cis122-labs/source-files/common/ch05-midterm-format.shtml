@@ -1,0 +1,42 @@
+<div class="slide">
+	<h1>
+		Midterm exam review
+	</h1>
+	
+	<p>
+		The CSE 142 midterm exam is usually very similar to the format of the <strong>practice exams</strong>.
+		The following kinds of problems are often found on the exam:
+	</p>
+	
+	<ul>
+		<li>
+			expressions (given an expression, write the value it produces)
+		</li>
+		
+		<li>
+			parameter mystery (read code with parameters and write its output)
+		</li>
+		
+		<li>
+			if/else mystery (read code with if/else statements and write its output)
+		</li>
+		
+		<li>
+			while loop mystery (read code with while loops and write its output)
+		</li>
+		
+		<li>
+			assertions (given a piece of code, what can we say is always / sometimes / never true?)
+		</li>
+		
+		<li>
+			programming problems (write code to implement a method with specific behavior)
+		</li>
+	</ul>
+	
+	<p>
+		To solve each problem, you will need to use various concepts and syntax taught throughout the course so far,
+		such as System.out.println, expressions, variables, parameters, return, if/else, for/while loops, Scanner, and Random.
+		Part of the challenge is in figuring out which tools to use and how to use them together to solve the problem at hand.
+	</p>
+</div>

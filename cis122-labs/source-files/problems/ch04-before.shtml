@@ -1,0 +1,29 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: before
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+5&amp;problem=lab5-before">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    Write a method <code>before</code> that takes as parameters two month/day
+    combinations and that returns whether or not the first date comes before
+    the second date (<code>true</code> if the first month/day comes before the
+    second month/day, <code>false</code> if it does not).  The method will take
+    four integers as parameters that represent the two month/day combinations.
+  </p>
+
+  <p>
+    The first integer in each pair represents the month and will be a value
+    between 1 and 12 (1 for January, 2 for February, etc, up to 12 for
+    December).  The second integer in each pair represents the day of the month
+    (a value between 1 and 31).  One date is considered to come before another
+    if it comes earlier in the year.
+  </p>
+
+  <p>
+    Solve this problem in Practice-It by clicking on the check-mark above.
+  </p>
+
+</div>

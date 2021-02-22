@@ -1,0 +1,25 @@
+<div class="slide">
+	<h1><code>while</code> Loops</h1>
+	
+	<p>
+		A <code>while</code> loop repeats indefinitely until a given condition is met.
+	</p>
+	
+	<pre>
+while (<var>test</var>) {
+    <var>statement(s)</var>;
+}
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+int num = 1;
+<em>while (num &lt; 5) {</em>
+    System.out.print(n + " ");     <span class="comment">// output: 1 2 3 4</span>
+    n++;
+<em>}</em>
+</pre>
+</div>

@@ -1,0 +1,65 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: ProcessName
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&problem=lab4-ProcessName">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		<strong>Copy/paste</strong> and save 
+		<a class="popup" href="problems/ProcessName.java">
+			<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+			ProcessName.java</a>
+		in jGRASP, then go to the next slide.
+	</p>
+
+	<pre class="compressed">
+import java.util.*;  // for Scanner
+
+public class ProcessName {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        
+        // your code goes here
+        
+        System.out.println("Your name is: " + name);
+    }
+}
+</pre>
+	
+	<p class="continued">
+		continued on the next slide ...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber noincrement"></span> - code to add
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&problem=lab4-ProcessName">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			Add code to the program so that it reads the user's first and last name (read an entire line as a single string), then prints the last name followed by a comma and the first initial.
+			(Assume that the user types a valid name.)
+			Example:
+			
+			<pre>
+Type your name: <span class="userinput">Jessica Miller</span>
+Your name is: Miller, J.
+</pre>
+		</li>
+	
+		<li>
+			Notice that the program reads an entire line of user input, not just one word.
+		</li>
+
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>

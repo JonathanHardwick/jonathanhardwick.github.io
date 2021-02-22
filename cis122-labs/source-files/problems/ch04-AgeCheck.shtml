@@ -1,0 +1,79 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: AgeCheck</h1>
+  
+  <ul>
+    <li>
+      <strong>Copy/paste</strong> and save the following program in jGRASP,
+      then see the instructions on the next slide.
+
+      <pre style="font-size: smaller">
+public class AgeCheck {
+    public static void main(String[] args) {
+        int myAge = 19;   // I am 19; let me see if I can drive
+        message(myAge);
+    }
+
+    // Displays message about driving to user based on given age
+    public static void message(int age) {
+        if (myAge &gt;= 16) {
+            System.out.println("I'm old enough to drive!");
+        }
+        if (myAge &lt;= 16) {
+            System.out.println("Not old enough yet... :*(");
+        }
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - things to
+    fix</h1>
+
+  <ul>
+    <li>
+      The program has a few syntax errors.  Fix them until it compiles.
+    </li>
+
+    <li>
+      The code has a logic problem.  (For some value(s), it prints the wrong
+      answer.)  Find any such problems and fix them.  (You may need to run the
+      program a few times and try different values to see which ones fail.)
+    </li>
+
+    <li>
+      The program uses <code>if</code> and <code>else</code> in a clumsy way.
+      Improve the style of the code.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <ul>
+    <li>
+      The following is a corrected version of the program:
+
+      <pre style="font-size: smaller">
+public class AgeCheck {
+    public static void main(String[] args) {
+        int myAge = 19;   // I am 19; let me see if I can drive
+        message(myAge);
+    }
+
+    // Displays a message about driving to user based on given age
+    public static void message(int age) {
+        if (<ins>age</ins> &gt;= 16) {
+            System.out.println("I'm old enough to drive!");
+        } <ins>else</ins> {
+            System.out.println("Not old enough yet... :*(");
+        }
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>

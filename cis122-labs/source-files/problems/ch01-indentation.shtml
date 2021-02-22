@@ -1,0 +1,33 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Indentation</h1>
+
+  <p>
+    Programs should be indented properly to make them easier to read.
+  </p>
+
+  <ul>
+    <li>
+      <code>{</code> brace &rarr; increase indent of following lines by one tab
+    </li>
+    <li>
+      <code>}</code> brace &rarr; decrease indent of that line and following
+      lines by one tab 
+    </li>
+  </ul>
+                                
+  <p>
+    The following program has poor indentation.  Paste it into jGRASP and fix
+    it.
+  </p>
+
+  <pre>
+  public class Icky {
+public static void main(String[] args) {
+System.out.println("Properly indented programs");
+     System.out.println("look ever so much better!");
+ System.out.println("please fix me");
+        System.out.println("and make me beautiful again");
+}
+  }
+</pre>
+</div>

@@ -1,0 +1,63 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: PointCoordinates
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+8&amp;problem=lab8-pointCoordinates">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		What are the x- and y-coordinates of the <code>Point</code>s referred to as <code>p1</code>, <code>p2</code>, and <code>p3</code> after the following code executes?
+		Give your answer as an x-y pair such as (0, 0).
+		(Recall that <code>Point</code>s and other objects use <em>reference semantics</em>.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre class="java compressed">
+Point p1 = new Point();
+p1.x = 17;
+p1.y = 9;
+Point p2 = new Point();
+p2.x = 4;
+p2.y = -1;
+Point p3 = p2;
+
+p1.translate(3, 1);
+p2.x = 50;
+p3.translate(-4, 5);
+</pre>
+
+			</td>
+
+			<td style="vertical-align: bottom">
+				<table class="expressiontable">
+					<tr>
+						<td class="expression"><code>p1</code>: </td>
+						<td>
+							<input type="text" class="expressionanswer" size="10" spellcheck="false" />
+						</td>
+						<td><pre class="expressionsolution">(20, 10)</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>p2</code>: </td>
+						<td>
+							<input type="text" class="expressionanswer" size="10" spellcheck="false" />
+							<pre class="ignore">[^0-9,]+</pre>
+						</td>
+						<td><pre class="expressionsolution">(46, 4)</pre></td>
+					</tr>
+
+					<tr>
+						<td class="expression"><code>p3</code>: </td>
+						<td>
+							<input type="text" class="expressionanswer" size="10" spellcheck="false" />
+						</td>
+						<td><pre class="expressionsolution">(46, 4)</pre></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>

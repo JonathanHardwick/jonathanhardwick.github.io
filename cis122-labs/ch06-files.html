@@ -1,0 +1,1127 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: File Processing</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 6: File Processing</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: File Processing</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>Scanner</code> and <code>File</code> objects to read input data from files</li>
+		<li>understand the way a <code>Scanner</code> breaks input into tokens</li>
+		<li>explore token-based and line-based input</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It!
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+    
+<!-- PROBLEMS ABOUT FILE PROCESSING WITH SCANNER -->
+    <div class="slide">
+      <h1><code>Scanner</code> methods</h1>
+
+      <!--
+         <p>
+           To use these methods, you need a variable of
+           type <code>Scanner</code>:
+         </p>
+
+         <pre>
+Scanner fileScanner = new Scanner(new File("input.txt"));
+String theNextString = <strong>fileScanner.next();</strong>
+</pre>
+         -->
+
+      <table class="standard">
+        <tr>
+          <th>
+            Method name
+          </th>
+
+          <th>
+            Description
+          </th>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>next()</code>
+          </td>
+
+          <td>
+            reads and returns the next token as a <code>String</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>nextLine()</code>
+          </td>
+
+          <td>
+            reads and returns as a <code>String</code> all the characters up to
+            the next new line (<code>\n</code>)
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>nextInt()</code>
+          </td>
+
+          <td>
+            reads and returns the next token as an <code>int</code>, if
+            possible
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>nextDouble()</code>
+          </td>
+
+          <td>
+            reads and returns the next token as <code>double</code>, if
+            possible
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNext()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if there is still a token in
+            the <code>Scanner</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNextLine()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if there is still at least one line left
+            to be read in the <code>Scanner</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNextInt()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if the next token can be read as
+            an <code>int</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="white-space: nowrap">
+            <code>hasNextDouble()</code>
+          </td>
+
+          <td>
+            returns <code>true</code> if the next token can be read as
+            an <code>double</code>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: File Scanner declaration
+    syntax</h1>
+                                
+  <p>
+    Which of the following choices is the correct syntax for declaring
+    a <code>Scanner</code> to read the file <code>example.txt</code> in the
+    current directory ?
+  </p>
+                                
+  <ol class="mcquestion">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>Scanner input = new Scanner("C:\example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mccorrect" />
+        <code>Scanner input = new Scanner(new File("example.txt"));</code>
+        <img class="mcresultimage" src="images/correct.gif" alt="correct" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>Scanner input = new File("example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>File input = new Scanner("/example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" class="mcincorrect" />
+        <code>Scanner input = new Scanner("C:/example.txt");</code>
+        <img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>-A: Tokenizing</h1>
+
+  <p>
+    How many tokens are in the
+    following <code>String</code>?
+    <span class="expressionarea">
+      <input type="text" value="" class="expressionanswer" size="6"
+             spellcheck="true"
+             /><span class="expressionsolution">3</span></span>  
+  </p>
+
+  <pre>
+welcome...to the matrix.
+</pre>
+
+  <div class="mcquestion">
+    <p>
+      What are the tokens that the <code>String</code> breaks up into?
+    </p>
+
+    <ol class="compressed" style="list-style-type: lower-alpha">
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"welcome", "to", "the", "matrix"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"welcome...to the matrix."</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mccorrect" />
+          <code>"welcome...to", "the", "matrix."</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/correct.gif" alt="correct" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"welcome...", "to", "the matrix."</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span>-B: More
+    tokenizing</h1>
+
+  <p>
+    How many tokens are in the
+    following <code>String</code>?
+    <span class="expressionarea">
+      <input type="text" value="" class="expressionanswer" size="6"
+             spellcheck="true"
+             /><span class="expressionsolution">9</span></span>
+  </p>
+
+  <pre>
+in fourteen-hundred 92
+columbus sailed the ocean blue :)
+</pre>
+
+  <div class="mcquestion">
+    <p>
+      What are the tokens that the <code>String</code> breaks up into?
+    </p>
+    <ol class="compressed">
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"in", "fourteen-hundred", "92"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mccorrect" />
+          <code>"in", "fourteen-hundred", "92", "columbus", "sailed", "the",
+            "ocean", "blue", ":)"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/correct.gif" alt="correct" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"in", "fourteen", "hundred", "92", "columbus", "sailed", "the",
+            "ocean", "blue"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"in", "fourteen-hundred", "92\ncolumbus", "sailed", "the",
+            "ocean", "blue :)"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>-A: <code>Scanner</code>
+    practice</h1>
+
+  <p>
+    The next couple problems are about a file called <code>readme.txt</code>
+    that has the following contents:
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output from the following code, as it would appear on the
+    console?
+  </p>
+<!--
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+System.out.println(input.nextLine());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">6.7  This file has</span></span>
+System.out.println(input.nextLine());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">several input</span></span>
+System.out.println(input.nextLine());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">LINES!</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement">
+    </span>-B: <code>Scanner</code> practice</h1>
+
+  <p>
+    Input file: <code>readme.txt</code>
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output if the code was changed to the following?
+  </p>
+ -->
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+System.out.println(input.next());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">6.7</span></span>
+System.out.println(input.next());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">This</span></span>
+System.out.println(input.next());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">file</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement">
+    </span>-B: <code>Scanner</code> practice</h1>
+
+  <p>
+    Input file: <code>readme.txt</code>
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output for the following code?  If there would be an
+    error, write <strong>error</strong> .
+  </p>
+
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+System.out.println(input.nextDouble());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">6.7</span></span>
+System.out.println(input.nextDouble());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">error</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement">
+    </span>-C: <code>Scanner</code> practice</h1>
+
+  <p>
+    Input file: <code>readme.txt</code>
+  </p>
+
+  <pre>
+6.7  This file has
+several input
+LINES!
+
+   10 20
+</pre>
+
+  <p>
+    What would be the output for the following code?  If there would be an
+    error, write <strong>error</strong> .
+  </p>
+
+  <pre>
+Scanner input = new Scanner(new File("readme.txt"));
+while (!input.hasNextInt()) {
+    input.next();
+}
+System.out.println(input.nextInt());  // <span class="expressionarea"><input type="text" value="" class="expressionanswer" size="25" spellcheck="true" /><span class="expressionsolution">10</span></span>
+</pre>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Words</h1>
+
+  <ul>
+    <li>
+      <strong>Download</strong> the following files
+      <a class="popup" href="problems/Words.java">
+        <img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon"
+             />
+        Words.java
+      </a>
+      and
+      <a class="popup" href="problems/wordinput.txt">
+        <img class="icon" src="images/icon_txt.gif" width="16" height="16" alt="icon"
+             />
+        wordinput.txt
+      </a>
+      to your machine and open them with jGrasp.
+    </li>
+
+    <li>
+      The program is supposed to read the input file and count how many words
+      it contains.  Finish the program so that it runs properly.  Don't forget
+      to add <code>import</code> statements and a <code>throws</code> clause to
+      the code.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <pre>
+<ins>import java.io.*;     // for File
+import java.util.*;   // for Scanner</ins>
+
+public class Words {
+    public static void main(String[] args) <ins>throws FileNotFoundException</ins> {
+        int wordCount = 0;
+        Scanner input = new Scanner(new File("wordinput.txt"));
+        
+        // your code goes here ...
+        <ins>while (input.hasNext()) {
+            String word = input.next();
+            wordCount++;
+        }</ins>
+        
+        System.out.println("Total words = " + wordCount);
+    }
+}
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Debug ZipCode Case Study</h1>
+
+	<p>
+		In this exercise we will practice the jGRASP debugger using the Case Study example from the end of Chapter 6.
+		To download this example, follow these steps:
+	</p>
+	
+	<ol>
+		<li>
+			Go to the <a class="popup" href="../">class web page</a> and click the "Textbook" link.
+		</li>
+		<li>
+			Find the section labeled "Code Files" and click the "code files" link.
+		</li>
+		<li>
+			This will bring you to a directory listing that includes an entry for each chapter.  Click the link for "ch06".
+		</li>
+		<li>
+			You want to download and save the files <code>ZipLookup.java</code> and <code>zipcode.txt</code>.
+			Right-click the file names and choose the option to save the link in whatever folder you have been using for lab work.
+			Make sure to save them in the same folder.
+		</li>
+		<li>
+			Compile and run <code>ZipLookup.java</code> in jGRASP.
+			You might try using your own ZIP code and a relatively small radius like 0.5 miles.
+			The program takes a while to run because it has to search a large data file.
+		</li>
+	</ol>
+
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+
+	<ul>
+		<li>
+			The debugger can be particularly helpful to understand a program that processes a large data file.
+			In this exercise are going to debug the <code>ZipLookup</code> program.
+		</li>
+
+		<li>
+			This program makes two passes through the data file.
+			First it looks for the target zip code in the method named <code>find</code>.
+			Then it shows all matches in the method named <code>showMatches</code>.
+			We want to debug <code>showMatches</code>.
+		</li>
+
+		<li>
+			The data file has a total of 43,191 zip codes in it, so it is not practical to have it display all of the data.
+			That's why it's important to have good debugging skills to be able to selectively stop the program at certain points to see what is going on.
+		</li>
+
+		<li>
+			Ask a TA for help if you have trouble setting or clearing break points or otherwise completing this exercise.
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+	
+	<ul>
+		<li>
+			We'll debug the program as it searches for all zip codes with 0.3 miles of the White House, at zip code 20500.
+			Run the program with those input values:
+			
+			<pre class="compressed">
+What zip code are you interested in? 20500
+And what proximity (in miles)? 0.3
+
+20500: Washington, DC
+zip codes within 0.3 miles:
+    20045 Washington, DC, 0.26 miles
+    20500 Washington, DC, 0.00 miles
+    20501 Washington, DC, 0.27 miles
+    20502 Washington, DC, 0.27 miles
+</pre>
+		</li>
+		
+		<li>
+			Now let's see what is true just before the <code>while</code> loop in the <code>showMatches</code> method executes.
+			Set a break point on the <code>while</code> loop itself.
+			Then debug to find <code>lat1</code> and <code>long1</code> (latitude and longitude of the White House ZIP code).
+
+			<table class="expressiontable">
+				<tr>
+					<td class="expression"><code>lat1</code></td>
+					<td><input type="text" class="expressionanswer" size="12" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">38.894781</pre></td>
+				</tr>
+				<tr>
+					<td class="expression"><code>long1</code></td>
+					<td><input type="text" class="expressionanswer" size="12" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">-77.036122</pre></td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+	
+	<p>
+		Clear your previous break point and set a new break point inside on the <code>printf</code> inside the <code>if</code>.
+		Then hit the resume button that looks like a play button and fill in the table below with the values for <code>zip</code>, <code>lat2</code>, and <code>long2</code>.
+	</p>
+	
+	<table class="arraytable">
+		<tr>
+			<th><code>zip</code></th>
+			<th><code>lat2</code></th>
+			<th><code>long2</code></th>
+		</tr>
+		
+		<tr>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="6" spellcheck="false" />
+				<span class="expressionsolution">20045</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">38.896599</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">-77.0319</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="6" spellcheck="false" />
+				<span class="expressionsolution">20500</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">38.894781</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">-77.036122</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="6" spellcheck="false" />
+				<span class="expressionsolution">20501</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">38.89872</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">-77.036198</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="6" spellcheck="false" />
+				<span class="expressionsolution">20502</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">38.89872</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="12" spellcheck="false" />
+				<span class="expressionsolution">-77.036198</span>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>runningSum</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+8&amp;problem=practicefinal8-runningSum">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a static method</strong> called <code>runningSum</code> that
+    accepts as a parameter a <code>Scanner</code> holding a sequence of real
+    numbers and that outputs the running sum of the numbers followed by the
+    maximum running sum.  For example if the <code>Scanner</code> contains the
+    following data:
+  </p>
+
+  <pre>
+3.25 4.5 -8.25 7.25 3.5 4.25 -6.5 5.25
+</pre>
+
+  <p>
+    Your method should produce the following output:
+  </p>
+
+  <pre>
+running sum = 3.25 7.75 -0.5 6.75 10.25 14.5 8.0 13.25
+max sum = 14.5
+</pre>
+
+  <p>
+    Click on the check-mark above to try out your solution in Practice-it!
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>flipLines</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+2&amp;problem=practicefinal2-flipLines">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> named <code>flipLines</code> that accepts
+    a <code>Scanner</code> for an input file and writes to the console the same
+    file's contents with each pair of lines reversed in order.  For example, if
+    the file contains:
+  </p>
+
+  <pre class="compressed">
+Twas brillig and the slithy toves
+did gyre and gimble in the wabe.
+All mimsey were the borogroves,
+and the mome raths outgrabe.
+
+The End
+</pre>
+
+  <p>
+    your method should produce the following output:
+  </p>
+
+  <pre class="compressed">
+did gyre and gimble in the wabe.
+Twas brillig and the slithy toves
+and the mome raths outgrabe.
+All mimsey were the borogroves,
+The End
+
+</pre>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: countWords errors
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+5&amp;problem=practicefinal5-countWords">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <table class="linenumbertable">
+    <tr>
+      <td>
+        <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+</pre>
+      </td>
+      <td>
+        <pre class="compressed">
+<span class="comment">// Counts the total lines and words in the given input scanner.</span>
+public static void countWords(Scanner input) {
+    Scanner input = new Scanner(new File("example.txt"));
+    int lineCount = 0;
+    int wordCount = 0;
+    
+    while (input.nextLine()) {
+        String line = input.line();       <span class="comment">// read one line</span>
+        lineCount++;
+        while (line.next()) {             <span class="comment">// count tokens in line</span>
+            String word = lineScan.hasNext;
+            wordCount++;
+        }
+    }
+}
+</pre>
+      </td>
+    </tr>
+  </table>
+                                        
+  <p>
+    The above attempted solution to Practice-It problem
+    "<code>countWords</code>" has 5 errors.
+    Open Practice-It from the link above, copy/paste this code into it, and fix
+    the errors.  Complete the code so that it passes the test cases.
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+                                
+  <ol class="compressed">
+    <li>line 3: should not declare another <code>Scanner</code> for the
+      file</li>
+    <li>line 7: <code>nextLine</code> should be <code>hasNextLine</code></li>
+    <li>line 8: <code>line</code> should be <code>nextLine</code></li>
+    <li>line 10: need a second line <code>Scanner</code> to read the tokens of
+      each line</li>
+    <li>line 11: <code>hasNext</code> should be <code>next()</code></li>
+    <li>line 14: need to add 3 <code>println</code> statements to print
+      line/word stats</li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber noincrement"></span> - solution
+  </h1>
+
+  <table class="linenumbertable">
+    <tr>
+      <td>
+        <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre>
+      </td>
+      <td>
+        <pre class="compressed">
+// Counts the total lines and words in the given input scanner.
+public static void countWords(Scanner input) {
+    <del>Scanner input = new Scanner(new File("example.txt"));</del>
+    int lineCount = 0;
+    int wordCount = 0;
+    
+    while (input.<ins>hasN</ins>extLine()) {
+        String line = input.nextLine();   // read one line
+        lineCount++;
+        <ins>Scanner lineScan = new Scanner(line);</ins>
+        while (line<ins>Scan</ins>.<ins>hasN</ins>ext()) {      // count tokens in line
+            String word = lineScan.<ins>next</ins>();
+            wordCount++;
+        }
+    }
+    
+    <ins>System.out.println("Total lines = " + lineCount);
+    System.out.println("Total words = " + wordCount);
+    System.out.printf("Average words per line = %.3f\n", (double) wordCount / lineCount);</ins>
+}
+</pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>coinFlip</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+3&amp;problem=practicefinal3-coinFlip">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> named <code>coinFlip</code> that accepts
+    a <code>Scanner</code> for an input file of coin flips that are heads (H)
+    or tails (T).  Consider each line to be a separate set of coin flips and
+    output the number and percentage of heads in that line. If it is more than
+    50%, print "You win!". Consider the following file:
+  </p>
+
+  <pre class="compressed">
+H T H H T
+T t    t  T h  H
+      h
+</pre>
+
+  <p>
+    For the input above, your method should produce the following output:
+  </p>
+
+  <pre class="compressed">
+3 heads (60.0%)
+You win!
+
+2 heads (33.3%)
+
+1 heads (100.0%)
+You win!
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>printDuplicates</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+6&problem=6-e12-printDuplicates">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method <code>printDuplicates</code> that accepts a <code>Scanner</code> for an input file.
+		Examine each line for consecutive occurrences of the same token on the same line and print each duplicated token along how many times it appears consecutively.  For example the file: 
+	</p>
+
+	<pre class="compressed">
+hello how how are you you you you
+I I I am Jack's Jack's smirking smirking smirking smirking smirking revenge
+one fish two fish red fish blue fish
+   bow  wow wow yippee yippee   yo yippee   yippee yay  yay yay
+</pre>
+
+	<p>
+		leads to the following console output:
+	</p>
+
+	<pre class="compressed">
+how*2 you*4
+I*3 Jack's*2 smirking*5
+
+wow*2 yippee*2 yippee*2 yay*3
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>mostCommonNames</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+10&problem=practicefinal10-mostCommonNames">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method <code>mostCommonNames</code> that accepts a <code>Scanner</code> for an input file with names on each line separated by spaces.  Some names appear multiple times in a row.  For example:
+	</p>
+
+	<pre class="compressed">
+Benson Eric   Eric  Marty Kim  Kim Kim   Jenny  Nancy Nancy  Nancy  Paul  Paul
+Stuart Stuart Stuart Ethan Alyssa Alyssa Helene Jessica Jessica Jessica Jessica
+Jared  Alisa Yuki   Catriona  Cody   Coral   Trent Kevin  Ben Stefanie Kenneth
+</pre>
+
+	<p>
+		For each line, print the most commonly occurring name.  If there's a tie, use the first name that had that many occurrences.
+	</p>
+
+	<pre class="compressed">
+Most common: Kim
+Most common: Jessica
+Most common: Jared
+</pre>
+
+	<p>
+		Also return the total number of unique names in the whole file (e.g. 23 for the above input).
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>frequentFlier</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+12&problem=practicefinal12-frequentFlier">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method <code>frequentFlier</code> that accepts a <code>Scanner</code> for an input file of ticket type / mileage pairs and reports how many frequent-flier miles the person earned.
+	</p>
+
+	<ul>
+		<li>
+			1 frequent flyer mile is earned for each mile traveled in coach.
+		</li>
+		<li>
+			2 frequent flyer miles are earned for each mile traveled in first class.
+		</li>
+		<li>
+			0 frequent flyer miles are earned on a discounted flight.
+		</li>
+	</ul>
+	
+	<p>
+		For example, given the input below, your method should return 15600 (2*5000 + 1500 + 100 + 2*2000).
+	</p>
+	
+	<pre class="compressed">
+firstclass  5000 coach   1500  coach
+100 firstclass 2000  discount 300
+</pre>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>stripHtmlTags</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+6&problem=6-e10-stripHtmlTags">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method <code>stripHtmlTags</code> that accepts a <code>Scanner</code> for an input file containing an HTML web page, then reads that file and prints the file's text with all HTML tags removed.  A tag is any text between the character &lt; and &gt;.  For example, consider the following text:
+	</p>                                        
+<pre>
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;title&gt;My web page&lt;/title&gt;
+   &lt;/head&gt;  
+&lt;/html&gt;
+</pre>
+
+<p>
+If a file containing these lines were passed to your program, your program should output the following:
+</p>
+<pre>
+	
+	
+My web page
+
+
+</pre> 
+
+</div>
+   
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

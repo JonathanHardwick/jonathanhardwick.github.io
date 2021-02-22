@@ -1,0 +1,30 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Sequence of
+    characters</h1>
+
+  <ul>
+    <li>
+      <strong>Modify</strong> the code from the previous exercise to produce
+      the following output:
+
+      <pre>
+********
+***********
+**************
+*****************
+********************
+***********************
+</pre>
+    </li>
+
+    <li>
+      Use the <a class="popup" href="../diff-labs.html">Output
+      Comparison Tool</a> to check your work.
+    </li>
+
+    <li>
+      (Hint: Note the number of stars in each row.  Instead of printing the
+      number 8, now you're printing 8 stars.  You will now need a nested loop.)
+    </li>
+  </ul>
+</div>

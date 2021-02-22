@@ -1,0 +1,25 @@
+<!--#set var="LAB_NUMBER" value="3" -->
+<!--#set var="LAB_NAME" value="Parameters" -->
+<!--#include virtual="common/header.shtml" -->
+
+<div class="slide">
+  <h1>Lab goals</h1>
+  <p>Goals for this problem set:</p>
+  <ul>
+    <li>practice declaring and passing <strong>parameters</strong> to methods</li>   
+  </ul>
+</div>
+
+<!-- PROBLEMS ABOUT PARAMETER-PASSING -->
+<!--#include virtual="common/ch03-parameter-syntax.shtml" -->
+<!--#include virtual="problems/ch03-parameter-output.shtml" -->
+<!--#include virtual="problems/ch03-parameter-mystery-help.shtml" -->
+<!--#include virtual="problems/ch03-parameter-mystery.shtml" -->
+<!--#include virtual="problems/ch03-parameter-mystery2.shtml" -->
+<!--#include virtual="problems/ch03-parameter-mystery3.shtml" -->   
+<!--#include virtual="problems/ch03-syntax-errors.shtml" -->
+<!--#include virtual="problems/ch03-printGrid.shtml" --> 
+<!--#include virtual="problems/ch03-printSquare.shtml" -->  
+
+<!--#include virtual="common/footer.shtml" -->  
+

@@ -1,0 +1,26 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Getting textbook code files</h1>
+
+	<p>
+		In this exercise we will download a program from the textbook for a debugging exercise.
+	</p>
+	 
+	<ol>
+		<li>
+			Go to the <a class="popup" href="..">course web page</a> and click the <strong>Textbook</strong> sidebar link.
+		</li>
+		<li>
+			Find the section labeled <strong>Code Files</strong> and click the "code files" link.
+		</li>
+		<li>
+			This will bring you to a listing of all chapters.  Click the link for <code>ch04</code>.
+		</li>
+		<li>
+			Download and save <code>Hailstone.java</code>.
+			Right-click the file name and choose the option to Save the Link in the folder you have been using for lab work.
+		</li>
+		<li>
+			Compile and run <code>Hailstone.java</code> in jGRASP.
+		</li>
+	</ol>
+</div>

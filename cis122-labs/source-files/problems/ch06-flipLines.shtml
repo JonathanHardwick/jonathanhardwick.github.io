@@ -1,0 +1,36 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>flipLines</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+2&amp;problem=practicefinal2-flipLines">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> named <code>flipLines</code> that accepts
+    a <code>Scanner</code> for an input file and writes to the console the same
+    file's contents with each pair of lines reversed in order.  For example, if
+    the file contains:
+  </p>
+
+  <pre class="compressed">
+Twas brillig and the slithy toves
+did gyre and gimble in the wabe.
+All mimsey were the borogroves,
+and the mome raths outgrabe.
+
+The End
+</pre>
+
+  <p>
+    your method should produce the following output:
+  </p>
+
+  <pre class="compressed">
+did gyre and gimble in the wabe.
+Twas brillig and the slithy toves
+and the mome raths outgrabe.
+All mimsey were the borogroves,
+The End
+
+</pre>
+</div>

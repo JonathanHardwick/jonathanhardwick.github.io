@@ -1,0 +1,26 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>flip</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+8&problem=bjp3-8-e2-flipPoint">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Add the following method to the <code>Point</code> class:
+	</p>
+
+	<pre class="java">
+public void flip()
+</pre>
+
+	<p>
+		Negates and swaps the x/y coordinates of the <code>Point</code> object.
+		For example, if an object <code>pt</code> initially represents the point (5, -3), after a call of <code>pt.flip();</code> , the object should represent (3, -5).
+		If the same object initially represents the point (4, 17), after a call to <code>pt.flip();</code>, the object should represent (-17, -4).
+	</p>
+	
+	<p>
+		Test your code in Practice-It! or by running the <code>PointMain</code> program.
+	</p>
+</div>

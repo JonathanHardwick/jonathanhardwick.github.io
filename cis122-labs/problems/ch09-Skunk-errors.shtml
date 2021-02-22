@@ -1,0 +1,48 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>Skunk</code> errors
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+9&problem=lab9-Skunk">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		The following critter
+		(<a class="popup" href="problems/Skunk.java">
+			<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+			Skunk.java
+		</a>)
+		is an attempt to make a critter that goes W, W, N and repeats, unless he eats food, in which case he will start going W, W, S.
+		But the file contains errors.
+		Download it and fix the errors so it compiles/runs properly.
+		Test it in <a class="popup" href="../homework.shtml#a9"><code>CritterMain</code></a> and Practice-It.
+	</p>
+	
+<pre class="compressed" style="font-size: 66% !important; line-height: 0.85em !important">
+public class Skunk extend Critter {
+    private int moves;
+    private boolean hungry;
+    
+    public void Skunk() {  // constructor
+        hungry = false;
+    }
+    public static boolean eat() {
+        hungry = true;
+        return true;
+    }
+    public Direction getmoves() {
+        moves++;
+        if (moves &gt;= 3) {
+            moves = 0;
+        }
+        if (moves == 1 &amp;&amp; moves == 2) {
+            return Direction.WEST;
+        } else if (hungry) {
+            return Direction.NORTH;
+        } else if (!hungry) {
+            return Direction.SOUTH;
+        }
+    }
+}
+</pre>
+</div>

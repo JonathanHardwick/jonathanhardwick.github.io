@@ -1,0 +1,80 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Expressions
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FExpressions&problem=practicefinal2-expressions">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+                                
+  <p>
+    For each expression in the left-hand column, indicate its value in the
+    right-hand column. Be sure to list a constant of appropriate type (e.g.,
+    7.0 rather than 7 for a double, Strings in quotes).
+  </p>
+                                
+  <table class="expressiontable">
+    <tr>
+      <td class="expression">
+        <code>12/5 + 8/4</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="12" spellcheck="false"
+               />
+      </td>
+      <td>
+        <pre class="expressionsolution">4</pre>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="expression">
+        <code>2.5 * 2 + 17/4</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="12" spellcheck="false"
+               />
+      </td>
+      <td>
+        <pre class="expressionsolution">9.0</pre>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="expression">
+        <code>41 % 15 % 7 + 17 % 3</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="12" spellcheck="false"
+               />
+      </td>
+      <td>
+        <pre class="expressionsolution">6</pre>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="expression">
+        <code>21/2 + "7 % 3" + 17 % 4</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="12" spellcheck="false"
+               />
+      </td>
+      <td>
+        <pre class="expressionsolution">"107 % 31"</pre>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="expression">
+        <code>46/3/2.0/3 * 4/5</code>
+      </td>
+      <td>
+        <input type="text" class="expressionanswer" size="12" spellcheck="false"
+               />
+      </td>
+      <td>
+        <pre class="expressionsolution">2.0</pre>
+      </td>
+    </tr>
+  </table>
+</div>

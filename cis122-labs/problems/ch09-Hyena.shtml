@@ -1,0 +1,24 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>Hyena</code></h1>
+	
+	<p>
+		<strong>Write a class <code>Hyena</code></strong> that extends the <code>Critter</code> class, along with its movement behavior.
+		All unspecified aspects of <code>Hyena</code> use the default behavior.
+	</p>
+	
+	<p>
+		A <code>Hyena</code> object moves in a rectangular pattern looking for food, walking NORTH, then EAST, then SOUTH, then WEST.
+		Each time the hyena walks an entire rectangle, it starts the rectangle pattern over again but with a rectangle 1 step wider than before.
+		The general pattern is as follows: 
+	</p>
+	
+	<ul>
+		<li>
+			N, E, S, W, N, E, E, S, W, W, N, E, E, E, S, W, W, W, N, E, E, E, E, S, W, W, W, W, ... 
+		</li>
+	</ul>
+	
+	<p>
+		Solve this program in jGRASP using the <code>CritterMain</code> simulator.
+	</p>
+</div>

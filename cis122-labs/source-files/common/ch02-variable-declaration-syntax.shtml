@@ -1,0 +1,66 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Variable declaration
+  syntax</h1>
+                                
+  <p>
+    Which of the following choices is the correct syntax for declaring a real
+    number variable named <code>grade</code> and initializing its value
+    to <code>4.0</code>?
+  </p>
+                                
+  <ol class="mcquestion shuffle">
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>grade : 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>int grade = 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>4.0 = grade;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>grade = 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mccorrect" />
+        <code>double grade = 4.0;</code>
+        <img class="mcresultimage" src="correct.gif" alt="correct" />
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="radio" name="mcquestion1" value="answer1"
+               class="mcincorrect" />
+        <code>grade = double 4.0;</code>
+        <img class="mcresultimage" src="incorrect.gif" alt="incorrect" />
+      </label>
+    </li>
+  </ol>
+</div>

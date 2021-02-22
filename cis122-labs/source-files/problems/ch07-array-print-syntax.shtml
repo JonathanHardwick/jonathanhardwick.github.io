@@ -1,0 +1,52 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Array declaration syntax
+	</h1>
+
+	<p>
+		Which of the following choices is the correct syntax for printing an array of integers named <code>a</code> as a comma-separated list of values enclosed in brackets?
+	</p>
+
+	<ol class="mcquestion shuffle">
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>System.out.println(a.toString());</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+<code>Arrays a2 = new Arrays(); <br />
+System.out.println(a2.toString(a));</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>Arrays.toString(a);</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mccorrect" />
+				<code>System.out.println(Arrays.toString(a));</code>
+				<img class="mcresultimage" src="images/correct.gif" alt="incorrect" />
+			</label>
+		</li>
+
+		<li>
+			<label>
+				<input type="radio" name="mcquestion1" class="mcincorrect" />
+				<code>System.out.println(a);</code>
+				<img class="mcresultimage" src="images/incorrect.gif" alt="correct" />
+			</label>
+		</li>
+	</ol>
+</div>

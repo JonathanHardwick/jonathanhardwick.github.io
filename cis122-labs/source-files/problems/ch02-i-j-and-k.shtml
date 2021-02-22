@@ -1,0 +1,22 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: <code>i</code>, 
+    <code>j</code>, and <code>k</code>
+  </h1>
+                                
+  <p>
+    What are the values of <code>i</code>, <code>j</code>, and <code>k</code>
+    after the following statements?
+  </p>
+                                
+  <pre>
+int i = 2;
+int j = 3;
+int k = 4;
+int x = i + j + k;
+
+i = x - i - j;            // i? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">4</span></span>
+j = x - j - k;            // j? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">2</span></span>
+k = x - i - k;            // k? <span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" /><span class="expressionsolution">1</span></span>
+</pre>
+</div>

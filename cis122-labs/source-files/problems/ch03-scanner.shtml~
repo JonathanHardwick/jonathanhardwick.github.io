@@ -1,0 +1,60 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>Scanner</code></h1>
+  
+  <p>
+    <strong>Copy and paste</strong> the following code into jGrasp.
+    <pre>
+public class SumNumbers {
+    public static void main(String[] args) {
+        int low = 1;
+        int high = 1000;
+        int sum = 0;
+        for (int i = low; i &lt;= high; i++) {
+            sum += i;
+        }
+        System.out.println("sum = " + sum);
+    }
+}
+</pre>
+  </p>
+
+  <p class="continued">
+    continued on next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span>:
+    <code>Scanner</code></h1>
+  <p>
+    <strong>Modify</strong> the code to use a <code>Scanner</code> to prompt
+    the user for the values of <code>low</code> and <code>high</code>.  Below
+    is a sample execution in which the user asks for the same values as in the
+    original program (1 through 1000):
+
+    <pre>
+low? 1
+high? 1000
+sum = 500500
+</pre>
+  </p>
+
+  <p>
+    Below is an execution with different values for <code>low</code>
+    and <code>high</code>:
+    <pre>
+low? 300
+high? 5297
+sum = 13986903
+</pre>
+  </p>
+
+  <p>
+    You should exactly reproduce this format.
+  </p>
+
+  <p>
+    Use the <a class="popup" href="../diff-labs.html">Output
+    Comparison Tool</a> to check your work.
+  </p>
+</div>

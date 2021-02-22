@@ -1,0 +1,125 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>-A: Tokenizing</h1>
+
+  <p>
+    How many tokens are in the
+    following <code>String</code>?
+    <span class="expressionarea">
+      <input type="text" value="" class="expressionanswer" size="6"
+             spellcheck="true"
+             /><span class="expressionsolution">3</span></span>  
+  </p>
+
+  <pre>
+welcome...to the matrix.
+</pre>
+
+  <div class="mcquestion">
+    <p>
+      What are the tokens that the <code>String</code> breaks up into?
+    </p>
+
+    <ol class="compressed" style="list-style-type: lower-alpha">
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"welcome", "to", "the", "matrix"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"welcome...to the matrix."</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mccorrect" />
+          <code>"welcome...to", "the", "matrix."</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/correct.gif" alt="correct" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"welcome...", "to", "the matrix."</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span>-B: More
+    tokenizing</h1>
+
+  <p>
+    How many tokens are in the
+    following <code>String</code>?
+    <span class="expressionarea">
+      <input type="text" value="" class="expressionanswer" size="6"
+             spellcheck="true"
+             /><span class="expressionsolution">9</span></span>
+  </p>
+
+  <pre>
+in fourteen-hundred 92
+columbus sailed the ocean blue :)
+</pre>
+
+  <div class="mcquestion">
+    <p>
+      What are the tokens that the <code>String</code> breaks up into?
+    </p>
+    <ol class="compressed">
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"in", "fourteen-hundred", "92"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mccorrect" />
+          <code>"in", "fourteen-hundred", "92", "columbus", "sailed", "the",
+            "ocean", "blue", ":)"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/correct.gif" alt="correct" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"in", "fourteen", "hundred", "92", "columbus", "sailed", "the",
+            "ocean", "blue"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input type="radio" name="mcquestion1" class="mcincorrect" />
+          <code>"in", "fourteen-hundred", "92\ncolumbus", "sailed", "the",
+            "ocean", "blue :)"</code>
+          <img class="mcresultimage" style="display: none"
+               src="images/incorrect.gif" alt="incorrect" />
+        </label>
+      </li>
+    </ol>
+  </div>
+</div>

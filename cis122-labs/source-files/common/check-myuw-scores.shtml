@@ -1,0 +1,43 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: Check MyUW scores</h1>
+	
+	<ul>
+		<li>
+			The scores you receive on homework and labs are available for you to view in MyUW.
+			Follow the instructions on our <a class="popup" href="../myuw.shtml">MyUW page</a> to check your scores.
+		</li>
+		
+		<li>
+			You should see scores for labs 1 and 2.
+			If not, <a class="popup" href="../staff.shtml">contact your TA</a> or a TA from your lab period.
+		</li>
+		<li>
+			Using the information on your MyUW page, fill in the values below.
+		</li>
+	</ul>
+	
+	<table class="expressiontable">
+		<tr>
+			<td class="expression">
+				class mean for a1 (i.e., average score for assignment 1)
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" /> / 10
+			</td>
+			<td>
+				<pre class="expressionsolution">9.14</pre>
+			</td>
+		</tr>
+		<tr>
+			<td class="expression">
+				class mean for lab1 (i.e., average score for lab 1)
+			</td>
+			<td>
+				<input type="text" class="expressionanswer" size="8" spellcheck="false" /> / 2
+			</td>
+			<td>
+				<pre class="expressionsolution">1.92</pre>
+			</td>
+		</tr>
+	</table>
+</div>

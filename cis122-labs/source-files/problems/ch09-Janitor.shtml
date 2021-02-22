@@ -1,0 +1,22 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>Janitor</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+9&problem=9-e2-Janitor">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			<strong>Write an employee class <code>Janitor</code></strong> to accompany the other employees.
+			Janitors work twice as many hours (80 hours/week),
+			they make $30,000 ($10,000 less than others),
+			they get half as much vacation (only 5 days),
+			and they have an additional method named <code>clean</code> that prints "Workin' for the man." 
+		</li>
+		
+		<li>
+			Use the <code>super</code> keyword to interact with the <code>Employee</code> superclass as appropriate.
+		</li>
+	</ul>
+</div>

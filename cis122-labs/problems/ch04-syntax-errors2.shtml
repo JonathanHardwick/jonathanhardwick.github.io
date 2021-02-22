@@ -1,0 +1,114 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+  
+  <ul>
+    <li>
+      The following Java program has 11 errors.  Can you find them all?
+      
+      <table class="linenumbertable">
+	<tr>
+	  <td>
+	    <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre>
+	  </td>
+	  <td>
+	    <pre class="compressed">
+public class StringOops {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        String name = console.nextString();
+        process(name);
+    }
+
+    public static void process(string "name") {
+        if (name == Whitaker) {
+            System.out.println("You must be really awesome.");
+        }
+        replace("a", "e");
+        toUppercase(name);
+        name.substring(0, 3);
+        System.out.println(name + " has " + name.length + " letters");
+    }
+}
+</pre>
+	  </td>
+	</tr>
+      </table>
+    </li>
+
+    <li>
+      <strong>Copy and paste</strong> the code into jGrasp and see if you can
+      fix the errors.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+  
+  <ol class="compressed">
+    <li>line 5: <code>nextString</code> should be <code>next</code></li>
+    <li>line 9: <code>string</code> should be <code>String</code></li>
+    <li>line 9: <code>name</code> should not be in quotes</li>
+    <li>line 10: <code>Whitaker</code> should be in quotes</li>
+    <li>line 10: cannot compare strings with <code>==</code>; must
+      use <code>.equals</code></li>
+    <li>line 13: cannot call <code>replace</code> without specifying a string
+      object (<code>name</code>)</li> 
+    <li>line 14: <code>toUppercase</code> should be
+      <code>toUpperCase</code></li> 
+    <li>line 14: <code>name.</code> should come
+      before <code>toUpperCase</code>, not passed as a parameter to it</li>
+    <li>line 14: must say <code>name =</code> to store the result
+      of <code>toUpperCase</code></li>
+    <li>line 15: must say <code>name =</code> to store the result
+      of <code>substring</code></li>
+    <li>line 16: must use parentheses <code>()</code> when
+      calling <code>length</code></li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - Corrected
+    version</h1>
+  
+  <pre class="compressed">
+public class StringOops {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        String name = console.<ins>next</ins>();
+        process(name);
+    }
+
+    public static void process(<ins>S</ins>tring <del>"</del>name<del>"</del>) {
+        if (name<ins>.equals("</ins>Whitaker<ins>")</ins>) {
+            System.out.println("You must be really awesome.");
+        }
+        <ins>name = name.</ins>replace("a", "e");
+        <ins>name = name.toUpper<ins>C</ins>ase()</ins>;
+        <ins>name = </ins>name.substring(0, 3);
+        System.out.println(name + " has " + name.length<ins>()</ins> + " letters");
+    }
+}
+</pre>
+</div>

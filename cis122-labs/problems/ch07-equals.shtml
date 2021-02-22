@@ -1,0 +1,26 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: <code>equals</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+7&amp;problem=lab7-equals">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a method named <code>equals</code> that accepts two arrays of integers as parameters and returns <code>true</code> if they contain exactly the same elements in the same order, and <code>false</code> otherwise.
+		Note that the arrays might not be the same length; if the lengths differ, return <code>false</code>.  Do not call <code>Arrays.equals</code> in your solution.
+	</p>
+
+	<p>
+		For example, if the following arrays are declared:
+	</p>
+
+	<pre>
+int[] a1 = {10, 20, 30, 40, 50, 60};
+int[] a2 = {10, 20, 30, 40, 50, 60};
+int[] a3 = {20, 3, 50, 10, 68};
+</pre>
+
+  <p>
+    The call <code>equals(a1, a2)</code> returns <code>true</code> but the call <code>equals(a1, a3)</code> returns <code>false</code>.
+  </p>
+</div>

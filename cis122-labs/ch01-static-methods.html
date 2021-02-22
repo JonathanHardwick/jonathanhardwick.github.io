@@ -1,0 +1,328 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: Static Methods</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 1: Static Methods</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: Static Methods</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+  <h1>Today's lab</h1>
+  <p>Goals for today:</p>
+  <ul> 
+		<li>practice using static <strong>methods</strong> to capture structure and redundancy</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Static methods</h1>
+                            
+  <p>
+    Recall the syntax for writing a static method.  Methods are useful for
+    representing a program's <strong>structure</strong> and capturing
+    common code to avoid <strong>redundancy</strong>:
+  </p>
+                            
+  <pre>
+public static void <var>name</var>() {
+    <var>statements</var>;
+}
+</pre>
+
+  <p>
+    Example:
+  </p>
+
+  <pre>
+public static void song() {
+    System.out.println("This is the song that never ends,");
+    System.out.println("Yes, it goes on and on, my friends.");
+}
+</pre>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: <code>Spikey</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+1&amp;problem=1-e2-Spikey">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      Write a complete program named <code>Spikey</code> that produces the following output:
+
+      <pre>
+  \/
+ \\//
+\\\///
+///\\\
+ //\\
+  /\
+</pre>
+
+      <p>
+        (Use only the material we have learned so far.  You can check your
+        output on the Output Comparison Tool web page.)
+      </p>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: <code>Lanterns</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+1&problem=bjp3-1-e14-Lanterns">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+				
+  <ul>
+    <li>
+      Write a complete program named <code>Lanterns</code> that produces the
+      following output.  Use static methods to capture structure and remove
+      redundancy.  (Check your output on the Comparison Tool.)
+
+      <pre class="compressed">
+    *****
+  *********
+*************
+
+    *****
+  *********
+*************
+* | | | | | *
+*************
+    *****
+  *********
+*************
+
+    *****
+  *********
+*************
+    *****
+* | | | | | *
+* | | | | | *
+    *****
+    *****
+</pre>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Spell your name</h1>
+                                
+  <ul>
+    <li>
+      Write a complete program that outputs your name in giant letters like the
+      following:
+
+      <pre>
+M     M    IIIII     SSSSS     PPPPPP
+MM   MM      I      S     S    P     P
+M M M M      I      S          P     P
+M  M  M      I       SSSSS     PPPPPP
+M     M      I            S    P
+M     M      I      S     S    P
+M     M    IIIII     SSSSS     P
+</pre>
+
+      <p>
+        The giant letters should flow vertically.  Use methods to avoid redundancy
+        when the same giant letter appears multiple times in your name.
+        (Use only the material from Chapter 1.)
+      </p>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>FightSong</code>
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+1&problem=bjp3-1-e12-FightSong">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<pre class="compressed" style="float: left; margin-right: 2.5em">
+Go, team, go!
+You can do it.
+
+Go, team, go!
+You can do it.
+You're the best,
+In the West.
+Go, team, go!
+You can do it.
+
+Go, team, go!
+You can do it.
+You're the best,
+in the West.
+Go, team, go!
+You can do it.
+
+Go, team, go!
+You can do it.
+</pre>
+
+	<p>
+		The following program produces the output at left, but it has poor structure and redundancy.  Download it and open it in jGRASP, then add at least <strong>two static methods</strong>.  
+	</p>
+
+	<ul>
+		<li>
+			<a class="popup" href="problems/FightSong.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				FightSong.java</a>
+		</li>
+	</ul>
+
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>: <code>FightSong</code>, cont'd</h1>
+	
+	<div style="float: left; margin-right: 2.5em; background-color: #eee; padding: 4px; border: 1px dashed gray;">
+		<pre class="compressed" style="background-color: #ffc; padding: 4px;">Go, team, go!
+You can do it.
+</pre>
+
+		<pre class="compressed" style="background-color: #cfc; padding: 4px;"><span style="background-color: #ffc;">Go, team, go! 
+You can do it.</span>
+You're the best,
+In the West.
+<span style="background-color: #ffd;">Go, team, go!
+You can do it.</span>
+</pre>
+
+		<pre class="compressed" style="background-color: #cfc; padding: 4px;"><span style="background-color: #ffc;">Go, team, go! 
+You can do it.</span>
+You're the best,
+In the West.
+<span style="background-color: #ffd;">Go, team, go!
+You can do it.</span>
+</pre>
+
+		<pre class="compressed" style="background-color: #ffc; padding: 4px;">Go, team, go!
+You can do it.
+</pre>
+</div>
+
+	<p>
+		Did you choose your methods well?  Avoid the following pitfalls:
+	</p>
+	
+	<ul>
+		<li>
+			Does the same <code>println</code> statement occur more than once in your code?
+		</li>
+		<li>
+			Are there any <code>println</code> statements in the <code>main</code> method?
+		</li>
+		<li>
+			Is your <code>main</code> method a good summary of the overall program?  (If <code>main</code> is only 1-2 lines long, it is not a good summary.)
+		</li>
+		<li>
+			Do you have any patterns of method calls that are repeated in the code?
+		</li>
+	</ul>
+	
+	<p>
+		Compare your method choice with your neighbor's.  Discuss any different decisions you made and ask a TA if you have questions about them.
+	</p>
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

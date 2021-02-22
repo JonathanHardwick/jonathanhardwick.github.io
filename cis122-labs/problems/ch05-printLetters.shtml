@@ -1,0 +1,29 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: printLetters
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-s12-printLetters">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>
+			Write a method named <code>printLetters</code> that takes a <code>String</code> as its parameter and that prints the letters of the String, separated by dashes.
+			For example, the call of <code>printLetters("Rabbit")</code> should print:
+
+			<pre>
+R-a-b-b-i-t
+</pre>
+    </li>
+
+		<li class="hint">
+			(Hint: This is a fencepost problem.
+			Remember that each <code>String</code> object has a <code>length</code> method that tells you how many characters are in the <code>String</code> and a <code>charAt</code> method that gets you individual characters of
+			the <code>String</code>.)
+		</li>
+
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>

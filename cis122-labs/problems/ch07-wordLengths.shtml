@@ -1,0 +1,16 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: <code>wordLengths</code>
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+7&problem=7-e18-wordLengths">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> called <code>wordLengths</code> that accepts a Scanner representing an input file as its argument. Your method should read from the given file, count the number of letters in each token in the file, and output a result diagram of how many words contain each number of letters. Use tabs before the asterisks so that they'll line up. If there are no words of a given length, omit that line from the output.
+  </p>
+
+  <p>
+    You should solve this problem in Practice-It!
+</p>
+
+</div>

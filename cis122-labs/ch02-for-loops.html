@@ -1,0 +1,1477 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: For loops</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 2: For loops</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: For loops</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+  <h1>Lab goals</h1>
+  <p>Goals for this problem set:</p>
+  <ul>
+    <li>trace and write <strong><code>for</code> loops</strong> for repeating lines of code</li>
+    <li>draw <strong>patterned figures</strong> of text using loops</li>
+    <li>use <strong>class constants</strong> to represent common unchanging values</li>
+  </ul>
+</div>
+
+<!-- PROBLEMS ABOUT FOR LOOPS -->
+<div class="slide">
+	<h1><code>for</code> loops</h1>
+	
+	<p>
+		A <strong><code>for</code> loop</strong> repeats a group of statements a given number of times.
+	</p>
+	
+	<pre>
+for (<var>initialization</var>; <var>test</var>; <var>update</var>) {
+    <var>statement(s) to repeat</var>;
+}
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+for (int i = 1; i &lt;= 10; i++) {
+    System.out.println("We're number one!");
+}
+</pre>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Bottles of beer
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+2&problem=lab2-bottlesOfBeer">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li>Write a <code>for</code> loop that produces the song <em>Bottles of Beer on the Wall</em>:
+
+			<pre class="compressed">
+10 bottles of beer on the wall, 10 bottles of beer
+Take one down, pass it around, 9 bottles of beer on the wall
+
+9 bottles of beer on the wall, 9 bottles of beer
+Take one down, pass it around, 8 bottles of beer on the wall
+
+... (output continues in the same pattern) ...
+
+1 bottles of beer on the wall, 1 bottles of beer
+Take one down, pass it around, 0 bottles of beer on the wall
+</pre>
+		</li>
+
+		<li>
+			Write and test your code in <strong>Practice-It!</strong> by clicking the checkmark icon
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" /> at the top of the slide.
+		</li>
+	</ul>
+</div>
+   
+
+<!-- PROBLEMS ABOUT NESTED FOR LOOPS -->
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>for</code> loop table practice
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+2&problem=lab2-loopTable">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Create a <strong>table</strong> of the number of stars on each line:
+	</p>
+	
+	<table>
+		<tr>
+			<td>
+				<pre style="margin-top: 1em; margin-right: 1em; line-height: 1.4em;">
+*******
+*****
+***
+*
+</pre>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">line</th>
+						<th style="text-align: left">stars</th>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>1</code>
+						</td>
+						<td>
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">7</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>2</code>
+						</td>
+						<td>
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" /> 
+							<pre class="expressionsolution">5</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>3</code>
+						</td>
+						<td>
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">3</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>4</code>
+						</td>
+						<td>
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">1</pre>
+						</td>
+					</tr>
+				</table>
+			</td>
+			
+			<td style="font-size: smaller">
+				<p>
+					<strong>multiplier:</strong> How much does the # of stars change between lines?
+					<span class="expressionarea"><input type="text" class="expressionanswer" size="4" spellcheck="false" />
+					<span class="expressionsolution">-2</span></span>
+				</p>
+				<p>
+					<strong>shift:</strong> Given your multiplier, what must be added to get that many stars on line 1?
+					<span class="expressionarea"><input type="text" class="expressionanswer" size="3" spellcheck="false" />
+					<span class="expressionsolution">9</span></span>
+				</p>
+			</td>
+		</tr>
+	</table>
+	
+	<p>
+		Test your loop expression in <strong>Practice-It!</strong> using the checkmark icon above.  Use the form:
+	</p>
+
+	<pre>
+for (int stars = 1; stars &lt;= <var>multiplier</var> * line + <var>shift</var>; stars++) {
+</pre>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: simple <code>for</code> loop
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+2&problem=bjp3-2-s18-Count2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<ul>
+		<li><strong>Copy/paste</strong> the following code into jGRASP.
+			<pre>
+public class Count2 {
+    public static void main(String[] args) {
+        for ( <var>fill me in!</var> ) {
+            System.out.println( <var>fill me in!</var> );
+        }
+    }
+}
+</pre>
+		</li>
+
+		<li><strong>Modify</strong> the code to produce the following output:
+
+			<pre>
+2 times 1 = 2
+2 times 2 = 4
+2 times 3 = 6
+2 times 4 = 8
+</pre>
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Verify solution in Practice-It!
+	</h1>
+	
+	<p>
+		<img src="images/practiceit-simpleforloop-screenshot-clipped.png" alt="screenshot" width="255" height="356" style="float: right; margin-left: 1em;" />
+		Our <strong>Practice-It!</strong> system lets you solve Java problems online.
+	</p>
+	
+	<ul>
+		<li>
+			Go to the 
+			<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/">
+				<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+				Practice-It!
+			</a>
+			web site.
+		</li>
+		<li>
+			<strong>Create an account</strong> if you don't have one, and log in.
+		</li>
+		<li>
+			Under the "CS1 Labs", "Lab 2" category, select the "simple for loop" problem.
+			(<a class="popup" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+2&problem=lab2-simpleForLoop">direct link</a>)
+		</li>
+		<li>
+			Copy/paste your program from jGRASP into Practice-It, and <strong>submit</strong>.  If it does not pass the test, modify your code and re-submit it.
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Sequence of numbers</h1>
+
+  <ul>
+    <li><strong>Write</strong> a complete Java program that produces this
+    sequence of numbers using a <code>for</code> loop:
+
+      <pre>
+8
+11
+14
+17
+20
+23
+</pre>
+    </li>
+
+    <li>
+      Hint: You want to come up with an expression with a multiplier and a
+      constant.  First pick a multiplier (if your loop variable goes up by 1
+      each time, how much do these numbers go up by each time?).  Then pick a
+      constant (when your loop variable is 1, this is supposed to be 8, what do
+      you have to add to get this value?).
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Sequence of
+    characters</h1>
+
+  <ul>
+    <li>
+      <strong>Modify</strong> the code from the previous exercise to produce
+      the following output:
+
+      <pre>
+********
+***********
+**************
+*****************
+********************
+***********************
+</pre>
+    </li>
+
+    <li>
+      Use the <a class="popup" href="../diff-labs.html">Output
+      Comparison Tool</a> to check your work.
+    </li>
+
+    <li>
+      (Hint: Note the number of stars in each row.  Instead of printing the
+      number 8, now you're printing 8 stars.  You will now need a nested loop.)
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: What's the output?
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-s16-oddStuff">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		What output is produced by the following Java program?  Write the output in the box on the right side.
+	</p>
+	
+	<table class="expressiontable">
+		<tr>
+			<td>
+				<pre>
+public class OddStuff {
+    public static void main(String[] args) {
+        int number = 32;
+        for (int count = 1; count &lt;= number; count++) {
+            System.out.println(number);
+            number = number / 2;
+        }
+    }
+}
+</pre>
+			</td>
+			
+			<td>
+				<p>Output:</p>
+				<textarea class="expressionanswer" rows="4" cols="4" spellcheck="false"></textarea>
+				<pre class="expressionsolution">32
+16
+8
+4
+</pre>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: Number lines, part 1
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e12-nestedNumbers">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      <strong>Write</strong> some nested <code>for</code> loops to produce the
+      following output:
+
+      <pre>
+000111222333444555666777888999
+000111222333444555666777888999
+000111222333444555666777888999
+</pre>
+    </li>
+
+    <li>
+      You can use the <a class="popup"
+      href="../diff-labs.html">Output Comparison Tool</a> to check your work.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: Number lines, part 2
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e13-nestedNumbers2">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      <strong>Modify</strong> the previous code to have it do something a
+      little different:
+
+      <pre>
+99999888887777766666555554444433333222221111100000
+99999888887777766666555554444433333222221111100000
+99999888887777766666555554444433333222221111100000
+99999888887777766666555554444433333222221111100000
+99999888887777766666555554444433333222221111100000
+</pre>
+    </li>
+
+    <li>
+      You can use the <a class="popup"
+      href="../diff-labs.html">Output Comparison Tool</a> to check your work.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: Number lines, part 3
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e14-nestedNumbers3">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <ul>
+    <li>
+      <strong>Modify</strong> the code to have it produce this output:
+
+      <pre>
+999999999888888887777777666666555554444333221
+999999999888888887777777666666555554444333221
+999999999888888887777777666666555554444333221
+999999999888888887777777666666555554444333221
+</pre>
+    </li>
+
+    <li>
+      You can use the <a class="popup"
+      href="../diff-labs.html">Output Comparison Tool</a> to check your work.
+    </li>
+
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: What's the output?</h1>
+
+  <ul>
+    <li>What output is produced by the following Java method?
+
+      <pre>
+public static void stars() {
+    for (int i = 1; i &lt;= 10; i++) {
+        for (int j = 1; j &lt;= i; j++) {
+            System.out.print(&quot;*&quot;);
+        }
+        for (int j = 1; j &lt;= 20 - 2 * i; j++) {
+            System.out.print(&quot; &quot;);
+        }
+        for (int j = 1; j &lt;= i; j++) {
+            System.out.print(&quot;*&quot;);
+        }
+        System.out.println();
+    }
+}
+</pre>
+    </li>
+                                        
+    <li>
+      (Try to figure it out without running the code... <br />
+      If you give up, copy and paste it into jGrasp and run it!)
+    </li>
+
+    <li class="incremental">
+      Hint: Think of each inner loop from 1 to <em>X</em> as a loop that
+      prints <em>X</em> copies of the given character.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <ul>
+    <li>
+      Answer:
+      <pre>
+*                  *
+**                **
+***              ***
+****            ****
+*****          *****
+******        ******
+*******      *******
+********    ********
+*********  *********
+********************
+</pre>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: What's the output?</h1>
+
+  <ul>
+    <li>What's the output of the following Java method?
+
+      <pre>
+public static void mystery() {
+    for (int i = 1; i &lt;= 10; i++) {
+        for (int j = 1; j &lt;= 10; j++) {
+            System.out.print(i * j + &quot;\t&quot;);
+        }
+        System.out.println();
+    }
+}
+</pre>
+    </li>
+					
+    <li>
+      (Try to figure it out without running the code... <br />
+      If you give up, copy and paste it into jGrasp and run it!)
+    </li>
+
+    <li>
+      Recall: <code>\t</code> represents a tab character.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <p>
+    Answer:
+  </p>
+
+  <pre style="font-size: smaller">
+1	2	3	4	5	6	7	8	9	10
+2	4	6	8	10	12	14	16	18	20
+3	6	9	12	15	18	21	24	27	30
+4	8	12	16	20	24	28	32	36	40
+5	10	15	20	25	30	35	40	45	50
+6	12	18	24	30	36	42	48	54	60
+7	14	21	28	35	42	49	56	63	70
+8	16	24	32	40	48	56	64	72	80
+9	18	27	36	45	54	63	72	81	90
+10	20	30	40	50	60	70	80	90	100
+</pre>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: printing a design
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e15-printDesign">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a program to produce the following output using nested <code>for</code> loops.  Use a table to help you figure out the patterns of characters on each line.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="margin-top: 1em; margin-right: 1em; line-height: 1.4em;">
+-----1-----
+----333----
+---55555---
+--7777777--
+-999999999-
+</pre>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">Line</th>
+						<th style="text-align: left">Dashes</th>
+						<th style="text-align: left">Numbers</th>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>1</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">5</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">1</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>2</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" /> 
+							<pre class="expressionsolution">4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">3</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>3</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">3</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">5</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>4</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">7</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>5</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">1</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">9</pre>
+						</td>
+					</tr>
+				</table>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">dashes expression</th>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="expressionarea expressionarealeft">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">-1</pre>
+							</span>
+							<code>* line + </code>
+							<span class="expressionarea">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">6</pre>
+							</span>
+						</td>
+					</tr>
+				</table>
+
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">numbers expression</th>
+					</tr>
+
+					<tr>
+						<td>
+							<span class="expressionarea expressionarealeft">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">2</pre>
+							</span>
+							<code>* line + </code>
+							<span class="expressionarea">
+								<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+								<pre class="expressionsolution">-1</pre>
+							</span>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<p>
+		Test your loop expressions in <strong>Practice-It!</strong> using the checkmark icon above.  Use your expressions in the loop tests of the inner loops of your code.
+	</p>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: SlashFigure
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e16-SlashFigure">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a Java program in a class named <code>SlashFigure</code> to produce the following output with nested <code>for</code> loops.  Use a loop table if necessary to figure out the expressions.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="margin-top: 1em; margin-right: 1em; line-height: 1.4em;">
+!!!!!!!!!!!!!!!!!!!!!!
+\\!!!!!!!!!!!!!!!!!!//
+\\\\!!!!!!!!!!!!!!////
+\\\\\\!!!!!!!!!!//////
+\\\\\\\\!!!!!!////////
+\\\\\\\\\\!!//////////
+</pre>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">Line</th>
+						<th style="text-align: left"><code>\</code></th>
+						<th style="text-align: left"><code>!</code></th>
+						<th style="text-align: left"><code>/</code></th>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>1</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">22</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>2</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">18</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>3</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">14</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>4</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>5</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">8</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">8</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>6</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							multiplier
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">-4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							shift
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">26</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+		<!--
+		<li>
+			You can use the <a class="popup" href="../diff-labs.html">Output Comparison Tool</a> to check your work.
+		</li>
+		-->
+		
+	<p>
+		Test your code in <strong>Practice-It!</strong> or the <a class="popup" href="../diff.html">Output Comparison Tool</a>.
+	</p>
+</div>
+
+
+<!-- PROBLEMS ABOUT CONSTANTS -->
+<div class="slide">
+	<h1>Class constants</h1>
+	
+	<p>
+		A <strong>class constant</strong> is a global value that cannot be changed.
+	</p>
+	
+	<pre>
+public static final <var>type</var> <var>name</var> = <var>expression</var>;
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+public static final int DAYS_PER_WEEK = 7;
+public static final double TAX_RATE = 0.10;
+</pre>
+</div>
+
+<div class="slide">
+	<h1>
+		<code>for</code> loop expressions w/ constant
+	</h1>
+
+	<p>
+		When adding a <strong>class constant</strong> to a loop expression, it affects the constant that must be added in the expression.
+		Suppose we have the two loop expressions below for figure sizes of 5 and 9.  The third line of the table shows the general formula that would be used if we turned our figure's size into a constant named <code>SIZE</code>.
+	</p>
+
+	<table class="calltable">
+		<tr>
+			<th>size</th>
+			<th>expression</th>
+			<th>relationship</th>
+		</tr>
+		
+		<tr>
+			<td><code>5</code></td>
+			<td><code>8 * line + <strong>16</strong></code></td>
+			<td><code>16 = 3 * 5 + 1</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>9</code></td>
+			<td><code>8 * line + <strong>28</strong></code></td>
+			<td><code>28 = 3 * 9 + 1</code></td>
+		</tr>
+		
+		<tr>
+			<td><code>SIZE</code></td>
+			<td><code>8 * line + <strong>(3 * SIZE + 1)</strong></code></td>
+			<td>
+				
+			</td>
+		</tr>
+	</table>
+	
+	<p class="continued">
+		continued on the next slide ...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: <code>for</code> loop table w/ constant
+	</h1>
+
+	<p>
+		You already found loop expressions for the slash figure at size 6.  Now make a <strong>table</strong> at size 4 and use the two to generalize the loop expression in terms of a <strong>constant</strong> for the figure size.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="margin-top: 1em; line-height: 1.4em;">
+!!!!!!!!!!!!!!
+\\!!!!!!!!!!//
+\\\\!!!!!!////
+\\\\\\!!//////
+</pre>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller">
+					<tr>
+						<th style="text-align: left">Line</th>
+						<th style="text-align: left"><code>\</code></th>
+						<th style="text-align: left"><code>!</code></th>
+						<th style="text-align: left"><code>/</code></th>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>1</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">14</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>2</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>3</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>4</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+					</tr>
+				</table>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller">
+					<tr>
+						<th colspan="2" style="text-align: left"><code>\</code> and <code>/</code></th>
+					</tr>
+					<tr>
+						<th style="text-align: left">size 6</th>
+						<td>
+							<code>&nbsp;2 * line + </code>
+						</td>
+						<td class="expressionarea correct">
+							<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="-2" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: left">size 4</th>
+						<td>
+							<code>&nbsp;2 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<th style="text-align: left; padding-right: 1em">size SIZE</th>
+						<td>
+							<code>&nbsp;2 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+				</table>
+
+				<table class="expressiontable" style="font-size: smaller">
+					<tr>
+						<th colspan="2" style="text-align: left"><code>!</code></th>
+					</tr>
+
+					<tr>
+						<th style="text-align: left">size 6</th>
+						<td>
+							<code>-4 * line + </code>
+						</td>
+						<td class="expressionarea correct">
+							<input type="text" class="expressionanswer correct" size="3" spellcheck="false" value="26" />
+							<pre class="expressionsolution">26</pre>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: left">size 4</th>
+						<td>
+							<code>-4 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+							<pre class="expressionsolution">18</pre>
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: left; padding-right: 1em">size SIZE</th>
+						<td>
+							<code>-4 * line + </code>
+						</td>
+						<td class="expressionarea">
+							<code>(</code>
+							<span class="expressionarea" style="padding-right: 0">
+								<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+								<pre class="expressionsolution">4</pre>
+							</span>
+							<code>&nbsp;* SIZE + </code>
+							<span class="expressionarea" style="padding-right: 0">
+								<input type="text" class="expressionanswer" size="3" spellcheck="false" />
+								<pre class="expressionsolution">2</pre>
+							</span><code>)</code>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: SlashFigure2
+	</h1>
+
+	<ul>
+		<li>
+			<p>
+				<strong>Add a class constant</strong> to your slash figure program so that it can be resized from its default of 6:
+			</p>
+
+			<table class="calltable">
+				<tr>
+					<th>size 4</th>
+					<th>size 7</th>
+				</tr>
+
+				<tr>
+					<td>
+						<pre class="output">
+!!!!!!!!!!!!!!
+\\!!!!!!!!!!//
+\\\\!!!!!!////
+\\\\\\!!//////
+</pre>
+					</td>
+					<td>
+						<pre class="output">
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+\\!!!!!!!!!!!!!!!!!!!!!!//
+\\\\!!!!!!!!!!!!!!!!!!////
+\\\\\\!!!!!!!!!!!!!!//////
+\\\\\\\\!!!!!!!!!!////////
+\\\\\\\\\\!!!!!!//////////
+\\\\\\\\\\\\!!////////////
+</pre>
+					</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+		
+	<p>
+		Test your code in the <a class="popup" href="../diff.html">Output Comparison Tool</a>.
+	</p>
+</div>
+ 
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: jGRASP Debugger
+	</h1>
+
+	<ul>
+		<li>
+			Breakpoints help you <strong>debug</strong> programs (<a class="popup" href="../jgrasp.shtml">tutorial</a>).  Copy/paste this code into jGRASP:
+
+			<table class="linenumbertable">
+				<tr>
+					<td>
+						<pre class="linenumbers" style="font-size: smaller">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+</pre>
+					</td>
+					<td>
+						<pre style="font-size: smaller">
+public class Numbers {
+    public static void main(String[] args) {
+        int number = 42;
+        for (int i = 1; i &lt;= 1000; i++) {
+            number = number * 37 % 103;
+        }
+        int number2 = number * number;
+        System.out.println("result = " + number2);
+    }
+}
+</pre>
+					</td>
+				</tr>
+			</table>
+		</li>
+		
+		<li>
+			<strong>Set a breakpoint</strong> on the statement inside the <code>for</code> loop (line 5).  Do this by moving your cursor to the beginning of that line until you see a
+			<strong>stop-sign icon</strong> 
+			<img src="images/jgrasp-stop-sign.png" alt="icon" width="18" height="18" />
+			and then clicking.
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+	
+	<ul>
+		<li>
+			Now you can debug the program by clicking on the debug icon
+			<img src="images/jgrasp-ladybug-icon.png" alt="icon" width="20" height="20" />
+			(looks like a ladybug).
+		</li>
+		
+		<li>
+			It will stop every time it hits line 5.
+			Then you can see the values of variables <code>i</code> and <code>number</code>.
+		</li>
+		
+		<li>
+			To continue running, press the top-left <strong>play</strong>
+			<img src="images/jgrasp-play-icon.png" alt="icon" width="28" height="28" />
+			or <strong>step</strong>
+			<img src="images/jgrasp-step-icon.png" alt="icon" width="28" height="28" />
+			buttons.
+		</li>
+		
+		<li>
+			Using this approach, <strong>fill in</strong> the table below indicating what value <code>number</code> has when <code>i</code> has the given value.
+			Keep in mind that you are figuring out what value <code>number</code> has just before it executes this line of code.
+
+			<table class="expressiontable">
+				<tr>
+					<td class="expression"><code>i = 1, number = </code></td>
+					<td><input type="text" class="expressionanswer" size="6" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">42</pre></td>
+				</tr>
+				<tr>
+					<td class="expression"><code>i = 2, number = </code></td>
+					<td><input type="text" class="expressionanswer" size="6" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">9</pre></td>
+				</tr>
+				<tr>
+					<td class="expression"><code>i = 3, number = </code></td>
+					<td><input type="text" class="expressionanswer" size="6" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">24</pre></td>
+				</tr>
+				<tr>
+					<td class="expression"><code>i = 4, number = </code></td>
+					<td><input type="text" class="expressionanswer" size="6" spellcheck="false" /></td>
+					<td><pre class="expressionsolution">64</pre></td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP Debugger</h1>
+	
+	<ul>
+		<li>
+			Click on the stop-sign
+			<img src="images/jgrasp-stop-sign.png" alt="icon" width="18" height="18" />
+			a second time to get rid of it and then set a new stop point on line number 7.
+			This will allow you to find out the value of <code>number</code> after the loop is done executing.
+		</li>
+		
+		<li>
+			Again press "play"
+			<img src="images/jgrasp-play-icon.png" alt="icon" width="28" height="28" /> 
+			to start the programming running again.
+		</li>
+		
+		<li>
+			At line 7, what is the value of <code>number</code>?
+			
+			<span class="expressionarea" style="margin-left: 1em">
+				<input type="text" class="expressionanswer" size="6" spellcheck="true" />
+				<span class="expressionsolution">69</span>
+			</span>
+		</li>
+	</ul>
+</div>
+       
+<div class="slide">
+	<h1>Variable Scope</h1>
+
+	<p>
+		A variable's <b>scope</b> is the part of a program in which it exists.  In Java, the scope of a variable starts when it is declared and ends when the closing curly brace <b>for the block that contains it</b> is reached.  A variable is said to be <b>in scope</b> where it is accessible.
+	</p>
+
+<table class="expressiontable">
+	<tbody>
+		<tr>
+			<td>
+<pre>
+public class Example {
+    public static void main(String[] args) {
+        performTest();
+    }
+	
+    public static void performTest() {
+        int count = 12;
+        for (int i = 1; i <= 12; i++) {
+            runSample();
+            System.out.print(count);   
+        }
+    }
+
+    public static void runSample() {
+	    System.out.print("sample");
+    }
+} 
+</pre>
+			</td>
+			<td>
+			In which of these <b>two</b> blocks is the variable <code>count</code> in scope?
+
+			<ol class="mcquestion shuffle">
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mcincorrect" />
+			      <code>main</code> method
+			    </label>
+			  </li>
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mccorrect" />
+			      <code>for</code> loop
+			    </label>
+			  </li>
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mccorrect" />
+			      <code>performTest</code> method
+			    </label>
+			  </li>
+			  <li>
+			    <label>
+			      <input type="checkbox" name="mcquestion2" value="answer1"
+			             class="mcincorrect" />
+			      <code>runSample</code> method
+			    </label>
+			  </li>
+			</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>     
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+  

@@ -1,0 +1,31 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Verify solution in Practice-It!
+	</h1>
+	
+	<p>
+		<img src="images/practiceit-simpleforloop-screenshot-clipped.png" alt="screenshot" width="255" height="356" style="float: right; margin-left: 1em;" />
+		Our <strong>Practice-It!</strong> system lets you solve Java problems online.
+	</p>
+	
+	<ul>
+		<li>
+			Go to the 
+			<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/">
+				<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+				Practice-It!
+			</a>
+			web site.
+		</li>
+		<li>
+			<strong>Create an account</strong> if you don't have one, and log in.
+		</li>
+		<li>
+			Under the "CS1 Labs", "Lab 2" category, select the "simple for loop" problem.
+			(<a class="popup" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+2&problem=lab2-simpleForLoop">direct link</a>)
+		</li>
+		<li>
+			Copy/paste your program from jGRASP into Practice-It, and <strong>submit</strong>.  If it does not pass the test, modify your code and re-submit it.
+		</li>
+	</ul>
+</div>

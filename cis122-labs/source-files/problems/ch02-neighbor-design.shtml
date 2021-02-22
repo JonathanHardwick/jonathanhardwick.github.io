@@ -1,0 +1,20 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: neighbor's design	
+	</h1>
+	
+	<ul>
+		<li>
+			<strong>Draw out</strong> a 2D ASCII figure that could be produced using nested for loops.   
+		</li>
+		<li>
+			<strong>Give your picture</strong> to your neighbor and ask him/her for a similar drawing.
+		</li>
+		<li>
+			<strong>Write a method</strong> named <code>neighborDesign</code> that produces the ASCII drawing specified by your neighbor.
+		</li>  
+		<li>
+			<strong>Discuss</strong> each other's images and code.
+		</li>
+	</ul>
+</div>

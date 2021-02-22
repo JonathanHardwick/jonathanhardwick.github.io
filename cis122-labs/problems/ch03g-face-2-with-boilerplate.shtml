@@ -1,0 +1,80 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Face 1+2
+	</h1>
+	
+	<div class="figureright">
+		<img src="images/ch03g-face1.png" alt="face" width="232" height="222" />
+	</div>
+	
+	<p>
+		Suppose you have an existing program that draws the "face" figure at right.
+		Let's modify the program using methods and parameters so that we can draw several faces at different locations.
+	</p>
+	
+	<ul>
+		<li>
+			<a class="popup" href="problems/Face.java">
+				<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+				Face.java</a>
+		</li>
+	</ul>
+	
+	<p class="continued">
+		continued on the next slide...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber noincrement"></span>: Face 2
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+3&problem=lab3-Face2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		Modify the <code>Face</code> program to draw the following output.
+		Write a <strong>parameterized method</strong> that draws a face at different positions.
+	</p>
+	
+	<div class="figureright">
+		<img src="images/ch03g-face2.png" alt="face 2" width="332" height="252" />
+	</div>
+	
+	<ul>
+		<li>
+			window size: 320 x 180 px
+		</li>
+		<li>
+			faces' top-left corners at (10, 30) and (150, 50)
+		</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+	
+	<pre style="font-size: smaller">
+import java.awt.*;
+
+public class Face2 {
+    public static void main(String[] args) {
+        DrawingPanel panel = new DrawingPanel(320, 180);
+        Graphics g = panel.getGraphics();
+        <em>drawFace(g, 10, 30);</em>
+        <em>drawFace(g, 150, 50);</em>
+    }
+    
+    <em>public static void drawFace(Graphics g, int x, int y) {</em>
+        g.setColor(Color.BLACK);
+        g.drawOval(<em>x, y</em>, 100, 100);
+        g.setColor(Color.BLUE);
+        g.fillOval(<em>x + </em>20, <em>y + </em>30, 20, 20);
+        g.fillOval(<em>x + </em>60, <em>y + </em>30, 20, 20);
+        g.setColor(Color.RED);
+        g.drawLine(<em>x + </em>30, <em>y + </em>70, <em>x + </em>70, <em>y + </em>70);
+    <em>}</em>
+}
+</pre>
+</div>

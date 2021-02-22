@@ -1,0 +1,114 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+
+  <ul>
+    <li>
+      The following Java program has 9 errors.  Can you find all of them?
+
+      <table class="linenumbertable">
+        <tr>
+          <td>
+            <pre class="linenumbers" style="font-size: smaller">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+</pre>
+          </td>
+          <td>
+            <pre style="font-size: smaller">
+public class Parameters {
+    public static void main() {
+        double bubble = 867.5309;
+        double x = 10.01;
+        printer(double x, double y);
+        printer(x);
+        printer("barack", "obama");
+        System.out.println("z = " + z);
+    }
+
+    public static void printer(x, y double) {
+        int z = 5;
+        System.out.println("x = " + double x + " and y = " + y);
+        System.out.println("The value from main is: " + bubble);
+    }
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <strong>Copy and paste</strong> the code into jGrasp and see if you can
+      fix the errors.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+
+  <ol style="font-size: smaller">
+    <li>line 5: cannot use variable <code>y</code> without declaring and
+      initializing it</li>
+    <li>line 5: cannot declare the type of <code>y</code> in the method
+      call</li>
+    <li>line 6: cannot call <code>printer</code> without the correct number of
+      parameters (2, in this case)</li>
+    <li>line 7: cannot call <code>printer</code> by passing the correct type of
+      parameters (double, in this case)</li>
+    <li>line 8: cannot refer to the variable <code>z</code>: it is in scope
+      inside <code>printer</code>, not <code>main</code></li>
+    <li>line 11: must provide a type for <code>x</code></li>
+    <li>line 11: must provide a variable name for the second parameter</li>
+    <li>line 12: must refer to the parameters using the exact same
+      spelling</li>
+    <li>line 13: cannot refer to variables in <code>main</code> that were not
+    passed into <code>printer</code> as a parameter</li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - Corrected
+    version</h1>
+
+  <ul>
+    <li>
+      Here is a corrected version of the program:
+
+      <pre style="font-size: smaller">
+public class Parameters {
+    public static void main(String[] args) {
+        double bubble = 867.5309;
+        double x = 10.01;
+        <ins>double y = 5.3;</ins>
+        printer(<del>double</del> x, <del>double</del> y);
+        printer(x, <ins>0.0</ins>);
+        <del>printer("barack", "obama");</del>
+        <ins>int z = 5;</ins>
+        System.out.println("z = " + z);
+    }
+
+    public static void printer(<ins>double</ins> x, <ins>double y</ins>) {
+        System.out.println("x = " + <ins>x</ins> + " and y = " + y);
+        <del>System.out.println("The value from main is: " + bubble);</del>
+        int z = 5;
+    }
+}
+</pre>
+    </li>
+  </ul>
+</div>

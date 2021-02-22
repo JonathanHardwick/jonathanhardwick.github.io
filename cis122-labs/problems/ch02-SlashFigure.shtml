@@ -1,0 +1,192 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: SlashFigure
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+2&amp;problem=2-e16-SlashFigure">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Write a Java program in a class named <code>SlashFigure</code> to produce the following output with nested <code>for</code> loops.  Use a loop table if necessary to figure out the expressions.
+	</p>
+
+	<table>
+		<tr>
+			<td>
+				<pre style="margin-top: 1em; margin-right: 1em; line-height: 1.4em;">
+!!!!!!!!!!!!!!!!!!!!!!
+\\!!!!!!!!!!!!!!!!!!//
+\\\\!!!!!!!!!!!!!!////
+\\\\\\!!!!!!!!!!//////
+\\\\\\\\!!!!!!////////
+\\\\\\\\\\!!//////////
+</pre>
+			</td>
+			
+			<td>
+				<table class="expressiontable" style="font-size: smaller; margin-right: 1em">
+					<tr>
+						<th style="text-align: left">Line</th>
+						<th style="text-align: left"><code>\</code></th>
+						<th style="text-align: left"><code>!</code></th>
+						<th style="text-align: left"><code>/</code></th>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>1</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">22</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">0</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>2</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">18</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>3</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">14</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">4</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>4</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>5</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">8</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">6</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">8</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							<code>6</code>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">10</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							multiplier
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">-4</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">2</pre>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="expression">
+							shift
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">26</pre>
+						</td>
+						<td class="expressionarea">
+							<input type="text" class="expressionanswer" size="4" spellcheck="false" />
+							<pre class="expressionsolution">-2</pre>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+		<!--
+		<li>
+			You can use the <a class="popup" href="../diff-labs.html">Output Comparison Tool</a> to check your work.
+		</li>
+		-->
+		
+	<p>
+		Test your code in <strong>Practice-It!</strong> or the <a class="popup" href="../diff.html">Output Comparison Tool</a>.
+	</p>
+</div>

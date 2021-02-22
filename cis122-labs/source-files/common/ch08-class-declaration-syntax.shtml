@@ -1,0 +1,24 @@
+<div class="slide">
+  <h1>Declaring a class (syntax)</h1>
+
+  <pre>
+public class <var>ClassName</var> {
+    // fields
+    <var>fieldType</var> <var>fieldName</var>;
+
+    // methods
+    public <var>returnType</var> <var>methodName</var>() {
+        <var>statements</var>;
+    }
+}
+</pre>
+
+  A couple things look different than programs for past homeworks:
+
+  <ul>
+    <li>no <code>main</code> method.  It won't be run like a client program.</li>
+    <li>methods don't have the <code>static</code> keyword in the header.</li>
+    <li>variables declared outside of any method (fields) are visible in <em>every</em> method.</li>
+  </ul>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: hasMidpoint
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Midterm+Exams%2FPractice+Midterm+14&amp;problem=practicemidterm14-hasMidpoint">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+
+  <p>
+    <strong>Write a method</strong> <code>hasMidpoint</code> that accepts three
+    integers as parameters, and returns <code>true</code> if one of the numbers
+    is the midpoint of the other two and returns <code>false</code> otherwise.
+  </p>
+
+  <p>
+    For example, the call <code>hasMidpoint(3, 7, 5)</code> would
+    return <code>true</code> because one of the parameters (5) is the midpoint
+    of the other two (3 and 7).
+  </p>
+
+  <p>
+    Try to solve this problem in Practice-It: click on the check-mark above!
+  </p>
+</div>

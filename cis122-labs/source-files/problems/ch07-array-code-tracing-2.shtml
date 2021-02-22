@@ -1,0 +1,59 @@
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: Array code tracing 2
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+7&problem=lab7-arrayCodeTracing2">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		Fill in the array with the values that would be stored after the code executes:
+	</p>
+
+	<pre class="compressed">
+int[] list = {2, 18, 6, -4, 5, 1};
+for (int i = 0; i &lt; list.length; i++) {
+    list[i] = list[i] + (list[i] / list[0]);
+}
+</pre>
+
+	<table class="arraytable">
+		<tr>
+			<th style="padding-right: 1em">index</th>
+			<th>0</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+		</tr>
+
+		<tr>
+			<th style="padding-right: 1em">value</th>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">3</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">24</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">8</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">-5</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">6</span>
+			</td>
+			<td class="expressionarea">
+				<input type="text" value="" class="expressionanswer" size="3" spellcheck="false" />
+				<span class="expressionsolution">1</span>
+			</td>
+		</tr>
+	</table>
+</div>

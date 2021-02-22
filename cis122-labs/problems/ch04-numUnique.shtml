@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: numUnique
+    <a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=Building+Java+Programs%2C+2nd+edition%2FChapter+5&amp;problem=5-e14-numUnique">
+      <img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+    </a>
+  </h1>
+				
+  <p>
+    Write a method named <code>numUnique</code> that accepts three integers as
+    parameters and that returns the number of unique integers among the three.
+    For example, the call <code>numUnique(18, 3, 4)</code> should return 3
+    because the parameters have 3 different values.  By contrast, the
+    call <code>numUnique(6, 7, 6)</code> would return 2 because there are only
+    2 unique numbers among the three parameters: 6 and 7.
+  </p>   
+  <p>
+	Compare your solution to your neighbors'.  Did you all solve it the same way?
+  </p>
+				
+  <ul>
+    <li>
+      (Try solving this problem in Practice-It by clicking the icon above.)
+    </li>
+  </ul>
+</div>

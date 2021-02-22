@@ -1,0 +1,100 @@
+<div class="slide">
+  <h1>
+    Exercise <span class="exercisenumber"></span>: jGRASP Debugger
+  </h1>
+
+  <p>
+    We are going to practice stepping into a method and stepping over a method.
+    Using <code>Pyramids.java</code>, set a breakpoint on the first call
+    to <code>drawPyramid</code> and hit the debug button.  The program should
+    begin executing.  Arrange your windows so that you can see both the jGRASP
+    window and the <code>DrawingPanel</code> window at the same time.  Under
+    the debug controls, you should see these options:
+    <blockquote>
+      <img src="images/jgrasp-options.png" width="350" height="40" />
+    </blockquote>
+    Hover your mouse over the leftmost one (the down-pointing arrow).  jGRASP
+    indicates that this is used to "Step over" a method call.  Use this when
+    you don't want to see the details of how a method executes.  Hit this once.
+    You should be at the second call on <code>drawPyramid</code>.  Hit the
+    button again to get to the third call.
+  </p>
+
+  <p>
+    Hover your mouse over the second icon (the one that looks like an arrow
+    pointing down and right) and jGRASP will tell you that this is used to
+    "Step in" a method.  Click on that to step into the third method call.
+  </p>
+
+  <p class="continued">
+    continued on the next slide...
+  </p>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - jGRASP
+    Debugger</h1>
+				
+  <p>
+    Now you can use the "Step over" button to step through this execution line
+    by line.  Fill in the table below to indicate what
+    value <code>stairX</code> is set to for the first few iterations of
+    the <code>for</code> loop.
+  </p>
+
+  <table class="expressiontable">
+    <tr>
+      <th>
+	Iteration
+      </th>
+      <th>
+	<code>stairX</code>
+      </th>
+    </tr>
+    <tr>
+      <td class="expression">
+	<code>i = 0</code>
+      </td>
+      <td>
+	<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+	<pre class="expressionsolution">267</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="expression">
+	<code>i = 1</code>
+      </td>
+      <td>
+	<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+	<pre class="expressionsolution">265</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="expression">
+	<code>i = 2</code>
+      </td>
+      <td>
+	<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+	<pre class="expressionsolution">262</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="expression">
+	<code>i = 3</code>
+      </td>
+      <td>
+	<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+	<pre class="expressionsolution">260</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="expression">
+	<code>i = 4</code>
+      </td>
+      <td>
+	<input type="text" class="expressionanswer" size="8" spellcheck="false" />
+	<pre class="expressionsolution">257</pre>
+      </td>
+    </tr>
+  </table>
+</div>

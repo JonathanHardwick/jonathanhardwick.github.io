@@ -1,0 +1,23 @@
+<div class="slide">
+	<h1><code>for</code> loops</h1>
+	
+	<p>
+		A <strong><code>for</code> loop</strong> repeats a group of statements a given number of times.
+	</p>
+	
+	<pre>
+for (<var>initialization</var>; <var>test</var>; <var>update</var>) {
+    <var>statement(s) to repeat</var>;
+}
+</pre>
+	
+	<p>
+		Example:
+	</p>
+	
+	<pre>
+for (int i = 1; i &lt;= 10; i++) {
+    System.out.println("We're number one!");
+}
+</pre>
+</div>

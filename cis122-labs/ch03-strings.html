@@ -1,0 +1,464 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Marty Stepp, Stuart Reges" />
+		<meta name="description" content="Slides for programming labs to accompany the Building Java Programs textbook." />
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, computer science" />
+
+		<!-- configuration parameters -->
+		<!--
+		<meta name="defaultView" content="slideshow" />
+		<meta name="controlVis" content="hidden" />
+		-->
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+		<link rel="stylesheet" href="labs-slides.css" type="text/css" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="resources/slides.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+		<title>Building Java Programs Lab: Strings</title>
+	</head>
+
+<body>
+	<div class="layout">
+		<div id="controls"><!-- DO NOT EDIT --></div>
+		<div id="currentSlide"><!-- DO NOT EDIT --></div>
+		<div id="header"></div>
+		<div id="footer">
+			<h1>Building Java Programs</h1>
+			<h2>Lab 3: Strings</h2>
+		</div>
+	</div>
+
+	<div class="presentation">
+		<div class="slide">
+			<h1>Building Java Programs</h1>
+			<h2>Lab: Strings</h2>
+
+			<p class="license">
+				Except where otherwise noted, the contents of this document are
+				Copyright 2019 Stuart Reges and Marty Stepp.
+			</p>
+			
+			<p class="license">
+				<em>lab document created by Marty Stepp, Stuart Reges and Whitaker Brand</em>
+			</p>
+
+			<!--
+			<div class="w3c">
+				<a href="http://validator.w3.org/check/referer"><img src="images/w3c-xhtml11.png" alt="Valid XHTML 1.1" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="images/w3c-css.png" alt="Valid CSS!" /></a>
+			</div>
+			-->
+		</div>
+
+
+<div class="slide">
+	<h1>Lab goals</h1>
+	<p>Goals for this problem set:</p>
+	<ul>
+		<li>use <code>String</code>s to represent and manipulate text data</li>
+		<li>Where you see this icon, you can click it to check the problem in Practice-It! 
+			<span class="practiceitlink"><img src="images/checkmark.png" alt="practice-it" width="26" height="26" /></span>
+		</li>
+	</ul>
+</div>
+
+<!-- PROBLEMS ABOUT STRINGS -->
+<div class="slide">
+  <h1><code>String</code> methods</h1>
+
+  <table class="standard">
+    <tr>
+      <th>
+	Method name
+      </th>
+
+      <th>
+	Description
+      </th>
+    </tr>
+    
+    <tr>
+      <td>
+	<code>charAt(<var>index</var>)</code>
+      </td>
+      <td>
+	character at given index
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>indexOf(<var>str</var>)</code>
+      </td>
+      <td>
+	index where the start of the given <code>String</code> appears in this
+	string (-1 if not found)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>length()</code>
+      </td>
+      <td>
+	number of characters in this <code>String</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>replace(<var>str1</var>, <var>str2</var>)</code>
+      </td>
+      <td>
+	a new string with all occurrences of <var>str1</var> changed
+	to <var>str2</var>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="white-space: nowrap">
+	<code>substring(<var>index1</var>, <var>index2</var>)</code> <br />
+	or <code>substring(<var>index1</var>)</code><br />
+      </td>
+      <td>
+	the characters in this string from <var>index1</var> (inclusive)
+	to <var>index2</var> (exclusive); if <var>index2</var> is omitted,
+	grabs till end of string
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<code>toLowerCase()</code>
+      </td>
+      <td>
+	a new string with all lowercase letters
+      </td>
+					</tr>
+    
+    <tr>
+      <td>
+	<code>toUpperCase()</code>
+      </td>
+      <td>
+	a new string with all uppercase letters
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+
+<div class="slide">
+  <h1>
+  	Exercise <span class="exercisenumber"></span>: String expressions
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s19-stringExpressions">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+  </h1>
+
+  <p>
+    Write the results of each expression with <code>String</code>s in
+    "quotes" and characters in single quotes (<code>'a'</code>)
+  </p>
+
+  <pre class="compressed">
+<span class="comment">//       index 0123456789012345</span>
+String str1 = "Frodo Baggins";
+String str2 = "Gandalf the GRAY";
+</pre>
+
+  <table class="expressiontable">
+    <tr>
+      <td class="expression"><code>str1.length()</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">13</pre></td>
+    </tr>
+
+
+    <tr>
+      <td class="expression"><code>str1.charAt(7)</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">'a'</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.charAt(0)</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">'G'</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str1.indexOf("o")</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">2</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.toUpperCase()</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"GANDALF THE GRAY"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str1.toLowerCase().indexOf("B")</code></td>
+      <td><input type="text" class="expressionanswer" size="4" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">-1</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str1.substring(4)</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"o Baggins"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.substring(3, 14)</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"dalf the GR"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.replace("a", "oo")</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"Goondoolf the GRAY"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>str2.replace("gray", "white")</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"Gandalf the GRAY"</pre></td>
+    </tr>
+
+    <tr>
+      <td class="expression"><code>"str1".replace("r", "range")</code></td>
+      <td><input type="text" class="expressionanswer" size="20" spellcheck="false" /></td>
+      <td><pre class="expressionsolution">"strange1"</pre></td>
+    </tr>
+  </table>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber"></span>: Syntax errors</h1>
+  
+  <ul>
+    <li>
+      The following Java program has 11 errors.  Work with your neighbor to find them all.  Can you explain why each of them is an error and describe how Java reacts to them?
+      
+      <table class="linenumbertable">
+	<tr>
+	  <td>
+	    <pre class="linenumbers compressed">
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre>
+	  </td>
+	  <td>
+	    <pre class="compressed">
+public class StringOops {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        String name = console.nextString();
+        process(name);
+    }
+
+    public static void process(string "name") {
+        if (name == Whitaker) {
+            System.out.println("You must be really awesome.");
+        }
+        replace("a", "e");
+        toUppercase(name);
+        name.substring(0, 3);
+        System.out.println(name + " has " + name.length + " letters");
+    }
+}
+</pre>
+	  </td>
+	</tr>
+      </table>
+    </li>
+
+    <li>
+      <strong>Copy and paste</strong> the code into jGrasp and see if you can
+      fix the errors.
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - answer</h1>
+  
+  <ol class="compressed">
+    <li>line 5: <code>nextString</code> should be <code>next</code></li>
+    <li>line 9: <code>string</code> should be <code>String</code></li>
+    <li>line 9: <code>name</code> should not be in quotes</li>
+    <li>line 10: <code>Whitaker</code> should be in quotes</li>
+    <li>line 10: cannot compare strings with <code>==</code>; must
+      use <code>.equals</code></li>
+    <li>line 13: cannot call <code>replace</code> without specifying a string
+      object (<code>name</code>)</li> 
+    <li>line 14: <code>toUppercase</code> should be
+      <code>toUpperCase</code></li> 
+    <li>line 14: <code>name.</code> should come
+      before <code>toUpperCase</code>, not passed as a parameter to it</li>
+    <li>line 14: must say <code>name =</code> to store the result
+      of <code>toUpperCase</code></li>
+    <li>line 15: must say <code>name =</code> to store the result
+      of <code>substring</code></li>
+    <li>line 16: must use parentheses <code>()</code> when
+      calling <code>length</code></li>
+  </ol>
+</div>
+
+<div class="slide">
+  <h1>Exercise <span class="exercisenumber noincrement"></span> - Corrected
+    version</h1>
+  
+  <pre class="compressed">
+public class StringOops {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        String name = console.<ins>next</ins>();
+        process(name);
+    }
+
+    public static void process(<ins>S</ins>tring <del>"</del>name<del>"</del>) {
+        if (name<ins>.equals("</ins>Whitaker<ins>")</ins>) {
+            System.out.println("You must be really awesome.");
+        }
+        <ins>name = name.</ins>replace("a", "e");
+        <ins>name = name.toUpper<ins>C</ins>ase()</ins>;
+        <ins>name = </ins>name.substring(0, 3);
+        System.out.println(name + " has " + name.length<ins>()</ins> + " letters");
+    }
+}
+</pre>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber"></span>: ProcessName
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&problem=lab4-ProcessName">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	
+	<p>
+		<strong>Copy/paste</strong> and save 
+		<a class="popup" href="problems/ProcessName.java">
+			<img class="icon" src="images/icon_java.gif" width="16" height="16" alt="icon" />
+			ProcessName.java</a>
+		in jGRASP, then go to the next slide.
+	</p>
+
+	<pre class="compressed">
+import java.util.*;  // for Scanner
+
+public class ProcessName {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("Type your name: ");
+        
+        // your code goes here
+        
+        System.out.println("Your name is: " + name);
+    }
+}
+</pre>
+	
+	<p class="continued">
+		continued on the next slide ...
+	</p>
+</div>
+
+<div class="slide">
+	<h1>
+		Exercise <span class="exercisenumber noincrement"></span> - code to add
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?edition=3&amp;category=University+of+Washington+CSE+142%2FCS1+Labs%2FLab+4&problem=lab4-ProcessName">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<ul>
+		<li>
+			Add code to the program so that it reads the user's first and last name (read an entire line as a single string), then prints the last name followed by a comma and the first initial.
+			(Assume that the user types a valid name.)
+			Example:
+			
+			<pre>
+Type your name: <span class="userinput">Jessica Miller</span>
+Your name is: Miller, J.
+</pre>
+		</li>
+	
+		<li>
+			Notice that the program reads an entire line of user input, not just one word.
+		</li>
+
+		<li>
+			Try solving this problem in Practice-It! using the link above.
+		</li>
+	</ul>
+</div>
+
+
+
+		</div>
+
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>
+	</body>
+</html>
+

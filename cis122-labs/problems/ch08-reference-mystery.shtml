@@ -1,0 +1,61 @@
+<div class="slide">
+	<h1>Exercise <span class="exercisenumber"></span>: reference mystery
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+10&problem=practicefinal10-referenceMystery">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+
+	<p>
+		The reference mystery problem on the next slide depends on the following definition of a <code>BasicPoint</code> class:
+	</p>
+	
+<pre>
+public class BasicPoint {
+    int x;
+    int y;
+
+    public BasicPoint(int initialX, int initialY) {
+        x = initialX;
+        y = initialY;
+    }
+}	
+</pre>
+</div>
+
+<div class="slide">	
+	<h1>Reference mystery, continued
+		<a class="popup practiceitlink" title="view in Practice-It!" href="http://practiceit.cs.washington.edu/problem.jsp?category=University+of+Washington+CSE+142%2FCS1+Exams%2FCS1+Final+Exams%2FPractice+Final+10&problem=practicefinal10-referenceMystery">
+			<img src="images/checkmark.png" width="26" height="26" alt="practice-it" />
+		</a>
+	</h1>
+	<p>The following program produces 5 lines of output.  Write each line of output as it would appear on the console.</p>
+
+<pre class="compressed">   
+public class ReferenceMystery {
+    public static void main(String[] args) {
+        BasicPoint p = new BasicPoint(11, 22);
+        int[] a = {33, 44};
+        int n = 55;
+
+        System.out.println(p.x + "," + p.y + " " + Arrays.toString(a) + " " + n); <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="16" spellcheck="false" /><span class="expressionsolution">11,22 [33, 44] 55</span><span class="ignore">[^0-9,]+</span></span>
+        mystery(p, a, n);                                                         <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="16" spellcheck="false" /><span class="expressionsolution">44,22 [44, 77] 0</span><span class="ignore">[^0-9,]+</span></span>
+        System.out.println(p.x + "," + p.y + " " + Arrays.toString(a) + " " + n); <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="16" spellcheck="false" /><span class="expressionsolution">44,22 [44, 77] 55</span><span class="ignore">[^0-9,]+</span></span>
+
+        a[0] = a[1];
+        p.x = p.y;
+
+        mystery(p, a, n);                                                         <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="16" spellcheck="false" /><span class="expressionsolution">55,22 [88, 77] 0</span><span class="ignore">[^0-9,]+</span></span>
+        System.out.println(p.x + "," + p.y + " " + Arrays.toString(a) + " " + n); <span class="comment">//</span> <span class="expressionarea"><input type="text" class="expressionanswer" size="16" spellcheck="false" /><span class="expressionsolution">55,22 [88, 77] 55</span><span class="ignore">[^0-9,]+</span></span>
+    }
+
+    public static int mystery(BasicPoint p, int[] a, int n) {
+        n = 0;
+        a[0] = a[0] + 11;
+        a[1] = 77;
+        p.x = p.x + 33;
+        System.out.println(p.x + "," + p.y + " " + Arrays.toString(a) + " " + n);
+        return n;
+    }
+}
+</pre>
+</div>
